@@ -1,0 +1,37 @@
+---
+title: List
+published: true
+---
+{% capture 'cat' %}{{ params.type }}{% endcapture %}
+{% extends 'layouts/default' %}
+{% block 'main' %}
+.w3-main{:style => "margin-left:300px;margin-top:43px;"}
+  %header.w3-container{:style => "padding-top:22px"}
+    .w3-container
+      {% case cat %}
+      {% when 'gists' %}
+      {% for gist in contents.gists %}
+      %a{:href => "{% path_to gist %}"} {{ gist.name }}
+      %br
+      %p {{ gist.desc }}
+      %br
+      {% endfor %}
+      {% when 'templates' %}
+      {% for template in contents.templates %}
+      %a{:href => "{% path_to template %}"} {{ template.name }}
+      %br
+      %br
+      %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px"}/
+      %p {{ template.desc }}
+      %hr
+      {% endfor %}
+      {% when 'actions' %}
+      {% for action in contents.actions %}
+      %a{:href => "{% path_to action %}"} {{ action.name }}
+      %br
+      %p {{ action.desc }}
+      %hr
+      {% endfor %}
+      {% endcase %}
+  {% include 'footer' %}
+{% endblock %}

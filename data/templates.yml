@@ -1,0 +1,24 @@
+- "Monitor":
+    turl: "https://github.com/manuchap/My-Locomotive-Sites"
+    demo: "https://admin.studiowan.fr"
+    desc: "Mini monitoring app for LocomotiveCMS<br>Clone<br>Fill in Infos tab<br>Have fun"
+    pict: "/images/My-Locomotive-Sites.jpg"
+
+- "Agendastudio":
+    turl: "https://github.com/manuchap/Agendastudio"
+    demo: "http://agendastudio.studiowan.fr/"
+    desc: "A little app for rehearsal studio bookings with a news caroussel, bands info, soundcloud player and a contact form."
+    pict: "/images/Agendastudio.jpg"
+
+- "Cube":
+    turl: "https://github.com/manuchap/Cube"
+    demo: "https://cube.studiowan.fr/"
+    desc: "Fully editable front page (you'll have to create the other pages 😉)<br>Based on a free html5 template"
+    pict: "/images/Cube.jpg"
+
+- "LocoF7":
+    turl: "https://github.com/manuchap/LocoF7"
+    demo: "http://recordit.co/9CERYWgiYQ"
+    desc: "A Framework7 ready LocomotiveCMS template (ios&android themes) Clone, add a wagon gemfile and serve<br>The demo is a screen recording of wagon running this template."
+    pict: "/images/LocoF7.jpg"
+

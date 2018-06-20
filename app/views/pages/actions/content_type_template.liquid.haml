@@ -1,0 +1,34 @@
+---
+title: Actions
+slug: content_type_template
+position: 0
+listed: false
+published: true
+is_layout: false
+content_type: actions
+---
+{% extends 'layouts/default' %}
+{% block 'main' %}
+.w3-main{:style => "margin-left:300px;margin-top:43px;"}
+  %header.w3-container{:style => "padding-top:22px"}
+    .w3-container
+      %h5 {{ action.name }}
+      %br
+      %p {{ action.desc }}
+      %br
+      .w3-panel.w3-card.w3-light-grey
+        .w3-code.htmlHigh.notranslate {{ action.code }}
+      %br
+    .w3-container
+      .w3-bar
+        {% if action.demo %}
+        %button.w3-bar-item.w3-button.w3-red
+          %a{:href => "{{ action.demo }}", :target => "_blank"} Demo
+        {% endif %}
+    %br
+    .w3-container
+      %a{:href => "/list?type=actions"}
+        %i.fa.fa-arrow-left.fa-fw>
+        \&#160; Actions list
+  {% include 'footer' %}
+{% endblock %}

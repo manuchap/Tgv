@@ -1,0 +1,21 @@
+---
+title: Home page
+published: true
+---
+{% extends 'layouts/default' %}
+{% block 'main' %}
+/ !PAGE CONTENT!
+.w3-main{:style => "margin-left:300px;margin-top:43px;"}
+  / Header
+  %header.w3-container{:style => "padding-top:22px"}
+    %h5 {{ 'welc' | translate }}
+    .w3-card-4
+      .w3-display-container.w3-animate-opacity
+        %img{:alt => "Photo by Christophe Maertens on Unsplash", :src => "{{ 'tgv.jpg' | theme_image_url }}", :style => "min-width: 100%;max-width: 100%"}/
+        .w3-display-middle.w3-text-white.w3-jumbo {{ 'wait' | translate }}
+        .w3-container.w3-display-bottomright.w3-text-white.w3-large
+    %p {{ 'btwy' | translate }}
+
+  {% include 'footer' %}
+  / End page content
+{% endblock %}

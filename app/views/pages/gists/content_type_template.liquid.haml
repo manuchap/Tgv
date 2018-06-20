@@ -1,0 +1,35 @@
+---
+title: Gists
+slug: content_type_template
+position: 0
+listed: false
+published: true
+is_layout: false
+content_type: gists
+---
+{% extends 'layouts/default' %}
+{% block 'main' %}
+.w3-main{:style => "margin-left:300px;margin-top:43px;"}
+  %header.w3-container{:style => "padding-top:22px"}
+    .w3-container
+      %h5 {{ gist.name }}
+      %br
+      %p {{ gist.desc }}
+      %br
+      <script src="{{ gist.gurl }}.js"></script>
+      %br
+    .w3-container
+      .w3-bar
+        %button.w3-bar-item.w3-button.w3-green
+          %a{:href => "{{ gist.gurl }}", :target => "_blank"} Source
+        {% if gist.demo %}
+        %button.w3-bar-item.w3-button.w3-red
+          %a{:href => "{{ gist.demo }}", :target => "_blank"} Demo
+        {% endif %}
+    %br
+    .w3-container
+      %a{:href => "/list?type=gists"}
+        %i.fa.fa-arrow-left.fa-fw>
+        \&#160; Gists list
+  {% include 'footer' %}
+{% endblock %}

@@ -1,0 +1,93 @@
+---
+title: Default Layout
+is_layout: true
+---
+!!!
+%html
+  %head
+    {% seo %}
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "https://www.w3schools.com/w3css/4/w3.css", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Raleway", :rel => "stylesheet"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    :css
+      html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+      hr {border-top: 1px solid #f70000;}
+  %body.w3-light-grey
+    / Top container
+    .w3-bar.w3-top.w3-black.w3-large{:style => "z-index:4"}
+      %button.w3-bar-item.w3-button.w3-hide-large.w3-hover-none.w3-hover-text-light-grey{:onclick => "w3_open();"}
+        %i.fa.fa-bars
+        \&#160;Menu
+      %span.w3-bar-item.w3-left {% locale_switcher %}
+      %span.w3-bar-item.w3-right.w3-animate-right.w3-orange.w3-hide-small {{ 'title' | translate }}
+      {% if params.type %}
+      %span.w3-bar-item.w3-right.w3-animate-left {{ params.type | upcase }}
+      {% else %}
+      %span.w3-bar-item.w3-right.w3-animate-left {{ 'home' | translate | upcase }}
+      {% endif %}
+    / Sidebar/menu
+    %nav#mySidebar.w3-sidebar.w3-collapse.w3-white.w3-animate-left{:style => "z-index:3;width:300px;"}
+      %br/
+      .w3-container.w3-row
+        .w3-col.s4
+          %img.w3-circle.w3-margin-right{:src => "{{ 'avatar.png' | theme_image_url }}", :style => "width:46px"}/
+        .w3-col.s8.w3-bar
+          %span
+            {{ 'hello' | translate }},
+            %strong {{ 'guest' | translate }}
+          %br/
+          <a href="#" onclick="document.getElementById('signup').style.display='block'">Signup</a>
+          <a href="#" onclick="document.getElementById('signin').style.display='block'">Signin</a>
+      %hr/
+      .w3-bar-block
+        %a.w3-bar-item.w3-button.w3-padding-16.w3-hide-large.w3-dark-grey.w3-hover-black{:href => "#", :onclick => "w3_close()", :title => "close menu"}
+          %i.fa.fa-remove.fa-fw>
+          \&#160; Close Menu
+        %a.w3-bar-item.w3-button.w3-padding{:href => "/"}
+          %i.fa.fa-home.fa-fw>
+          \&#160; {{ 'home' | translate }}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=actions"}
+          %i.fa.fa-server.fa-fw>
+          \&#160; Actions
+          %span.w3-badge.w3-red.w3-small {{ contents.actions.size }}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=gists"}
+          %i.fa.fa-github.fa-fw>
+          \&#160; Gists
+          %span.w3-badge.w3-red.w3-small {{ contents.gists.size }}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=templates"}
+          %i.fa.fa-html5.fa-fw>
+          \&#160; Templates
+          %span.w3-badge.w3-red.w3-small {{ contents.templates.size }}
+        %br/
+        %br/
+    / Overlay effect when opening sidebar on small screens
+    #myOverlay.w3-overlay.w3-hide-large.w3-animate-opacity{:onclick => "w3_close()", :style => "cursor:pointer", :title => "close side menu"}
+    {% block 'main' %}
+    {% endblock %}
+    {% include 'modal_signup' %}
+    {% include 'modal_signin' %}
+    :javascript
+      // Get the Sidebar
+      var mySidebar = document.getElementById("mySidebar");
+
+      // Get the DIV with overlay effect
+      var overlayBg = document.getElementById("myOverlay");
+
+      // Toggle between showing and hiding the sidebar, and add overlay effect
+      function w3_open() {
+          if (mySidebar.style.display === 'block') {
+              mySidebar.style.display = 'none';
+              overlayBg.style.display = "none";
+          } else {
+              mySidebar.style.display = 'block';
+              overlayBg.style.display = "block";
+          }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+          mySidebar.style.display = "none";
+          overlayBg.style.display = "none";
+      }

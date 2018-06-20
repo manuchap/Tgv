@@ -1,0 +1,34 @@
+---
+title: Templates
+slug: content_type_template
+position: 0
+listed: false
+published: true
+is_layout: false
+content_type: templates
+---
+{% extends 'layouts/default' %}
+{% block 'main' %}
+.w3-main{:style => "margin-left:300px;margin-top:43px;"}
+  %header{:style => "padding-top:22px"}
+  .w3-container
+    %h5 {{ template.name }}
+    %br
+    %p {{ template.desc }}
+    %br
+    %img{:src => "{{ template.pict.url }}", :style => "min-width: 100%;max-width: 100%"}/
+    %br
+    %hr
+  .w3-container
+    .w3-bar
+      %button.w3-bar-item.w3-button.w3-green
+        %a{:href => "{{ template.turl }}", :target => "_blank"} Source
+      %button.w3-bar-item.w3-button.w3-red
+        %a{:href => "{{ template.demo }}", :target => "_blank"} Demo
+  %br
+  .w3-container
+    %a{:href => "/list?type=templates"}
+      %i.fa.fa-arrow-left.fa-fw>
+      \&#160; Templates list
+  {% include 'footer' %}
+{% endblock %}
