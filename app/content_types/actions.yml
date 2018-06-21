@@ -5,13 +5,13 @@ name: Actions
 slug: actions
 
 # Explanatory text displayed in the back-office
-description: A description of the content type for the editors
+# description: A description of the content type for the editors
 
 # Slug of field used to identify entries by default, such as the title
 label_field_name: name
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+order_by: updated_at
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
 # order_direction: asc
@@ -20,7 +20,7 @@ order_by: manually
 # group_by: <your field>
 
 # Activate public 'create' API (e.g for a contact form)
-# public_submission_enabled: false
+public_submission_enabled: true
 
 # Array of emails to be notified of new entries made with the public API
 # public_submission_accounts: ['john@example.com']
@@ -36,27 +36,26 @@ order_by: manually
 # entry_template: '<a href="{{ link }}">{{ entry._label }}</a>' # The default template
 
 # A list describing each field
-fields: 
+fields:
 - name: # The lowercase, underscored name of the field
     label: Name # Human readable name of the field
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
+    hint: Name of your action
     localized: false
 
-- demo: # The lowercase, underscored name of the field
-    label: Demo # Human readable name of the field
-    type: string
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
+- user:
+    label: User
+    hint: A description of the relationship for the editors
+    type: belongs_to
+    class_name: users
 
 - desc: # The lowercase, underscored name of the field
     label: Desc # Human readable name of the field
     type: text
     required: false
     hint: Explanatory text displayed in the back office
-    localized: false
+    localized: true
     # text_formatting: html # html (uses rich text editor), markdown or text (uses plain text editor)
 
 - code: # The lowercase, underscored name of the field
@@ -66,3 +65,10 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
     # text_formatting: html # html (uses rich text editor), markdown or text (uses plain text editor)
+
+- demo: # The lowercase, underscored name of the field
+    label: Demo # Human readable name of the field
+    type: string
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: false

@@ -5,13 +5,13 @@ name: Users
 slug: users
 
 # Explanatory text displayed in the back-office
-description: A description of the content type for the editors
+# description: A description of the content type for the editors
 
 # Slug of field used to identify entries by default, such as the title
 label_field_name: name
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+order_by: updated_at
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
 # order_direction: asc
@@ -64,3 +64,27 @@ fields:
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
+
+- actions:
+    label: Actions
+    hint: A description of the relationship for the editors
+    type: has_many
+    class_name: actions
+    inverse_of: user
+    ui_enabled: true
+
+- gists:
+    label: Gists
+    hint: A description of the relationship for the editors
+    type: has_many
+    class_name: gists
+    inverse_of: user
+    ui_enabled: true
+
+- templates:
+    label: Templates
+    hint: A description of the relationship for the editors
+    type: has_many
+    class_name: templates
+    inverse_of: user
+    ui_enabled: true

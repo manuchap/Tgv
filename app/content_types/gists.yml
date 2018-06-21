@@ -1,6 +1,6 @@
 name: Gists
 slug: gists
-description: A description of the content type for the editors
+# description: A description of the content type for the editors
 label_field_name: name
 order_by: updated_at
 
@@ -34,6 +34,12 @@ fields:
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
+
+- user:
+    label: User
+    hint: A description of the relationship for the editors
+    type: belongs_to
+    class_name: users
 
 - gurl: # The lowercase, underscored name of the field
     label: Url # Human readable name of the field
