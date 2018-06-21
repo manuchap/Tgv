@@ -11,14 +11,14 @@ published: true
       {% case cat %}
       {% when 'gists' %}
       {% for gist in contents.gists %}
-      %a{:href => "{% path_to gist %}"} {{ gist.name }}
+      %a{:href => "{% path_to gist %}?type=gist"} {{ gist.name }} {{ 'whos' | translate }} {{ action.user.name }}
       %br
       %p {{ gist.desc }}
       %br
       {% endfor %}
       {% when 'templates' %}
       {% for template in contents.templates %}
-      %a{:href => "{% path_to template %}"} {{ template.name }}
+      %a{:href => "{% path_to template %}?type=template"} {{ template.name }}
       %br
       %br
       %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px"}/
@@ -27,7 +27,7 @@ published: true
       {% endfor %}
       {% when 'actions' %}
       {% for action in contents.actions %}
-      %a{:href => "{% path_to action %}"} {{ action.name }}
+      %a{:href => "{% path_to action %}?type=action"} {{ action.name }} {{ 'whos' | translate }} {{ action.user.name }}
       %br
       %p {{ action.desc }}
       %hr

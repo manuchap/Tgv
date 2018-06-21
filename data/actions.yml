@@ -1,5 +1,5 @@
 - "Edit member":
     demo: "https://actions.studiowan.fr"
-    desc: "Action used to edit a member on the <a>actions template</a>."
+    desc: "Action used to edit a member on the <a href=\"/templates/actions?type=template\">actions template</a>."
     code: "---<br>title: Saving<br>published: true<br>handle: edit_member<br>---<br>%h1 {{ page.title }}<br>{% capture member %}{{ params.slug }}{% endcapture %}<br>{% action 'editMember' %}<br>setProp(\"member\", \"{{member}}\");<br>var params = getProp('params');<br>var member = getProp('member');<br>updateEntry('members', member, { genre: params.genre, nickname: params.nick, first_name: params.firs, last_name: params.last, description: params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction %}"
-
+    user: "john"
