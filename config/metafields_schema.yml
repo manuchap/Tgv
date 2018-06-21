@@ -54,3 +54,13 @@
 #       type: select
 #       select_options: ['helvetica', 'Noto']
 
+algolia:
+  label: Algolia settings
+  fields:
+    application_id:
+      type: string
+    api_key:
+      type: string
+    reset:
+      type: boolean
+      hint: 'If switched on and after pressed the save button, re-index the content of the site '

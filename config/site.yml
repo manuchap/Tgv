@@ -46,3 +46,8 @@ meta_description: "LocomotiveCMS Gists"
 #     address: 700 South Laflin Street
 #   theme:
 #     background_image: "/samples/background.png"
+
+algolia:
+    application_id: RAVDOBYAM2
+    api_key: 46b0543d9035689b9aedb89a8e8ea65a
+    reset: false
