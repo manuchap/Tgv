@@ -13,12 +13,10 @@ content_type: actions
   %header.w3-container{:style => "padding-top:22px"}
     .w3-container
       %h5 {{ action.name }}
-      %br
+      %p  {{ 'whos' | translate }}  {{ action.user.name }}
       %p {{ action.desc }}
-      %br
       .w3-panel.w3-card.w3-light-grey
         .w3-code.htmlHigh.notranslate {{ action.code }}
-      %br
     .w3-container
       .w3-bar
         {% if action.demo %}

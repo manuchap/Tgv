@@ -13,12 +13,6 @@ home:
 cate:
     en: "Categories"
     fr: "Categories"
-welc:
-    en: "Welcome to the #1 LocomotiveCMS ressources website.<br>Signup or signin to upload your ressources and share them with the world."
-    fr: "Bienvenue dans votre site de ressources LocomotiveCMS.<br>Enregistrez-vous ou connectez-vous pour partager vos ressources."
-wait:
-    en: "It's coming... "
-    fr: "Il arrive..."
-btwy:
-    en: "Either stick your ear to the rails or just use the menu on the left 🤓."
-    fr: "Collez votre oreille au rail ou utilisez le menu de gauche 🤓."
+whos:
+    en: "by"
+    fr: "par"

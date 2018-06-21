@@ -1,6 +1,11 @@
 ---
 title: Home page
 published: true
+editable_elements:
+  main/welcome: "Welcome to the #1 LocomotiveCMS ressources website.<br>Signup or signin to upload your ressources and share them with the world."
+  main/photo: "/images/tgv.jpg"
+  main/overlay: "It's coming..."
+  main/legend: "Either stick your ear to the rails or just use the menu on the left 🤓."
 ---
 {% extends 'layouts/default' %}
 {% block 'main' %}
@@ -8,13 +13,13 @@ published: true
 .w3-main{:style => "margin-left:300px;margin-top:43px;"}
   / Header
   %header.w3-container{:style => "padding-top:22px"}
-    %h5 {{ 'welc' | translate }}
+    %h5 {% editable_text 'welcome' %}{% endeditable_text %}
     .w3-card-4
       .w3-display-container.w3-animate-opacity
-        %img{:alt => "Photo by Christophe Maertens on Unsplash", :src => "{{ 'tgv.jpg' | theme_image_url }}", :style => "min-width: 100%;max-width: 100%"}/
-        .w3-display-middle.w3-text-white.w3-jumbo {{ 'wait' | translate }}
+        %img{:src => "{% editable_file 'photo', hint: 'Photo du site', priority: 0 %}{% endeditable_file %}", :style => "min-width: 100%;max-width: 100%"}/
+        .w3-display-middle.w3-text-white.w3-jumbo {% editable_text 'overlay', format: 'raw', rows: 1 %}{% endeditable_text %}
         .w3-container.w3-display-bottomright.w3-text-white.w3-large
-    %p {{ 'btwy' | translate }}
+    %p {% editable_text 'legend', format: 'raw', rows: 2 %}{% endeditable_text %}
 
   {% include 'footer' %}
   / End page content

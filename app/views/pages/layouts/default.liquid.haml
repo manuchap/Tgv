@@ -11,6 +11,9 @@ is_layout: true
     %link{:href => "https://www.w3schools.com/w3css/4/w3.css", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Raleway", :rel => "stylesheet"}/
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    {% if fullpath contains 'search' %}
+    %link{:href => "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css", :rel => "stylesheet"}/
+    {% endif %}
     :css
       html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       hr {border-top: 1px solid #f70000;}
@@ -21,7 +24,7 @@ is_layout: true
         %i.fa.fa-bars
         \&#160;Menu
       %span.w3-bar-item.w3-left {% locale_switcher %}
-      %span.w3-bar-item.w3-right.w3-animate-right.w3-orange.w3-hide-small {{ 'title' | translate }}
+      %span.w3-bar-item.w3-right.w3-animate-right.w3-red.w3-hide-small {{ 'title' | translate }}
       {% if params.type %}
       %span.w3-bar-item.w3-right.w3-animate-left {{ params.type | upcase }}
       {% else %}
@@ -36,30 +39,54 @@ is_layout: true
         .w3-col.s8.w3-bar
           %span
             {{ 'hello' | translate }},
-            %strong {{ 'guest' | translate }}
+            %strong {% unless current_account %}{{ 'guest' | translate }}
           %br/
           <a href="#" onclick="document.getElementById('signup').style.display='block'">Signup</a>
-          <a href="#" onclick="document.getElementById('signin').style.display='block'">Signin</a>
+          <a href="#" onclick="document.getElementById('signin').style.display='block'">Signin</a>{% else %}
+          {{ current_account.name }}
+          %br
+          %a.w3-bar-item.w3-button{:href => "#"}
+            %i.fa.fa-envelope
+          %a.w3-bar-item.w3-button{:href => "#"}
+            %i.fa.fa-user
+          %a.w3-bar-item.w3-button{:href => "#"}
+            %i.fa.fa-cog
+          {% endunless %}
       %hr/
       .w3-bar-block
         %a.w3-bar-item.w3-button.w3-padding-16.w3-hide-large.w3-dark-grey.w3-hover-black{:href => "#", :onclick => "w3_close()", :title => "close menu"}
-          %i.fa.fa-remove.fa-fw>
+          %i.fa.fa-remove.fa-fw
           \&#160; Close Menu
         %a.w3-bar-item.w3-button.w3-padding{:href => "/"}
-          %i.fa.fa-home.fa-fw>
+          %i.fa.fa-home.fa-fw
           \&#160; {{ 'home' | translate }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=actions"}
-          %i.fa.fa-server.fa-fw>
+          %i.fa.fa-server.fa-fw
           \&#160; Actions
           %span.w3-badge.w3-red.w3-small {{ contents.actions.size }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=gists"}
-          %i.fa.fa-github.fa-fw>
+          %i.fa.fa-github.fa-fw
           \&#160; Gists
           %span.w3-badge.w3-red.w3-small {{ contents.gists.size }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=templates"}
-          %i.fa.fa-html5.fa-fw>
+          %i.fa.fa-html5.fa-fw
           \&#160; Templates
           %span.w3-badge.w3-red.w3-small {{ contents.templates.size }}
+        .w3-bar-item
+          %input#search-input.w3-input.w3-right{:placeholder => "Search"}/
+          #hits
+          #pagination
+          %script#hit-template{:type => "text/html"}
+            <div class="hit">
+            <div class="hit-image">
+            <img src="{{image}}" alt="{{name}}">
+            </div>
+            <div class="hit-content">
+            <h3 class="hit-price">${{price}}</h3>
+            <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+            <p class="hit-description">{{{_highlightResult.description.value}}}</p>
+            </div>
+            </div>
         %br/
         %br/
     / Overlay effect when opening sidebar on small screens
@@ -91,3 +118,7 @@ is_layout: true
           mySidebar.style.display = "none";
           overlayBg.style.display = "none";
       }
+    {% if fullpath contains 'search' %}
+    {{ 'instantsearch.min' | javascript_tag }}
+    {{ 'app' | javascript_tag }}
+    {% endif %}
