@@ -1,7 +1,17 @@
 - "John":
     email: 'john@locomotivecms.com'
     password: 'easyone'
-    ip: ""
+    actions: 'Edit member'
+
+- "Azer":
+    email: 'azer@azer.fr'
+    password: 'azerazer'
+    templates:
+    - Actions
+    - Cube
+    - Monitor
+    - Agendastudio
+    - LocoF7
 
 - "Sample 2":
     ip: "Qui ab impedit cumque molestias autem excepturi architecto."

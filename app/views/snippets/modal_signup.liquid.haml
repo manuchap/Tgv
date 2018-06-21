@@ -1,5 +1,5 @@
 / The Modal
-#signup.w3-modal
+#signup.w3-modal.w3-animate-zoom
   .w3-modal-content
     .w3-container
       %span.w3-button.w3-red.w3-display-topright
@@ -39,6 +39,5 @@
         {% if auth_entry.errors.password_confirmation.size &gt; 0 %}
         {{ auth_entry.errors.password_confirmation.first }}
         {% endif %}
-      %button.w3-button.w3-red.w3-ripple{:type => "submit"} Sign up
-      %hr
+      %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} Sign up
       {% endif %}

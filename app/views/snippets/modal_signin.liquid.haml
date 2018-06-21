@@ -1,5 +1,5 @@
 / The Modal
-#signin.w3-modal
+#signin.w3-modal.w3-animate-zoom
   .w3-modal-content
     .w3-container
       %span.w3-button.w3-red.w3-display-topright
@@ -32,6 +32,5 @@
           %span
             %a{:href => "{% path_to 'forgot_password' %}"} Forgot your password?
           %input#auth-password.w3-input{:name => "auth_password", :placeholder => "Password", :type => "password", :value => ""}/
-      %button.w3-button.w3-red.w3-ripple{:type => "submit"} Sign in
-      %hr
+      %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} Sign in
       {% endif %}
