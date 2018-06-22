@@ -48,6 +48,6 @@ meta_description: "LocomotiveCMS Gists"
 #     background_image: "/samples/background.png"
 
 algolia:
-    application_id: RAVDOBYAM2
-    api_key: 46b0543d9035689b9aedb89a8e8ea65a
+    application_id: XXXXXXx
+    api_key: 46b05xxxxxxxxxxxxxxxxxxxxxx
     reset: false
