@@ -1,18 +1,15 @@
 title:
-    en: "TGV: Train with Great Velocity"
-    fr: "TGV: Train à Grande Vitesse"
-hello:
-    en: "Hello"
-    fr: "Bonjour"
-guest:
-    en: "Guest"
-    fr: "Invité"
+  en: 'TGV: Train with Great Velocity'
+  fr: 'TGV: Train à Grande Vitesse'
 home:
-    en: "Home"
-    fr: "Accueil"
-cate:
-    en: "Categories"
-    fr: "Categories"
+  en: Home
+  fr: Accueil
+hello:
+  en: Hello
+  fr: Bonjour
+guest:
+  en: guest
+  fr: invité
 whos:
-    en: "by"
-    fr: "par"
+  en: by
+  fr: par

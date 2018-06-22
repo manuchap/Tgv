@@ -1,20 +1,8 @@
-- "Manuchap":
-    email: 'manuchap@gmail.com'
-    password: 'password'
-    apps:
-    - Members
-    - Monitor
-    - Agendastudio
-    actions:
-    - Edit member
-    gists:
-    - FAQ Export
-    templates:
-    - Cube
-    - LocoF7
-    - W3CSS
-
-- "John":
-    email: 'john@locomotivecms.com'
-    password: 'easyone'
-    actions: ''
+- Manuchap:
+    _slug: manuchap
+    name: Manuchap
+    email: manuchap@gmail.com
+- John:
+    _slug: john
+    name: John
+    email: john@locomotivecms.com

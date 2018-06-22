@@ -1,20 +1,32 @@
-- "Cube":
-    url: "https://github.com/manuchap/Cube"
-    demo: "https://cube.studiowan.fr"
-    desc: "Fully editable front page (you'll have to create the other pages 😉)<br>Based on a free html5 template"
-    pict: "/images/Cube.jpg"
-    user: "manuchap"
-
-- "LocoF7":
-    url: "https://github.com/manuchap/LocoF7"
-    demo: "http://recordit.co/9CERYWgiYQ"
-    desc: "A Framework7 ready LocomotiveCMS template (ios&android themes)<br>Clone, add a wagon gemfile and serve<br>The demo is a screen recording of wagon running this template."
-    pict: "/images/LocoF7.jpg"
-    user: "manuchap"
-
-- "W3css":
-    url: "https://github.com/manuchap/LocoF7"
-    demo: "http://w3c.studiowan.fr"
-    desc: "Smaller and faster than any other CSS frameworks.<br>Easier to learn, and easier to use than any other CSS frameworks.<br>Better cross-browser compatibility than any other CSS frameworks.<br>Uses standard CSS only (No jQuery or JavaScript library).<br>Supports modern responsive mobile first design by default.<br>Provides CSS equality for all browsers: Chrome, Firefox, Edge, IE, Safari, Opera, ...<br>Provides CSS equality for all devices: desktop, laptop, tablet, and mobile."
-    pict: "/images/W3css.jpg"
-    user: "manuchap"
+- Cube:
+    _slug: cube
+    name: Cube
+    user: manuchap
+    desc: "Fully editable front page (you'll have to create the other pages \U0001F609)<br>Based
+      on a free html5 template"
+    pict: "/samples/content_entries/Cube.jpg"
+    url: https://github.com/manuchap/Cube
+    demo: https://cube.studiowan.fr
+- LocoF7:
+    _slug: locof7
+    name: LocoF7
+    user: manuchap
+    desc: A Framework7 ready LocomotiveCMS template (ios&android themes)<br>Clone,
+      add a wagon gemfile and serve<br>The demo is a screen recording of wagon running
+      this template.
+    pict: "/samples/content_entries/LocoF7.jpg"
+    url: https://github.com/manuchap/LocoF7
+    demo: http://recordit.co/9CERYWgiYQ
+- W3css:
+    _slug: w3css
+    name: W3css
+    user: manuchap
+    desc: 'Smaller and faster than any other CSS frameworks.<br>Easier to learn, and
+      easier to use than any other CSS frameworks.<br>Better cross-browser compatibility
+      than any other CSS frameworks.<br>Uses standard CSS only (No jQuery or JavaScript
+      library).<br>Supports modern responsive mobile first design by default.<br>Provides
+      CSS equality for all browsers: Chrome, Firefox, Edge, IE, Safari, Opera, ...<br>Provides
+      CSS equality for all devices: desktop, laptop, tablet, and mobile.'
+    pict: "/samples/content_entries/W3css.jpg"
+    url: https://github.com/manuchap/LocoF7
+    demo: http://w3c.studiowan.fr

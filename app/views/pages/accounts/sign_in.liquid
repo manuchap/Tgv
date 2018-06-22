@@ -1,19 +1,19 @@
 ---
 title: Sign in
-published: true
-listed: false
+slug: sign_in
 handle: sign_in
+position: 0
+listed: false
+published: true
+is_layout: false
 ---
 {% extends 'layouts/default' %}
-
 {% block main %}
-
 <div class="container main-content">
   <div class="row">
     <div class="col-md-12">
       <h2 class="page-title">Sign in</h2>
     </div>
-
     <div class="col-md-4 col-md-offset-4">
       {% if auth_signed_out %}
         <div class="alert alert-info">
@@ -31,13 +31,11 @@ handle: sign_in
           <input type="hidden" name="auth_id_field" value="email" />
           <input type="hidden" name="auth_password_field" value="password" />
           <input type="hidden" name="auth_callback" value="{% path_to me %}" />
-
           {% if auth_wrong_credentials %}
             <div class="alert alert-warning">
               Wrong credentials!
             </div>
           {% endif %}
-
           <div class="form-group">
             <label for="auth-email">Your E-mail</label>
             <input type="email" class="form-control" id="auth-email" placeholder="Email" name="auth_id" value="{{ params.auth_id }}">
@@ -53,5 +51,4 @@ handle: sign_in
     </div>
   </div>
 </div>
-
 {% endblock %}

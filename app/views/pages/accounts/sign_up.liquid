@@ -1,19 +1,19 @@
 ---
 title: Sign up
-published: true
-listed: false
+slug: sign_up
 handle: sign_up
+position: 1
+listed: false
+published: true
+is_layout: false
 ---
 {% extends 'layouts/default' %}
-
 {% block main %}
-
 <div class="container main-content">
   <div class="row">
     <div class="col-md-12">
       <h2 class="page-title">Register!</h2>
     </div>
-
     <div class="col-md-4 col-md-offset-4">
       {% if current_account %}
         <div class="alert alert-warning">
@@ -27,13 +27,11 @@ handle: sign_up
           <input type="hidden" name="auth_password_field" value="password" />
           <input type="hidden" name="auth_email_handle" value="welcome_message" />
           <input type="hidden" name="auth_callback" value="{% path_to me %}" />
-
           {% if auth_invalid_entry %}
             <div class="alert alert-warning">
               We're sorry, we couldn't create your account.
             </div>
           {% endif %}
-
           <div class="form-group {% if auth_entry.errors.name.size > 0 %}has-error{% endif %}">
             <label for="auth-name">Your name</label>
             <input type="text" name="auth_entry[name]" class="form-control" id="auth-name" placeholder="Your name" value="{{ auth_entry.name }}">
@@ -41,7 +39,6 @@ handle: sign_up
               <span class="help-block">{{ auth_entry.errors.name.first }}</span>
             {% endif %}
           </div>
-
           <div class="form-group {% if auth_entry.errors.email.size > 0 %}has-error{% endif %}">
             <label for="auth-email">Your E-mail</label>
             <input type="email" name="auth_entry[email]" class="form-control" id="auth-email" placeholder="Email" value="{{ auth_entry.email }}">
@@ -49,7 +46,6 @@ handle: sign_up
               <span class="help-block">{{ auth_entry.errors.email.first }}</span>
             {% endif %}
           </div>
-
           <div class="form-group {% if auth_entry.errors.password.size > 0 %}has-error{% endif %}">
             <label for="auth-password">Password</label>
             <input type="password" name="auth_entry[password]" class="form-control" id="auth-password" placeholder="Password">
@@ -57,7 +53,6 @@ handle: sign_up
             <span class="help-block">{{ auth_entry.errors.password.first }}</span>
             {% endif %}
           </div>
-
           <div class="form-group {% if auth_entry.errors.password_confirmation.size > 0 %}has-error{% endif %}">
             <label for="auth-password">Password confirmation</label>
             <input type="password" name="auth_entry[password_confirmation]" class="form-control" id="auth-password" placeholder="Password confirmation">
@@ -65,12 +60,10 @@ handle: sign_up
             <span class="help-block">{{ auth_entry.errors.password_confirmation.first }}</span>
             {% endif %}
           </div>
-
           <button type="submit" class="btn btn-default">Sign up</button>
         </form>
       {% endif %}
     </div>
   </div>
 </div>
-
 {% endblock %}

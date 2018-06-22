@@ -1,5 +1,6 @@
-- "FAQ Export":
-    url: "https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db"
-    demo:
-    desc: "Export FAQ entries to Algolia."
-    user: "manuchap"
+- FAQ Export:
+    _slug: faq-export
+    name: FAQ Export
+    user: manuchap
+    desc: Export FAQ entries to Algolia.
+    url: https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db
