@@ -18,6 +18,12 @@ is_layout: true
       html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       hr {border-top: 1px solid #f70000;}
   %body.w3-light-grey
+    %script{:language => "JavaScript"}
+      var renderStart = new Date().getTime();
+      window.onload=function() {
+      var elapsed = new Date().getTime()-renderStart;
+      document.getElementById("speed").innerHTML = elapsed;
+      }
     / Top container
     .w3-bar.w3-top.w3-black.w3-large{:style => "z-index:4"}
       %button.w3-bar-item.w3-button.w3-hide-large.w3-hover-none.w3-hover-text-light-grey{:onclick => "w3_open();"}
@@ -61,9 +67,13 @@ is_layout: true
           %i.fa.fa-home.fa-fw
           \&#160; {{ 'home' | translate }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=actions"}
-          %i.fa.fa-server.fa-fw
+          %i.fa.fa-wrench.fa-fw
           \&#160; Actions
           %span.w3-badge.w3-red.w3-small {{ contents.actions.size }}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=apps"}
+          %i.fa.fa-cogs.fa-fw
+          \&#160; Apps
+          %span.w3-badge.w3-red.w3-small {{ contents.apps.size }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=gists"}
           %i.fa.fa-github.fa-fw
           \&#160; Gists

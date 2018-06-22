@@ -1,24 +1,20 @@
+- "Manuchap":
+    email: 'manuchap@gmail.com'
+    password: 'password'
+    apps:
+    - Members
+    - Monitor
+    - Agendastudio
+    actions:
+    - Edit member
+    gists:
+    - FAQ Export
+    templates:
+    - Cube
+    - LocoF7
+    - W3CSS
+
 - "John":
     email: 'john@locomotivecms.com'
     password: 'easyone'
-    actions: 'Edit member'
-
-- "Azer":
-    email: 'azer@azer.fr'
-    password: 'azerazer'
-    templates:
-    - Actions
-    - Cube
-    - Monitor
-    - Agendastudio
-    - LocoF7
-
-- "Sample 2":
-    ip: "Qui ab impedit cumque molestias autem excepturi architecto."
-
-- "Sample 3":
-    ip: "Corporis id error harum laboriosam."
-
-- "Sample 4":
-    ip: "Error officiis quidem id sint incidunt voluptate aspernatur itaque."
-
+    actions: ''

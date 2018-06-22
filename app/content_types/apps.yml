@@ -1,5 +1,5 @@
-name: Actions
-slug: actions
+name: Apps
+slug: apps
 label_field_name: name
 order_by: created_at
 public_submission_enabled: true
@@ -8,11 +8,11 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Name of your action
+    hint: Name of your app
     localized: false
 - user:
     label: User
-    hint: The action's creator
+    hint: The app's creator
     type: belongs_to
     class_name: users
 - desc:
@@ -21,11 +21,17 @@ fields:
     required: false
     hint: A short description of your app
     localized: false
-- code:
-    label: Code
-    type: text
+- pict:
+    label: Picture
+    type: file
     required: false
-    hint: Paste you action code here (in editor mode)
+    hint: A screen grab of your app
+    localized: false
+- url:
+    label: Turl
+    type: string
+    required: false
+    hint: Url to your app's source code
     localized: false
 - demo:
     label: Demo

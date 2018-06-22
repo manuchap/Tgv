@@ -16,12 +16,12 @@ content_type: gists
       %br
       %p {{ gist.desc }}
       %br
-      <script src="{{ gist.gurl }}.js"></script>
+      <script src="{{ gist.url }}.js"></script>
       %br
     .w3-container
       .w3-bar
         %button.w3-bar-item.w3-button.w3-green
-          %a{:href => "{{ gist.gurl }}", :target => "_blank"} Source
+          %a{:href => "{{ gist.url }}", :target => "_blank"} Source
         {% if gist.demo %}
         %button.w3-bar-item.w3-button.w3-red
           %a{:href => "{{ gist.demo }}", :target => "_blank"} Demo
@@ -30,6 +30,6 @@ content_type: gists
     .w3-container
       %a{:href => "/list?type=gists"}
         %i.fa.fa-arrow-left.fa-fw>
-        \&#160; Gists list
+        \&#160; Back to the list
   {% include 'footer' %}
 {% endblock %}

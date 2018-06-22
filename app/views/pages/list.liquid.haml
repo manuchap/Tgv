@@ -9,27 +9,46 @@ published: true
   %header.w3-container{:style => "padding-top:22px"}
     .w3-container
       {% case cat %}
+      {% when 'actions' %}
+      {% for action in contents.actions %}
+      %a{:href => "{% path_to action %}?type=action"} {{ action.name }}
+      {{ 'whos' | translate }} {{ action.user.name }}
+      %br
+      %p {{ action.desc | truncatewords: '25' }}
+      %hr
+      {% endfor %}
+      {% when 'apps' %}
+      {% for app in contents.apps %}
+      %a{:href => "{% path_to app %}?type=app"} {{ app.name }}
+      {{ 'whos' | translate }} {{ app.user.name }}
+      %br
+      %br
+      .w3-row
+        .w3-quarter
+          %img{:src => "{{ app.pict.url }}", :style => "min-width: 100px;max-width: 100px"}/
+        .w3-rest
+          %p {{ app.desc | truncatewords: '25' }}
+      %hr
+      {% endfor %}
       {% when 'gists' %}
       {% for gist in contents.gists %}
-      %a{:href => "{% path_to gist %}?type=gist"} {{ gist.name }} {{ 'whos' | translate }} {{ action.user.name }}
+      %a{:href => "{% path_to gist %}?type=gist"} {{ gist.name }}
+      {{ 'whos' | translate }} {{ gist.user.name }}
       %br
-      %p {{ gist.desc }}
+      %p {{ gist.desc | truncatewords: '25' }}
       %br
       {% endfor %}
       {% when 'templates' %}
       {% for template in contents.templates %}
       %a{:href => "{% path_to template %}?type=template"} {{ template.name }}
+      {{ 'whos' | translate }} {{ template.user.name }}
       %br
       %br
-      %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px"}/
-      %p {{ template.desc }}
-      %hr
-      {% endfor %}
-      {% when 'actions' %}
-      {% for action in contents.actions %}
-      %a{:href => "{% path_to action %}?type=action"} {{ action.name }} {{ 'whos' | translate }} {{ action.user.name }}
-      %br
-      %p {{ action.desc }}
+      .w3-row
+        .w3-quarter
+          %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px"}/
+        .w3-rest
+          %p {{ template.desc | truncatewords: '25' }}
       %hr
       {% endfor %}
       {% endcase %}

@@ -1,0 +1,21 @@
+- "Members":
+    url: "https://github.com/manuchap/loco_templates/tree/actions"
+    demo: "http://actions.studiowan.fr"
+    desc: "A simple table to demonstrate actions on models (crud)."
+    pict: "/images/Members.jpg"
+    user: "manuchap"
+
+- "My Locomotive Sites":
+    url: "https://github.com/manuchap/My-Locomotive-Sites"
+    demo: "https://admin.studiowan.fr"
+    desc: "Mini monitoring app for your LocomotiveCMS engine.<br>Clone, fill in Infos tab, have fun."
+    pict: "/images/My-Locomotive-Sites.jpg"
+    user: "manuchap"
+
+- "Agendastudio":
+    url: "https://github.com/manuchap/Agendastudio"
+    demo: "http://agendastudio.studiowan.fr"
+    desc: "A little app for rehearsal studio bookings<br>Contains a news caroussel, bands info, soundcloud player and a contact form."
+    pict: "/images/Agendastudio.jpg"
+    user: "manuchap"
+

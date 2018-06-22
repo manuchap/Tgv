@@ -25,6 +25,7 @@
           Wrong credentials!
         {% endif %}
         .form-group
+          %br
           %label{:for => "auth-email"} Your E-mail
           %input#auth-email.w3-input{:name => "auth_id", :placeholder => "Email", :type => "email", :value => "{{ params.auth_id }}"}/
         .form-group
@@ -32,5 +33,6 @@
           %span
             %a{:href => "{% path_to 'forgot_password' %}"} Forgot your password?
           %input#auth-password.w3-input{:name => "auth_password", :placeholder => "Password", :type => "password", :value => ""}/
-      %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} Sign in
+        %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} Sign in
+      %br
       {% endif %}

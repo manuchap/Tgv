@@ -12,8 +12,8 @@ editable_elements:
 / !PAGE CONTENT!
 .w3-main{:style => "margin-left:300px;margin-top:43px;"}
   / Header
-  %header.w3-container{:style => "padding-top:22px"}
-    %h5 {% editable_text 'welcome' %}{% endeditable_text %}
+  %header.w3-container{:style => "padding-top:12px"}
+    %p {% editable_text 'welcome' %}{% endeditable_text %}
     .w3-card-4
       .w3-display-container.w3-animate-opacity
         %img{:src => "{% editable_file 'photo', hint: 'Photo du site', priority: 0 %}{% endeditable_file %}", :style => "min-width: 100%;max-width: 100%"}/
