@@ -28,7 +28,7 @@ fields:
     hint: A screen grab of your app
     localized: false
 - url:
-    label: Turl
+    label: Url
     type: string
     required: false
     hint: Url to your app's source code

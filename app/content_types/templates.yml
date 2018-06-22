@@ -1,7 +1,7 @@
 name: Templates
 slug: templates
 label_field_name: name
-order_by: updated_at
+order_by: manually
 public_submission_enabled: true
 fields:
 - name:
@@ -28,7 +28,7 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 - url:
-    label: Turl
+    label: Url
     type: string
     required: false
     hint: Explanatory text displayed in the back office
