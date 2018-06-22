@@ -1,7 +1,7 @@
 name: Apps
 slug: apps
 label_field_name: name
-order_by: created_at
+order_by: manually
 public_submission_enabled: true
 fields:
 - name:

@@ -20,8 +20,6 @@ content_type: gists
       %br
     .w3-container
       .w3-bar
-        %button.w3-bar-item.w3-button.w3-green
-          %a{:href => "{{ gist.url }}", :target => "_blank"} Source
         {% if gist.demo %}
         %button.w3-bar-item.w3-button.w3-red
           %a{:href => "{{ gist.demo }}", :target => "_blank"} Demo

@@ -23,8 +23,10 @@ content_type: apps
     .w3-bar
       %button.w3-bar-item.w3-button.w3-green
         %a{:href => "{{ app.url }}", :target => "_blank"} Source
+      {% if app.demo %}
       %button.w3-bar-item.w3-button.w3-red
         %a{:href => "{{ app.demo }}", :target => "_blank"} Demo
+      {% endif %}
   %br
   .w3-container
     %a{:href => "/list?type=apps"}
