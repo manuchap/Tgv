@@ -1,20 +1,3 @@
-- Members:
-    _slug: members
-    name: Members
-    user: manuchap
-    desc: A simple table to demonstrate actions on models (crud).
-    pict: "/samples/content_entries/Members.jpg"
-    url: https://github.com/manuchap/loco_templates/tree/actions
-    demo: http://actions.studiowan.fr
-- My Locomotive Sites:
-    _slug: my-locomotive-sites
-    name: My Locomotive Sites
-    user: manuchap
-    desc: Mini monitoring app for your LocomotiveCMS engine.<br>Clone, fill in Infos
-      tab, have fun.
-    pict: "/samples/content_entries/My-Locomotive-Sites.jpg"
-    url: https://github.com/manuchap/My-Locomotive-Sites
-    demo: https://admin.studiowan.fr
 - Agendastudio:
     _slug: agendastudio
     name: Agendastudio
@@ -24,3 +7,29 @@
     pict: "/samples/content_entries/Agendastudio.jpg"
     url: https://github.com/manuchap/Agendastudio
     demo: http://agendastudio.studiowan.fr
+- Members:
+    _slug: members
+    name: Members
+    user: manuchap
+    desc: A simple table to demonstrate actions on models (crud).
+    pict: "/samples/content_entries/Members.jpg"
+    url: https://github.com/manuchap/loco_templates/tree/actions
+    demo: http://actions.studiowan.fr
+- Wordpress Importer:
+    _slug: wordpress-importer
+    name: Wordpress Importer
+    user: manuchap
+    desc: "<p>Import you old wordpress site into locomotive.<br>No front end except
+      the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
+      soon but was a nice try.</p>"
+    pict: "/samples/content_entries/Wpimport.jpg"
+    url: https://github.com/manuchap/loco_templates/tree/wp-import
+- My Locomotive Sites:
+    _slug: my-locomotive-sites
+    name: My Locomotive Sites
+    user: manuchap
+    desc: Mini monitoring app for your LocomotiveCMS engine.<br>Clone, fill in Infos
+      tab, have fun.
+    pict: "/samples/content_entries/My-Locomotive-Sites.jpg"
+    url: https://github.com/manuchap/My-Locomotive-Sites
+    demo: https://admin.studiowan.fr

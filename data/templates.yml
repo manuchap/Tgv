@@ -1,22 +1,3 @@
-- Cube:
-    _slug: cube
-    name: Cube
-    user: manuchap
-    desc: "Fully editable front page (you'll have to create the other pages \U0001F609)<br>Based
-      on a free html5 template"
-    pict: "/samples/content_entries/Cube.jpg"
-    url: https://github.com/manuchap/Cube
-    demo: https://cube.studiowan.fr
-- LocoF7:
-    _slug: locof7
-    name: LocoF7
-    user: manuchap
-    desc: A Framework7 ready LocomotiveCMS template (ios&android themes)<br>Clone,
-      add a wagon gemfile and serve<br>The demo is a screen recording of wagon running
-      this template.
-    pict: "/samples/content_entries/LocoF7.jpg"
-    url: https://github.com/manuchap/LocoF7
-    demo: http://recordit.co/9CERYWgiYQ
 - W3css:
     _slug: w3css
     name: W3css
@@ -30,3 +11,41 @@
     pict: "/samples/content_entries/W3css.jpg"
     url: https://github.com/manuchap/LocoF7
     demo: http://w3c.studiowan.fr
+- Cube:
+    _slug: cube
+    name: Cube
+    user: manuchap
+    desc: "Fully editable front page (you'll have to create the other pages \U0001F609)<br>Based
+      on a free html5 template"
+    pict: "/samples/content_entries/Cube.jpg"
+    url: https://github.com/manuchap/Cube
+    demo: https://cube.studiowan.fr
+- Webagency:
+    _slug: webagency
+    name: Webagency
+    user: manuchap
+    desc: "<p></p><p>A webagency onepager locomotive template with bootstrap 4.<br>This
+      is my fist attempt to adapt a website created with mobirise to locomotive.<br>Edit
+      site.yml &amp; deploy.yml and push.<br>Multi-lang 100% backend editable.</p><p></p><br><p></p>"
+    pict: "/samples/content_entries/Agency.jpg"
+    url: https://github.com/manuchap/webagency
+    demo: http://agency.studiowan.fr
+- Ecwid:
+    _slug: ecwid
+    name: Ecwid
+    user: manuchap
+    desc: "<p>Simple to use online shop.<br>Ecwid resides outside of Locomotive and
+      is a breeze to implement and use front/back</p>"
+    pict: "/samples/content_entries/Ecwid.jpg"
+    url: https://github.com/manuchap/Ecwid
+    demo: http://ecwid.studiowan.fr
+- LocoF7:
+    _slug: locof7
+    name: LocoF7
+    user: manuchap
+    desc: A Framework7 ready LocomotiveCMS template (ios &amp; android themes)<br>Clone,
+      add a wagon gemfile and serve<br>The demo is a screen recording of wagon running
+      this template.
+    pict: "/samples/content_entries/LocoF7.jpg"
+    url: https://github.com/manuchap/LocoF7
+    demo: http://recordit.co/9CERYWgiYQ
