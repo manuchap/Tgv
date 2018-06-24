@@ -22,10 +22,9 @@ published: true
       %a{:href => "{% path_to app %}?type=app"} {{ app.name }}
       {{ 'whos' | translate }} {{ app.user.name }}
       %br
-      %br
       .w3-row
         .w3-quarter
-          %img{:src => "{{ app.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;"}/
+          %img{:src => "{{ app.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
         .w3-rest
           %p {{ app.desc | truncatewords: '25' }}
       %hr
@@ -43,10 +42,9 @@ published: true
       %a{:href => "{% path_to template %}?type=template"} {{ template.name }}
       {{ 'whos' | translate }} {{ template.user.name }}
       %br
-      %br
       .w3-row
         .w3-quarter
-          %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;"}/
+          %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
         .w3-rest
           %p {{ template.desc | truncatewords: '25' }}
       %hr
@@ -56,12 +54,11 @@ published: true
       %a{:href => "{% path_to video %}?type=video"} {{ video.name }}
       {{ 'whos' | translate }} {{ video.user.name }}
       %br
-      %br
       .w3-row
         .w3-quarter
           {% case video.origin %}
           {% when 'youtube' %}
-          %img{:src => "http://img.youtube.com/vi/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}/sddefault.jpg", :style => "min-width: 100px;max-width: 100px;max-height: 80px;"}/
+          %img{:src => "http://img.youtube.com/vi/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}/sddefault.jpg", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
           {% endcase %}
         .w3-rest
           %p {{ video.desc | truncatewords: '25' }}

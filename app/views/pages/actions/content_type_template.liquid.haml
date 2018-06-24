@@ -17,12 +17,13 @@ content_type: actions
       %p {{ action.desc }}
       .w3-panel.w3-card.w3-light-grey
         .w3-code.jsHigh {{ action.code }}
+    %hr
+    {% if action.demo %}
     .w3-container
       .w3-bar
-        {% if action.demo %}
         %button.w3-bar-item.w3-button.w3-red
           %a{:href => "{{ action.demo }}", :target => "_blank"} Demo
-        {% endif %}
+    {% endif %}
     %br
     .w3-container
       %a{:href => "/list?type=actions"}

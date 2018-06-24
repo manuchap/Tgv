@@ -13,18 +13,16 @@ content_type: gists
   %header.w3-container{:style => "padding-top:22px"}
     .w3-container
       %h5 {{ gist.name }}
-      %br
       %p {{ gist.desc }}
-      %br
       <script src="{{ gist.url }}.js"></script>
-      %br
+      %hr
+    {% if gist.demo %}
     .w3-container
       .w3-bar
-        {% if gist.demo %}
         %button.w3-bar-item.w3-button.w3-red
           %a{:href => "{{ gist.demo }}", :target => "_blank"} Demo
-        {% endif %}
     %br
+    {% endif %}
     .w3-container
       %a{:href => "/list?type=gists"}
         %i.fa.fa-arrow-left.fa-fw>

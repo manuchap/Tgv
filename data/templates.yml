@@ -15,7 +15,7 @@
     _slug: cube
     name: Cube
     user: manuchap
-    desc: "Fully editable front page (you'll have to create the other pages \U0001F609)<br>Based
+    desc: "Fully editable front page.<br>You'll have to create the other pages \U0001F609<br>Based
       on a free html5 template"
     pict: "/samples/content_entries/Cube.jpg"
     url: https://github.com/manuchap/Cube
@@ -26,7 +26,7 @@
     user: manuchap
     desc: "<p></p><p>A webagency onepager locomotive template with bootstrap 4.<br>This
       is my fist attempt to adapt a website created with mobirise to locomotive.<br>Edit
-      site.yml &amp; deploy.yml and push.<br>Multi-lang 100% backend editable.</p><p></p><br><p></p>"
+      site.yml &amp; deploy.yml and push.<br>Multi-lang 100% backend editable.</p>"
     pict: "/samples/content_entries/Agency.jpg"
     url: https://github.com/manuchap/webagency
     demo: http://agency.studiowan.fr
