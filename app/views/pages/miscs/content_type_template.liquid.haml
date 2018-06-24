@@ -1,6 +1,10 @@
 ---
 title: Miscs
 slug: content_type_template
+position: 0
+listed: false
+published: true
+is_layout: false
 content_type: miscs
 ---
 {% extends 'layouts/default' %}
@@ -8,7 +12,7 @@ content_type: miscs
 .w3-main{:style => "margin-left:300px;margin-top:43px;"}
   %header.w3-container{:style => "padding-top:22px"}
     .w3-container
-      %h5 {{ misc.name }}
+      %h3 {{ misc.name }}
       %p  {{ 'whos' | translate }}  {{ misc.user.name }}
       %p {{ misc.desc }}
       .w3-panel.w3-card.w3-light-grey

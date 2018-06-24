@@ -36,7 +36,7 @@ handle: list
       {{ 'whos' | translate }} {{ gist.user.name }}
       %br
       %p {{ gist.desc | truncatewords: '25' }}
-      %br
+      %hr
       {% endfor %}
       {% when 'miscs' %}
       {% for misc in contents.miscs %}
@@ -44,7 +44,7 @@ handle: list
       {{ 'whos' | translate }} {{ misc.user.name }}
       %br
       %p {{ misc.desc | truncatewords: '25' }}
-      %br
+      %hr
       {% endfor %}
       {% when 'templates' %}
       {% for template in contents.templates %}
