@@ -6,9 +6,16 @@
       /apps/members?type=apps">members template</a>.'
     code: '---<br>title: Saving<br>published: true<br>handle: edit_member<br>---<br>%h1
       {{ page.title }}<br>{% capture member %}{{ params.slug }}{% endcapture %}<br>{%
-      action ''editMember'' %}<br>setProp("member", "{{member}}");<br>var params =
+      action ''editMember'' %}<br>setProp(''member'', ''{{member}}'');<br>var params =
       getProp(''params'');<br>var member = getProp(''member'');<br>updateEntry(''members'',
       member, { genre: params.genre, nickname: params.nick, first_name: params.firs,
       last_name: params.last, description: params.desc, avatar: params.avat });<br>redirectTo(''members'');<br>{%
       endaction %}'
     demo: https://actions.studiowan.fr
+
+- Call API:
+    _slug: call-api
+    name: Call API
+    user: manuchap
+    desc: 'Query the restful v3 api and get a json response'
+    code: '---<br>title: Info page<br>response_type: application/json<br>---<br>{% capture token %}{{site.metafields.info.token}}{% endcapture %}<br>{% capture email %}{{site.metafields.info.email}}{% endcapture %}<br>{% capture handle %}{{site.metafields.info.handle}}{% endcapture %}<br>{% action "Call API" %}<br>var token = getProp("token");<br>var email = getProp("email");<br>var handle = getProp("handle");<br>var info = false;<br>info = callAPI(''GET'', ''http://YOURENGINE/locomotive/api/v3/current_site.json'', {<br>  data: {<br>  },<br>  headers: {<br>    ''X-Locomotive-Account-Token'': token,<br>    ''X-Locomotive-Account-Email'': email,<br>    ''X-Locomotive-Site-Handle'': handle<br>  }<br>});<br>setProp(''info'', info);<br>{% endaction %}<br>{% if info %}<br>{{ info | split: \"=>\" | join: \": \" | split: \"nil\" | join: ''\"NULL\"'' }}<br>{% else %}<br>FAILURE!<br>{% endif %}'

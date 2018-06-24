@@ -2,6 +2,7 @@ name: Gists
 slug: gists
 label_field_name: name
 order_by: updated_at
+order_direction: desc
 public_submission_enabled: true
 fields:
 - name:
@@ -20,7 +21,7 @@ fields:
     type: text
     required: false
     hint: A short description of your gist
-    localized: false
+    localized: true
 - url:
     label: Url
     type: string

@@ -5,10 +5,10 @@
       %span.w3-button.w3-red.w3-display-topright
         <a href="#" style="text-decoration: none;" onclick="document.getElementById('signup').style.display='none'"> X</a>
       {% if current_account %}
-      You're already authenticated!
+      {{ 'auth' | translate }}
       {% else %}
       %header.w3-container
-        %h3 Signup
+        %h3 {{ 'siup' | translate }}
       %form.w3-container.w3-card-4{:action => "{% path_to 'sign_up' %}", :method => "POST"}
         %input{:name => "auth_action", :type => "hidden", :value => "sign_up"}/
         %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
@@ -17,28 +17,28 @@
         %input{:name => "auth_email_handle", :type => "hidden", :value => "welcome_message"}/
         %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to me %}"}/
         {% if auth_invalid_entry %}
-        We're sorry, we couldn't create your account.
+        {{ 'sorr' | translate }}
         {% endif %}
-        %label{:for => "auth-name"} Your name
+        %label{:for => "auth-name"} {{ 'name' | translate }}
         %input#auth-name.w3-input{:name => "auth_entry[name]", :type => "text", :value => "{{ auth_entry.name }}"}/
         {% if auth_entry.errors.name.size &gt; 0 %}
         {{ auth_entry.errors.name.first }}
         {% endif %}
-        %label{:for => "auth-email"} Your E-mail
+        %label{:for => "auth-email"} {{ 'mail' | translate }}
         %input#auth-email.w3-input{:name => "auth_entry[email]", :type => "email", :value => "{{ auth_entry.email }}"}/
         {% if auth_entry.errors.email.size &gt; 0 %}
         {{ auth_entry.errors.email.first }}
         {% endif %}
-        %label{:for => "auth-password"} Password
+        %label{:for => "auth-password"} {{ 'pass' | translate }}
         %input#auth-password.w3-input{:name => "auth_entry[password]", :type => "password"}/
         {% if auth_entry.errors.password.size &gt; 0 %}
         {{ auth_entry.errors.password.first }}
         {% endif %}
-        %label{:for => "auth-password"} Password confirmation
+        %label{:for => "auth-password"} {{ 'pasc' | translate }}
         %input#auth-password.w3-input{:name => "auth_entry[password_confirmation]", :type => "password"}/
         {% if auth_entry.errors.password_confirmation.size &gt; 0 %}
         {{ auth_entry.errors.password_confirmation.first }}
         {% endif %}
-        %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} Sign up
+        %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'siup' | translate }}
       %br
       {% endif %}

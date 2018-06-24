@@ -47,8 +47,8 @@ is_layout: true
             {{ 'hello' | translate }},
             %strong {% unless current_account %}{{ 'guest' | translate }}
           %br/
-          <a href="#" onclick="document.getElementById('signup').style.display='block'">Signup</a>
-          <a href="#" onclick="document.getElementById('signin').style.display='block'">Signin</a>{% else %}
+          <a href="#" onclick="document.getElementById('signup').style.display='block'">{{ 'siup' | translate }}</a>
+          <a href="#" onclick="document.getElementById('signin').style.display='block'">{{ 'siin' | translate }}</a>{% else %}
           {{ current_account.name }}
           %br
           %a.w3-bar-item.w3-button{:href => "#"}
@@ -63,31 +63,29 @@ is_layout: true
         %a.w3-bar-item.w3-button.w3-padding-16.w3-hide-large.w3-dark-grey.w3-hover-black{:href => "#", :onclick => "w3_close()", :title => "close menu"}
           %i.fa.fa-remove.fa-fw
           \&#160; Close Menu
-        %a.w3-bar-item.w3-button.w3-padding{:href => "/"}
-          %i.fa.fa-home.fa-fw
-          \&#160; {{ 'home' | translate }}
-        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=actions"}
+        <a class="w3-bar-item w3-button w3-padding" href="{% path_to 'index' %}"><i class="fa fa-home fa-fw"></i>&nbsp; {{ 'home' | translate }}</a>
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=actions"}
           %i.fa.fa-wrench.fa-fw
           \&#160; Actions
           %span.w3-badge.w3-red.w3-small {{ contents.actions.size }}
-        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=apps"}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=apps"}
           %i.fa.fa-cogs.fa-fw
           \&#160; Apps
           %span.w3-badge.w3-red.w3-small {{ contents.apps.size }}
-        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=gists"}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=gists"}
           %i.fa.fa-github.fa-fw
           \&#160; Gists
           %span.w3-badge.w3-red.w3-small {{ contents.gists.size }}
-        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=templates"}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=templates"}
           %i.fa.fa-html5.fa-fw
           \&#160; Templates
           %span.w3-badge.w3-red.w3-small {{ contents.templates.size }}
-        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=videos"}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=videos"}
           %i.fa.fa-youtube-play.fa-fw
           \&#160; Videos
           %span.w3-badge.w3-red.w3-small {{ contents.videos.size }}
         .w3-bar-item
-          %input#search-input.w3-input.w3-right{:placeholder => "Search"}/
+          %input#search-input.w3-input.w3-right{:placeholder => "{{ 'sear' | translate }}"}/
           #hits
           #pagination
           %script#hit-template{:type => "text/html"}

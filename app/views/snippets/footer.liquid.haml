@@ -2,17 +2,17 @@
 
 %footer.w3-container.w3-padding-16.w3-light-grey
   %p.w3-center
-    Pushed by
+    {{ 'push' | translate }} {{ 'whos' | translate }}
     %a{:href => "https://www.locomotivecms.com", :target => "_blank", :style => "text-decoration: none; color: orangered"} LocomotiveCMS
-    in
+    {{ 'time' | translate }}
     %span#speed
     ms
     |
-    Clothed by
+    {{ 'clot' | translate }} {{ 'whos' | translate }}
     %a{:href => "https://www.w3schools.com/w3css/default.asp", :target => "_blank", :style => "text-decoration: none; color: orangered"} W3.css
     |
-    Coded by
+    {{ 'code' | translate }} {{ 'whos' | translate }}
     %a{:href => "https://studiowan.fr", :target => "_blank", :style => "text-decoration: none; color: orangered"} StudioWan
     |
-    We&nbsp;❤️
+    {{ 'weee' | translate }}&nbsp;❤️
     &nbsp;{{ now | localized_date: '%Y' }}

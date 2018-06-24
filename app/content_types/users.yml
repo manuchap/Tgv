@@ -2,6 +2,7 @@ name: Users
 slug: users
 label_field_name: name
 order_by: updated_at
+order_direction: desc
 public_submission_enabled: true
 fields:
 - name:

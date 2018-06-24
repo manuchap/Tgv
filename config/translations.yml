@@ -13,3 +13,63 @@ guest:
 whos:
   en: by
   fr: par
+siin:
+  en: Sign in
+  fr: Connexion
+siup:
+  en: Signup
+  fr: Inscription
+sear:
+  en: Search
+  fr: Chercher
+push:
+  en: Pushed
+  fr: Propulsé
+time:
+  en: in
+  fr: en
+code:
+  en: Coded
+  fr: Codé
+clot:
+  en: Clothed
+  fr: Habillé
+weee:
+  en: We
+  fr: Nous
+sour:
+  en: Source
+  fr: Source
+demo:
+  en: Demo
+  fr: Demo
+back:
+  en: Back to the list
+  fr: Retour à la liste
+wcre:
+  en: Wrong credentials!
+  fr: Mauvais identifiants!
+name:
+  en: Your name
+  fr: Votre nom
+mail:
+  en: Your E-mail
+  fr: Votre E-mail
+pass:
+  en: Password confirmation
+  fr: Mot de passe à nouveau
+pasc:
+  en: Password
+  fr: Mot de passe
+forg:
+  en: Forgot your password?
+  fr: Mot de passe oublié?
+disc:
+  en: You've been disconnected!
+  fr: Vous êtes déconnecté!
+auth:
+  en: You're already authenticated!
+  fr: Vous êtes déjà connecté!
+sorr:
+  en: We're sorry, we couldn't create your account.
+  fr: Votre compte ne peut pas être créé.

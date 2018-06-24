@@ -1,6 +1,6 @@
 ---
 title: Videos
-slug: content_type_video
+slug: content_type_template
 position: 0
 listed: false
 published: true
@@ -22,8 +22,8 @@ content_type: videos
     %hr
   .w3-container
   .w3-container
-    %a{:href => "/list?type=videos"}
+    %a{:href => "{% path_to 'list' %}?type=videos"}
       %i.fa.fa-arrow-left.fa-fw>
-      \&#160; Back to the list
+      \&#160; {{ 'back' | translate }}
   {% include 'footer' %}
 {% endblock %}

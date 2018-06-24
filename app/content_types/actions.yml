@@ -1,7 +1,8 @@
 name: Actions
 slug: actions
 label_field_name: name
-order_by: created_at
+order_by: updated_at
+order_direction: desc
 public_submission_enabled: true
 fields:
 - name:
@@ -20,7 +21,7 @@ fields:
     type: text
     required: false
     hint: A short description of your app
-    localized: false
+    localized: true
 - code:
     label: Code
     type: text

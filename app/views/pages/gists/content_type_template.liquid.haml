@@ -20,12 +20,12 @@ content_type: gists
     .w3-container
       .w3-bar
         %button.w3-bar-item.w3-button.w3-red
-          %a{:href => "{{ gist.demo }}", :target => "_blank"} Demo
+          %a{:href => "{{ gist.demo }}", :target => "_blank"} {{ 'demo' | translate }}
     %br
     {% endif %}
     .w3-container
-      %a{:href => "/list?type=gists"}
+      %a{:href => "{% path_to 'list' %}?type=gists"}
         %i.fa.fa-arrow-left.fa-fw>
-        \&#160; Back to the list
+        \&#160; {{ 'back' | translate }}
   {% include 'footer' %}
 {% endblock %}

@@ -1,5 +1,5 @@
 - "Sample 1":
     desc: "Dolorum aliquam debitis quod facere. Dolores et voluptatem ad sunt. Quasi rerum ut delectus nulla necessitatibus."
     url: "https://www.youtube.com/watch?v=C-9V2TzqtxQ"
-    origin: youtube # Use the value of a select option defined in the app/content_types/Videos.rb file.
+    origin: "youtube"
     user: "manuchap"

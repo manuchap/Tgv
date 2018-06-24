@@ -21,16 +21,16 @@ content_type: apps
     .w3-bar
       {% if app.url %}
       %button.w3-bar-item.w3-button.w3-green
-        %a{:href => "{{ app.url }}", :target => "_blank"} Source
+        %a{:href => "{{ app.url }}", :target => "_blank"} {{ 'sour' | translate }}
       {% endif %}
       {% if app.demo %}
       %button.w3-bar-item.w3-button.w3-red
-        %a{:href => "{{ app.demo }}", :target => "_blank"} Demo
+        %a{:href => "{{ app.demo }}", :target => "_blank"} {{ 'demo' | translate }}
       {% endif %}
   %br
   .w3-container
-    %a{:href => "/list?type=apps"}
+    %a{:href => "{% path_to 'list' %}?type=apps"}
       %i.fa.fa-arrow-left.fa-fw>
-      \&#160; Back to the list
+      \&#160; {{ 'back' | translate }}
   {% include 'footer' %}
 {% endblock %}
