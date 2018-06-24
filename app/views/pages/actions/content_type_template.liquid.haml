@@ -16,7 +16,7 @@ content_type: actions
       %p  {{ 'whos' | translate }}  {{ action.user.name }}
       %p {{ action.desc }}
       .w3-panel.w3-card.w3-light-grey
-        .w3-code.htmlHigh.notranslate {{ action.code }}
+        .w3-code.jsHigh {{ action.code }}
     .w3-container
       .w3-bar
         {% if action.demo %}

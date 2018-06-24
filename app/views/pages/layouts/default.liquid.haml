@@ -82,6 +82,10 @@ is_layout: true
           %i.fa.fa-html5.fa-fw
           \&#160; Templates
           %span.w3-badge.w3-red.w3-small {{ contents.templates.size }}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "/list?type=videos"}
+          %i.fa.fa-youtube-play.fa-fw
+          \&#160; Videos
+          %span.w3-badge.w3-red.w3-small {{ contents.videos.size }}
         .w3-bar-item
           %input#search-input.w3-input.w3-right{:placeholder => "Search"}/
           #hits
