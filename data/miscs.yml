@@ -1,0 +1,35 @@
+- Heroku Gemfile:
+    _slug:
+      en: heroku-gemfile
+      fr: heroku-gemfile
+    name: Heroku Gemfile
+    user: manuchap
+    desc:
+      en: "<p>Working on a Heroku-16 stack with ruby 2.5.1, rails 5.1.5.<br>Served
+        by Passenger 5.1.2</p>"
+      fr: "<p>Working on a Heroku-16 stack with ruby 2.5.1, rails 5.1.5.<br>Served
+        by Passenger 5.1.2</p>"
+    code: <p>source '<a href="https://rubygems.org">https://rubygems.org</a>'<br>if
+      ENV['HEROKU_APP_NAME']<br>&nbsp; ruby '2.5.1'<br>end<br>gem 'rails', '~&gt;
+      5.1.5'<br>gem 'sass-rails', '~&gt; 5.0.4'<br>gem 'uglifier', '&gt;= 2.5.3'<br>gem
+      'coffee-rails', '~&gt; 4.2'<br>gem 'jquery-rails'<br>gem 'turbolinks', '~&gt;
+      5'<br>gem 'jbuilder', '~&gt; 2.0'<br>gem 'puma'<br>gem 'passenger', '5.1.2'<br>gem
+      'carrierwave-aws'<br>gem 'locomotivecms', :git =&gt; '<a href="https://github.com/locomotivecms/engine.git">https://github.com/locomotivecms/engine.git</a>'<br>gem
+      'locomotivecms_search'<br>group :development, :test do<br>&nbsp; gem 'byebug'<br>end<br>group
+      :development do<br>&nbsp; gem 'web-console', '~&gt; 2.0'<br>&nbsp; gem 'spring'<br>end<br>group
+      :production do<br>&nbsp; gem 'rails_12factor'<br>&nbsp; gem 'platform-api'<br>&nbsp;
+      gem 'heroics', '= 0.0.21'<br>end<br>gem 'rack-cors'<br><br></p>
+- S3 bucket cors config:
+    _slug:
+      en: sample-1
+      fr: sample-1
+    name: S3 bucket cors config
+    user: manuchap
+    desc:
+      en: "<p>S3 bucket cors config.<br></p>"
+      fr: "<p>S3 bucket cors config.<br></p>"
+    code: <p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>&lt;CORSConfiguration
+      xmlns="<a href="http://s3.amazonaws.com/doc/2006-03-01/&quot;&gt;">http://s3.amazonaws.com/doc/2006-03-01/"&gt;</a>;<br>&lt;CORSRule&gt;<br>&nbsp;
+      &nbsp; &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;<br>&nbsp;
+      &nbsp; &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;<br>&nbsp;
+      &nbsp; &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;<br>&lt;/CORSRule&gt;<br>&lt;/CORSConfiguration&gt;<br></p>

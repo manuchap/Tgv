@@ -1,18 +1,3 @@
-title:
-  en: 'TGV: Train with Great Velocity'
-  fr: 'TGV: Train à Grande Vitesse'
-home:
-  en: Home
-  fr: Accueil
-hello:
-  en: Hello
-  fr: Bonjour
-guest:
-  en: guest
-  fr: invité
-whos:
-  en: by
-  fr: par
 siin:
   en: Sign in
   fr: Connexion
@@ -28,6 +13,30 @@ push:
 time:
   en: in
   fr: en
+forg:
+  en: Forgot your password?
+  fr: Mot de passe oublié?
+disc:
+  en: You've been disconnected!
+  fr: Vous êtes déconnecté!
+auth:
+  en: You're already authenticated!
+  fr: Vous êtes déjà connecté!
+title:
+  en: 'TGV: Train with Great Velocity'
+  fr: 'TGV: Train à Grande Vitesse'
+home:
+  en: Home
+  fr: Accueil
+hello:
+  en: Hello
+  fr: Bonjour
+guest:
+  en: guest
+  fr: invité
+whos:
+  en: by
+  fr: par
 code:
   en: Coded
   fr: Codé
@@ -61,15 +70,6 @@ pass:
 pasc:
   en: Password
   fr: Mot de passe
-forg:
-  en: Forgot your password?
-  fr: Mot de passe oublié?
-disc:
-  en: You've been disconnected!
-  fr: Vous êtes déconnecté!
-auth:
-  en: You're already authenticated!
-  fr: Vous êtes déjà connecté!
 sorr:
   en: We're sorry, we couldn't create your account.
   fr: Votre compte ne peut pas être créé.

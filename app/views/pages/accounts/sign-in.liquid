@@ -1,0 +1,30 @@
+---
+title: Sign in
+slug: sign-in
+handle: sign_in
+position: 0
+listed: false
+published: true
+is_layout: false
+---
+{% extends 'layouts/default' %}
+{% block main %}
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+  <header class="w3-container" style="padding-top:12px">
+    <form action="{% path_to 'sign_in' %}" method="POST">
+    <input type="hidden" name="auth_action" value="sign_in" />
+    <input type="hidden" name="auth_content_type" value="users" />
+    <input type="hidden" name="auth_id_field" value="email" />
+    <input type="hidden" name="auth_password_field" value="password" />
+    <input type="hidden" name="auth_callback" value="{% path_to me %}" />
+    {% if auth_wrong_credentials %}Wrong credentials!{% endif %}
+    <label for="auth-email">Your E-mail</label>
+    <input type="email" class="form-control" id="auth-email" placeholder="Email" name="auth_id" value="{{ params.auth_id }}">
+    <label for="auth-password">Password</label>
+    <input type="password" class="form-control" id="auth-password" placeholder="Password" name="auth_password" value="">
+    <button type="submit">Sign in</button>
+    </form>
+  </header>
+  {% include 'footer' %}
+</div>
+{% endblock %}

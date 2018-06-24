@@ -1,0 +1,30 @@
+name: Miscs
+slug: miscs
+label_field_name: name
+order_by: updated_at
+order_direction: desc
+public_submission_enabled: true
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Name of your action
+    localized: false
+- user:
+    label: User
+    hint: The misc's creator
+    type: belongs_to
+    class_name: users
+- desc:
+    label: Desc
+    type: text
+    required: false
+    hint: A short description of your thing
+    localized: true
+- code:
+    label: Code
+    type: text
+    required: false
+    hint: Paste you misc code here (in editor mode)
+    localized: false

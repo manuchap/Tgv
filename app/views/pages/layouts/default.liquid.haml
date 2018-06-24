@@ -76,6 +76,10 @@ is_layout: true
           %i.fa.fa-github.fa-fw
           \&#160; Gists
           %span.w3-badge.w3-red.w3-small {{ contents.gists.size }}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=miscs"}
+          %i.fa.fa-file.fa-fw
+          \&#160; Miscs
+          %span.w3-badge.w3-red.w3-small {{ contents.miscs.size }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=templates"}
           %i.fa.fa-html5.fa-fw
           \&#160; Templates

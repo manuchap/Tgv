@@ -38,6 +38,14 @@ handle: list
       %p {{ gist.desc | truncatewords: '25' }}
       %br
       {% endfor %}
+      {% when 'miscs' %}
+      {% for misc in contents.miscs %}
+      %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
+      {{ 'whos' | translate }} {{ misc.user.name }}
+      %br
+      %p {{ misc.desc | truncatewords: '25' }}
+      %br
+      {% endfor %}
       {% when 'templates' %}
       {% for template in contents.templates %}
       %a{:href => "{% path_to template %}?type=template"} {{ template.name }}

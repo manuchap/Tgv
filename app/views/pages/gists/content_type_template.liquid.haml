@@ -27,5 +27,6 @@ content_type: gists
       %a{:href => "{% path_to 'list' %}?type=gists"}
         %i.fa.fa-arrow-left.fa-fw>
         \&#160; {{ 'back' | translate }}
+    {% include 'comments' %}
   {% include 'footer' %}
 {% endblock %}
