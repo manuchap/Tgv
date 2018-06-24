@@ -16,7 +16,7 @@
         %h3 {{ 'siin' | translate }}
       %form.w3-container.w3-card-4{:action => "{% path_to 'sign_in' %}", :method => "POST"}
         %input{:name => "auth_action", :type => "hidden", :value => "sign_in"}/
-        %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
+        %input{:name => "auth_content_type", :type => "hidden", :value => "users"}/
         %input{:name => "auth_id_field", :type => "hidden", :value => "email"}/
         %input{:name => "auth_password_field", :type => "hidden", :value => "password"}/
         %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to me %}"}/

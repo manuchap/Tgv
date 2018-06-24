@@ -6,3 +6,4 @@
     _slug: john
     name: John
     email: john@locomotivecms.com
+    password: 'easyone'
