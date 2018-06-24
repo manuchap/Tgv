@@ -1,6 +1,13 @@
 - FAQ Export:
-    _slug: faq-export
+    _slug:
+      en: faq-export
+      fr: faq-export
     name: FAQ Export
     user: manuchap
-    desc: Export FAQ entries to Algolia.
+    desc:
+      en: Export FAQ entries to Algolia (forked from<span class="Apple-converted-space">&nbsp;</span><a
+        href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).
+      fr: 'Exporter les entrées FAQ vers Algolia (fork de<span class="Apple-converted-space">&nbsp;</span><a
+        href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183"
+        title="Link: https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).<br>'
     url: https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db

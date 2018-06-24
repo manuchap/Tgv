@@ -1,35 +1,58 @@
-- Agendastudio:
-    _slug: agendastudio
-    name: Agendastudio
-    user: manuchap
-    desc: A little app for rehearsal studio bookings<br>Contains a news caroussel,
-      bands info, soundcloud player and a contact form.
-    pict: "/samples/content_entries/Agendastudio.jpg"
-    url: https://github.com/manuchap/Agendastudio
-    demo: http://agendastudio.studiowan.fr
 - Members:
-    _slug: members
+    _slug:
+      en: members
+      fr: members
     name: Members
     user: manuchap
-    desc: A simple table to demonstrate actions on models (crud).
+    desc:
+      en: A simple table to demonstrate <a target="_blank" href="https://locomotive-v3.readme.io/v3.4/docs/introduction"
+        title="Locomotive actions dov">actions</a> in Locomotive.
+      fr: Un simple tableau pour comprendre les <a target="_blank" href="https://locomotive-v3.readme.io/v3.4/docs/introduction"
+        title="Locomotive actions doc">actions</a> dans Locomotive.
     pict: "/samples/content_entries/Members.jpg"
     url: https://github.com/manuchap/loco_templates/tree/actions
     demo: http://actions.studiowan.fr
-- Wordpress Importer:
-    _slug: wordpress-importer
-    name: Wordpress Importer
-    user: manuchap
-    desc: "<p>Import you old wordpress site into locomotive.<br>No front end except
-      the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
-      soon but was a nice try.</p>"
-    pict: "/samples/content_entries/Wpimport.jpg"
-    url: https://github.com/manuchap/loco_templates/tree/wp-import
 - My Locomotive Sites:
-    _slug: my-locomotive-sites
+    _slug:
+      en: my-locomotive-sites
+      fr: my-locomotive-sites
     name: My Locomotive Sites
     user: manuchap
-    desc: Mini monitoring app for your LocomotiveCMS engine.<br>Clone, fill in Infos
-      tab, have fun.
+    desc:
+      en: Mini monitoring app for your LocomotiveCMS engine.<br>Clone, fill in Infos
+        tab, have fun.
+      fr: Mini appli de monitoring de votre engine.<br>Clonez, remplissez le tab infos,
+        surveillez!
     pict: "/samples/content_entries/My-Locomotive-Sites.jpg"
     url: https://github.com/manuchap/My-Locomotive-Sites
     demo: https://admin.studiowan.fr
+- Wordpress Importer:
+    _slug:
+      en: wordpress-importer
+      fr: wordpress-importer
+    name: Wordpress Importer
+    user: manuchap
+    desc:
+      en: "<p>Import you old wordpress site into locomotive.<br>No front end except
+        the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
+        soon but was a nice try.</p>"
+      fr: "<p>Importez votre viex wordpress dans locomotive.<br>Pas de frontend à
+        part l'importateur.<br>Aspirez votre blog et synchronisez!<br>Projet temporairement
+        abandonné.</p>"
+    pict: "/samples/content_entries/Wpimport.jpg"
+    url: https://github.com/manuchap/loco_templates/tree/wp-import
+- Agendastudio:
+    _slug:
+      en: agendastudio
+      fr: agendastudio
+    name: Agendastudio
+    user: manuchap
+    desc:
+      en: A little app for rehearsal studio bookings.<br>Contains a news caroussel,
+        bands info, beautiful soundcloud player and a contact form.
+      fr: Une petite app pour réserver un local de répèt'.<br>Inclue une page d'accueil/news
+        sous forme de caroussel, un onglet groupes avec un player soundcloud customizé
+        et un formulaire de contact.
+    pict: "/samples/content_entries/Agendastudio.jpg"
+    url: https://github.com/manuchap/Agendastudio
+    demo: http://agendastudio.studiowan.fr

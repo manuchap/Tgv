@@ -1,51 +1,88 @@
 - W3css:
-    _slug: w3css
+    _slug:
+      en: w3css
+      fr: w3css
     name: W3css
     user: manuchap
-    desc: 'Smaller and faster than any other CSS frameworks.<br>Easier to learn, and
-      easier to use than any other CSS frameworks.<br>Better cross-browser compatibility
-      than any other CSS frameworks.<br>Uses standard CSS only (No jQuery or JavaScript
-      library).<br>Supports modern responsive mobile first design by default.<br>Provides
-      CSS equality for all browsers: Chrome, Firefox, Edge, IE, Safari, Opera, ...<br>Provides
-      CSS equality for all devices: desktop, laptop, tablet, and mobile.'
+    desc:
+      en: 'Smaller and faster than any other CSS frameworks.<br>Easier to learn, and
+        easier to use than any other CSS frameworks.<br>Better cross-browser compatibility
+        than any other CSS frameworks.<br>Uses standard CSS only (No jQuery or JavaScript
+        library).<br>Supports modern responsive mobile first design by default.<br>Provides
+        CSS equality for all browsers: Chrome, Firefox, Edge, IE, Safari, Opera, ...<br>Provides
+        CSS equality for all devices: desktop, laptop, tablet, and mobile.'
+      fr: 'Plus petit et plus rapide que tous les autres frameworks CSS.<br>Plus facile
+        à apprendre et plus facile à utiliser que n''importe quel autre framework
+        CSS.<br>Meilleure compatibilité avec tous les navigateurs que tout autre framework
+        CSS<br>Utilise les standards CSS&nbsp;uniquement (Pas de bibliothèque jQuery
+        ou JavaScript).<br>Supporte par défaut le design mobile first responsive moderne.<br>
+        Fournit&nbsp;l''égalité CSS pour tous les navigateurs: Chrome, Firefox, Edge,
+        IE, Safari, Opera, ...<br>Fournit l''égalité CSS pour tous les périphériques:
+        ordinateur de bureau, ordinateur portable, tablette et mobile.<br>'
     pict: "/samples/content_entries/W3css.jpg"
-    url: https://github.com/manuchap/LocoF7
+    url: https://www.w3schools.com/w3css/default.asp
     demo: http://w3c.studiowan.fr
+- Ecwid:
+    _slug:
+      en: ecwid
+      fr: ecwid
+    name: Ecwid
+    user: manuchap
+    desc:
+      en: "<p>Simple to use online shop.<br>Ecwid resides outside of Locomotive and
+        is a breeze to implement and use front/back.</p>"
+      fr: "<p>Boutique en ligne simple.<br>Ecwid réside en dehors de Locomotive et
+        est très simple à utiliser et implémenter.</p>"
+    pict: "/samples/content_entries/Ecwid.jpg"
+    url: https://github.com/manuchap/Ecwid
+    demo: http://ecwid.studiowan.fr
 - Cube:
-    _slug: cube
+    _slug:
+      en: cube
+      fr: cube
     name: Cube
     user: manuchap
-    desc: "Fully editable front page.<br>You'll have to create the other pages \U0001F609<br>Based
-      on a free html5 template"
+    desc:
+      en: "Fully editable front page.<br>You'll have to create the other pages \U0001F609<br>Based
+        on a <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">free
+        html5 template</a>."
+      fr: "Page unique totalement éditable.<br>Les autres pages sont à créer \U0001F609.<br>Basé
+        sur un <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">template
+        html5 open source</a>.<div><br></div>"
     pict: "/samples/content_entries/Cube.jpg"
     url: https://github.com/manuchap/Cube
     demo: https://cube.studiowan.fr
 - Webagency:
-    _slug: webagency
+    _slug:
+      en: webagency
+      fr: webagency
     name: Webagency
     user: manuchap
-    desc: "<p></p><p>A webagency onepager locomotive template with bootstrap 4.<br>This
-      is my fist attempt to adapt a website created with mobirise to locomotive.<br>Edit
-      site.yml &amp; deploy.yml and push.<br>Multi-lang 100% backend editable.</p>"
+    desc:
+      en: <p></p><p>A webagency onepager locomotive template with Bootstrap 4.<br>This
+        is my fist attempt to adapt a website created with <a target="_blank" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwiEyqywp-zbAhUBzxQKHeYjBL0QFggoMAA&amp;url=https%3A%2F%2Fmobirise.com%2Ffr%2F&amp;usg=AOvVaw2Xvy1T_rqyUUfjhaAyHkPK"
+        title="Mobirise">Mobirise</a> to Locomotive.<br>Edit site.yml &amp; deploy.yml
+        and push.<br>Multi-lang 100% backend editable.</p>
+      fr: <p></p><p>Un onepage pour une agence utilisant Bootstrap 4.<br>Premier essai
+        d'adaptations d'un site créé avec <a target="_blank" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwiEyqywp-zbAhUBzxQKHeYjBL0QFggoMAA&amp;url=https%3A%2F%2Fmobirise.com%2Ffr%2F&amp;usg=AOvVaw2Xvy1T_rqyUUfjhaAyHkPK"
+        title="Mobirise">Mobirise</a> vers Locomotive.<br>Editez les fichiers site.yml
+        &amp; deploy.yml et déployez.<br>Multi-langues 100% éditable.</p>
     pict: "/samples/content_entries/Agency.jpg"
     url: https://github.com/manuchap/webagency
     demo: http://agency.studiowan.fr
-- Ecwid:
-    _slug: ecwid
-    name: Ecwid
-    user: manuchap
-    desc: "<p>Simple to use online shop.<br>Ecwid resides outside of Locomotive and
-      is a breeze to implement and use front/back</p>"
-    pict: "/samples/content_entries/Ecwid.jpg"
-    url: https://github.com/manuchap/Ecwid
-    demo: http://ecwid.studiowan.fr
 - LocoF7:
-    _slug: locof7
+    _slug:
+      en: locof7
+      fr: locof7
     name: LocoF7
     user: manuchap
-    desc: A Framework7 ready LocomotiveCMS template (ios &amp; android themes)<br>Clone,
-      add a wagon gemfile and serve<br>The demo is a screen recording of wagon running
-      this template.
+    desc:
+      en: A Framework7 ready LocomotiveCMS template (ios &amp; android themes)<br>Clone,
+        add a wagon gemfile and serve<br>The demo is a screen recording of wagon running
+        this template.
+      fr: Le template Framework7 pour Locomotive (thèmes ios &amp; android)<br>Cloner,
+        ajouter le Gemfile et servir.<br>La démo est une vidéo de wagon servant ce
+        template.
     pict: "/samples/content_entries/LocoF7.jpg"
     url: https://github.com/manuchap/LocoF7
     demo: http://recordit.co/9CERYWgiYQ
