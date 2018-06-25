@@ -22,6 +22,21 @@ fields:
     required: false
     hint: A short description of your thing
     localized: true
+- type:
+    label: Type
+    type: select
+    required: false
+    hint: Type of snippet
+    localized: true
+    select_options:
+      en:
+      - Config
+      - Gemfile
+      - System
+      fr:
+      - Config
+      - Gemfile
+      - Système
 - code:
     label: Code
     type: text

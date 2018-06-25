@@ -14,7 +14,7 @@ content_type: templates
   .w3-container
     %h3 {{ template.name }}
     %p {{ template.desc }}
-    %img{:src => "{{ template.pict.url }}", :style => "max-width: 100%"}/
+    %img.w3-card{:src => "{{ template.pict.url }}", :style => "max-width: 100%"}/
     %br
     %hr
   .w3-container
@@ -23,10 +23,11 @@ content_type: templates
         %a{:href => "{{ template.url }}", :target => "_blank"} {{ 'sour' | translate }}
       %button.w3-bar-item.w3-button.w3-red
         %a{:href => "{{ template.demo }}", :target => "_blank"} {{ 'demo' | translate }}
-  %br
+    %br
   .w3-container
     %a{:href => "{% path_to 'list' %}?type=templates"}
       %i.fa.fa-arrow-left.fa-fw>
       \&#160; {{ 'back' | translate }}
-    {% include 'comments' %}
+  {% include 'comments' %}
+  {% include 'footer' %}
 {% endblock %}

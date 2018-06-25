@@ -9,6 +9,9 @@
         by Passenger 5.1.2</p>"
       fr: "<p>Working on a Heroku-16 stack with ruby 2.5.1, rails 5.1.5.<br>Served
         by Passenger 5.1.2</p>"
+    type:
+      en: Gemfile
+      fr: Gemfile
     code: <p>source '<a href="https://rubygems.org">https://rubygems.org</a>'<br>if
       ENV['HEROKU_APP_NAME']<br>&nbsp; ruby '2.5.1'<br>end<br>gem 'rails', '~&gt;
       5.1.5'<br>gem 'sass-rails', '~&gt; 5.0.4'<br>gem 'uglifier', '&gt;= 2.5.3'<br>gem

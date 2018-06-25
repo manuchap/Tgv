@@ -80,6 +80,17 @@ is_layout: true
           %i.fa.fa-file.fa-fw
           \&#160; Miscs
           %span.w3-badge.w3-red.w3-small {{ contents.miscs.size }}
+        {% if fullpath contains 'miscs' %}
+        %form.w3-container.w3-margin-left
+          %input#milk.w3-check{:checked => "checked", :type => "checkbox"}/
+          %label Config
+          %br/
+          %input#sugar.w3-check{:checked => "checked", :type => "checkbox"}/
+          %label Gemfile
+          %br/
+          %input#lemon.w3-check{:checked => "checked", :type => "checkbox"}/
+          %label System
+        {% endif %}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=templates"}
           %i.fa.fa-html5.fa-fw
           \&#160; Templates
@@ -103,7 +114,6 @@ is_layout: true
             <p class="hit-description">{{{_highlightResult.description.value}}}</p>
             </div>
             </div>
-        %br/
         %br/
     / Overlay effect when opening sidebar on small screens
     #myOverlay.w3-overlay.w3-hide-large.w3-animate-opacity{:onclick => "w3_close()", :style => "cursor:pointer", :title => "close side menu"}

@@ -16,17 +16,10 @@ content_type: gists
       %p {{ gist.desc }}
       <script src="{{ gist.url }}.js"></script>
       %hr
-    {% if gist.demo %}
-    .w3-container
-      .w3-bar
-        %button.w3-bar-item.w3-button.w3-red
-          %a{:href => "{{ gist.demo }}", :target => "_blank"} {{ 'demo' | translate }}
-    %br
-    {% endif %}
     .w3-container
       %a{:href => "{% path_to 'list' %}?type=gists"}
         %i.fa.fa-arrow-left.fa-fw>
         \&#160; {{ 'back' | translate }}
-    {% include 'comments' %}
+  {% include 'comments' %}
   {% include 'footer' %}
 {% endblock %}

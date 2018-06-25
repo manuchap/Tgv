@@ -36,4 +36,3 @@
       nickname: params.nick, first_name: params.firs, last_name: params.last, description:
       params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction
       %}"
-    demo: https://actions.studiowan.fr

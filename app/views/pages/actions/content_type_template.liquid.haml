@@ -17,14 +17,7 @@ content_type: actions
       %p {{ action.desc }}
       .w3-panel.w3-card.w3-light-grey
         .w3-code.jsHigh.notranslate {{ action.code }}
-    %hr
-    {% if action.demo %}
-    .w3-container
-      .w3-bar
-        %button.w3-bar-item.w3-button.w3-red
-          %a{:href => "{{ action.demo }}", :target => "_blank"} {{ 'demo' | translate }}
-    {% endif %}
-    %br
+      %hr
     .w3-container
       %a{:href => "{% path_to 'list' %}?type=actions"}
         %i.fa.fa-arrow-left.fa-fw>
@@ -32,6 +25,6 @@ content_type: actions
     %script{:src => "https://www.w3schools.com/lib/w3codecolor.js"}
     :javascript
       w3CodeColor();
-    {% include 'comments' %}
+  {% include 'comments' %}
   {% include 'footer' %}
 {% endblock %}

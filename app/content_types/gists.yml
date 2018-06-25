@@ -28,9 +28,3 @@ fields:
     required: false
     hint: Your gist's url
     localized: false
-- demo:
-    label: Demo
-    type: string
-    required: false
-    hint: Optional link to a demo
-    localized: false

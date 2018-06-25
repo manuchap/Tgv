@@ -14,8 +14,7 @@ content_type: apps
     .w3-container
       %h3 {{ app.name }}
       %p {{ app.desc }}
-      %img{:src => "{{ app.pict.url }}", :style => "max-width: 100%"}/
-      %br
+      %img.w3-card{:src => "{{ app.pict.url }}", :style => "max-width: 100%"}/
       %hr
     .w3-container
       .w3-bar
@@ -27,11 +26,11 @@ content_type: apps
         %button.w3-bar-item.w3-button.w3-red
           %a{:href => "{{ app.demo }}", :target => "_blank"} {{ 'demo' | translate }}
         {% endif %}
-    %br
+      %br
     .w3-container
       %a{:href => "{% path_to 'list' %}?type=apps"}
         %i.fa.fa-arrow-left.fa-fw>
         \&#160; {{ 'back' | translate }}
-    {% include 'comments' %}
+  {% include 'comments' %}
   {% include 'footer' %}
 {% endblock %}
