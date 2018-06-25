@@ -1,29 +1,41 @@
-var search = instantsearch({
-  appId: 'RAVDOBYAM2',
-  apiKey: '46b0543d9035689b9aedb89a8e8ea65a',
-  indexName: 'dev_tgv',
-  urlSync: true,
-  searchParameters: {
-    hitsPerPage: 10
-  }
-});
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '#search-input'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '#hits',
-    templates: {
-      item: document.getElementById('hit-template').innerHTML,
-      empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
-    }
-  })
-);
-search.addWidget(
-  instantsearch.widgets.pagination({
-    container: '#pagination'
-  })
-);
-// search.start();
+function toggleConf() {
+  document.getElementById("conf").onchange = function() {
+    var x = document.getElementsByClassName("conf");
+    if (document.getElementById("conf").checked === true) {
+      var i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
+      }
+    } else for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+  };
+}
+
+function toggleGemf() {
+  document.getElementById("gemf").onchange = function() {
+    var x = document.getElementsByClassName("gemf");
+    if (document.getElementById("gemf").checked === true) {
+      var i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
+      }
+    } else for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+  };
+}
+
+function toggleSyst() {
+  document.getElementById("syst").onchange = function() {
+    var x = document.getElementsByClassName("syst");
+    if (document.getElementById("syst").checked === true) {
+      var i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
+      }
+    } else for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+  };
+}

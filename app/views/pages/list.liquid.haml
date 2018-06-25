@@ -40,11 +40,32 @@ handle: list
       {% endfor %}
       {% when 'miscs' %}
       {% for misc in contents.miscs %}
-      %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
-      {{ 'whos' | translate }} {{ misc.user.name }}
-      %br
-      %p {{ misc.desc | truncatewords: '25' }}
-      %hr
+      {% case misc.type %}
+      {% when 'Config' %}
+      .w3-container.conf{:style => 'display: block'}
+        %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
+        %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
+        {{ 'whos' | translate }} {{ misc.user.name }}
+        %br
+        %p {{ misc.desc | truncatewords: '25' }}
+        %hr
+      {% when 'Gemfile' %}
+      .w3-container.gemf{:style => 'display: block'}
+        %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
+        %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
+        {{ 'whos' | translate }} {{ misc.user.name }}
+        %br
+        %p {{ misc.desc | truncatewords: '25' }}
+        %hr
+      {% when 'System' %}
+      .w3-container.syst{:style => 'display: block'}
+        %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
+        %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
+        {{ 'whos' | translate }} {{ misc.user.name }}
+        %br
+        %p {{ misc.desc | truncatewords: '25' }}
+        %hr
+      {% endcase %}
       {% endfor %}
       {% when 'templates' %}
       {% for template in contents.templates %}

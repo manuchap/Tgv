@@ -9,9 +9,7 @@
         by Passenger 5.1.2</p>"
       fr: "<p>Working on a Heroku-16 stack with ruby 2.5.1, rails 5.1.5.<br>Served
         by Passenger 5.1.2</p>"
-    type:
-      en: Gemfile
-      fr: Gemfile
+    type: Gemfile
     code: <p>source '<a href="https://rubygems.org">https://rubygems.org</a>'<br>if
       ENV['HEROKU_APP_NAME']<br>&nbsp; ruby '2.5.1'<br>end<br>gem 'rails', '~&gt;
       5.1.5'<br>gem 'sass-rails', '~&gt; 5.0.4'<br>gem 'uglifier', '&gt;= 2.5.3'<br>gem
@@ -22,15 +20,16 @@
       :development do<br>&nbsp; gem 'web-console', '~&gt; 2.0'<br>&nbsp; gem 'spring'<br>end<br>group
       :production do<br>&nbsp; gem 'rails_12factor'<br>&nbsp; gem 'platform-api'<br>&nbsp;
       gem 'heroics', '= 0.0.21'<br>end<br>gem 'rack-cors'<br><br></p>
-- S3 bucket cors config:
+- S3 bucket cors Config:
     _slug:
-      en: sample-1
-      fr: sample-1
-    name: S3 bucket cors config
+      en: s3-bucket-cors-config
+      fr: s3-bucket-cors-config
+    name: S3 bucket cors Config
     user: manuchap
+    type: Config
     desc:
-      en: "<p>S3 bucket cors config.<br></p>"
-      fr: "<p>S3 bucket cors config.<br></p>"
+      en: "<p>S3 bucket cors config necessary to edit images as stated in the <a href=\"https://locomotive-v3.readme.io/v3.4/docs/heroku\" target=\"_blank\">docs</a>.</p>"
+      fr: "<p>S3 bucket cors config necessaire au redimensionnement des images comme indiqué dans la <a href=\"https://locomotive-v3.readme.io/v3.4/docs/heroku\" target=\"_blank\">doc</a>.</p>"
     code: <p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>&lt;CORSConfiguration
       xmlns="<a href="http://s3.amazonaws.com/doc/2006-03-01/&quot;&gt;">http://s3.amazonaws.com/doc/2006-03-01/"&gt;</a>;<br>&lt;CORSRule&gt;<br>&nbsp;
       &nbsp; &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;<br>&nbsp;

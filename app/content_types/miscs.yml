@@ -27,16 +27,11 @@ fields:
     type: select
     required: false
     hint: Type of snippet
-    localized: true
+    localized: false
     select_options:
-      en:
       - Config
       - Gemfile
       - System
-      fr:
-      - Config
-      - Gemfile
-      - Système
 - code:
     label: Code
     type: text

@@ -82,13 +82,13 @@ is_layout: true
           %span.w3-badge.w3-red.w3-small {{ contents.miscs.size }}
         {% if fullpath contains 'miscs' %}
         %form.w3-container.w3-margin-left
-          %input#milk.w3-check{:checked => "checked", :type => "checkbox"}/
+          %input#conf.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleConf()"}/
           %label Config
           %br/
-          %input#sugar.w3-check{:checked => "checked", :type => "checkbox"}/
+          %input#gemf.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleGemf()"}/
           %label Gemfile
           %br/
-          %input#lemon.w3-check{:checked => "checked", :type => "checkbox"}/
+          %input#syst.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleSyst()"}/
           %label System
         {% endif %}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=templates"}
@@ -144,7 +144,8 @@ is_layout: true
           mySidebar.style.display = "none";
           overlayBg.style.display = "none";
       }
+    {{ 'app' | javascript_tag }}
     {% if fullpath contains 'search' %}
     {{ 'instantsearch.min' | javascript_tag }}
-    {{ 'app' | javascript_tag }}
+    {{ 'search' | javascript_tag }}
     {% endif %}
