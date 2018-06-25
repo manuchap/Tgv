@@ -19,8 +19,14 @@
     name: My Locomotive Sites
     user: manuchap
     desc:
-      en: Mini monitoring app for your LocomotiveCMS engine.<br>The index page contains only logic (liquid) instructions.<br>All of the markup is in the template and snippets.<br>This can be an interresting workflow when it comes to pushing you code.
-      fr: Mini appli de monitoring de votre engine.<br>La page index ne contient que de la logique (liquid).<br>Le markup est dans le template et les snippets, ce qui peut être un flux de travail interressant lorsqu'il s'agit de déployer votre code.
+      en: Mini monitoring app for your LocomotiveCMS engine.<br>The index page contains
+        only logic (liquid) instructions.<br>All of the markup is in the template
+        and snippets.<br>This can be an interresting workflow when it comes to pushing
+        you code.
+      fr: Mini appli de monitoring de votre engine.<br>La page index ne contient que
+        de la logique (liquid).<br>Le markup est dans le template et les snippets,
+        ce qui peut être un flux de travail interressant lorsqu'il s'agit de déployer
+        votre code.
     pict: "/samples/content_entries/My-Locomotive-Sites.jpg"
     url: https://github.com/manuchap/My-Locomotive-Sites
     demo: https://admin.studiowan.fr
