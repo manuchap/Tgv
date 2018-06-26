@@ -18,12 +18,6 @@ is_layout: true
       html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       hr {border-top: 1px solid #f70000;}
   %body.w3-light-grey
-    %script{:language => "JavaScript"}
-      var renderStart = new Date().getTime();
-      window.onload=function() {
-      var elapsed = new Date().getTime()-renderStart;
-      document.getElementById("speed").innerHTML = elapsed;
-      }
     / Top container
     .w3-bar.w3-top.w3-black.w3-large{:style => "z-index:4"}
       %button.w3-bar-item.w3-button.w3-hide-large.w3-hover-none.w3-hover-text-light-grey{:onclick => "w3_open();"}
@@ -50,7 +44,7 @@ is_layout: true
           <a href="#" onclick="document.getElementById('signup').style.display='block'">{{ 'siup' | translate }}</a>
           <a href="#" onclick="document.getElementById('signin').style.display='block'">{{ 'siin' | translate }}</a>{% else %}
           {{ current_account.name }}
-          %br
+          %br/
           %a.w3-bar-item.w3-button{:href => "#"}
             %i.fa.fa-envelope
           %a.w3-bar-item.w3-button{:href => "#"}
@@ -121,29 +115,6 @@ is_layout: true
     {% endblock %}
     {% include 'modal_signup' %}
     {% include 'modal_signin' %}
-    :javascript
-      // Get the Sidebar
-      var mySidebar = document.getElementById("mySidebar");
-
-      // Get the DIV with overlay effect
-      var overlayBg = document.getElementById("myOverlay");
-
-      // Toggle between showing and hiding the sidebar, and add overlay effect
-      function w3_open() {
-          if (mySidebar.style.display === 'block') {
-              mySidebar.style.display = 'none';
-              overlayBg.style.display = "none";
-          } else {
-              mySidebar.style.display = 'block';
-              overlayBg.style.display = "block";
-          }
-      }
-
-      // Close the sidebar with the close button
-      function w3_close() {
-          mySidebar.style.display = "none";
-          overlayBg.style.display = "none";
-      }
     {{ 'app' | javascript_tag }}
     {% if fullpath contains 'search' %}
     {{ 'instantsearch.min' | javascript_tag }}
