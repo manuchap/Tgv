@@ -13,7 +13,7 @@ handle: list
       {% when 'actions' %}
       {% for action in contents.actions %}
       %a{:href => "{% path_to action %}?type=action"} {{ action.name }}
-      {{ 'whos' | translate }} {{ action.user.name }}
+      {{ 'whos' | translate }} {{ action.account.name }}
       %br
       %p {{ action.desc | truncatewords: '25' }}
       %hr
@@ -21,7 +21,7 @@ handle: list
       {% when 'apps' %}
       {% for app in contents.apps %}
       %a{:href => "{% path_to app %}?type=app"} {{ app.name }}
-      {{ 'whos' | translate }} {{ app.user.name }}
+      {{ 'whos' | translate }} {{ app.account.name }}
       %br
       .w3-row
         .w3-quarter
@@ -33,7 +33,7 @@ handle: list
       {% when 'gists' %}
       {% for gist in contents.gists %}
       %a{:href => "{% path_to gist %}?type=gist"} {{ gist.name }}
-      {{ 'whos' | translate }} {{ gist.user.name }}
+      {{ 'whos' | translate }} {{ gist.account.name }}
       %br
       %p {{ gist.desc | truncatewords: '25' }}
       %hr
@@ -45,7 +45,7 @@ handle: list
       .w3-container.conf{:style => 'display: block'}
         %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
         %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
-        {{ 'whos' | translate }} {{ misc.user.name }}
+        {{ 'whos' | translate }} {{ misc.account.name }}
         %br
         %p {{ misc.desc | truncatewords: '25' }}
         %hr
@@ -53,7 +53,7 @@ handle: list
       .w3-container.gemf{:style => 'display: block'}
         %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
         %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
-        {{ 'whos' | translate }} {{ misc.user.name }}
+        {{ 'whos' | translate }} {{ misc.account.name }}
         %br
         %p {{ misc.desc | truncatewords: '25' }}
         %hr
@@ -61,7 +61,7 @@ handle: list
       .w3-container.syst{:style => 'display: block'}
         %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
         %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
-        {{ 'whos' | translate }} {{ misc.user.name }}
+        {{ 'whos' | translate }} {{ misc.account.name }}
         %br
         %p {{ misc.desc | truncatewords: '25' }}
         %hr
@@ -70,7 +70,7 @@ handle: list
       {% when 'templates' %}
       {% for template in contents.templates %}
       %a{:href => "{% path_to template %}?type=template"} {{ template.name }}
-      {{ 'whos' | translate }} {{ template.user.name }}
+      {{ 'whos' | translate }} {{ template.account.name }}
       %br
       .w3-row
         .w3-quarter
@@ -82,7 +82,7 @@ handle: list
       {% when 'videos' %}
       {% for video in contents.videos %}
       %a{:href => "{% path_to video %}?type=video"} {{ video.name }}
-      {{ 'whos' | translate }} {{ video.user.name }}
+      {{ 'whos' | translate }} {{ video.account.name }}
       %br
       .w3-row
         .w3-quarter

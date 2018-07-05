@@ -12,7 +12,7 @@ content_type: actions
 .w3-main{:style => "margin-left:300px;margin-top:43px;"}
   .w3-container{:style => "padding-top:22px"}
     %h3 {{ action.name }}
-    %p  {{ 'whos' | translate }}  {{ action.user.name }}
+    %p  {{ 'whos' | translate }}  {{ action.account.name }}
     %p {{ action.desc }}
     .w3-panel.w3-card.w3-light-grey
       .w3-code.jsHigh.notranslate {{ action.code }}

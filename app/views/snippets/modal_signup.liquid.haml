@@ -1,4 +1,4 @@
-/ Signup Modal
+ƒ/ Signup Modal
 #signup.w3-modal.w3-animate-zoom
   .w3-modal-content
     .w3-container
@@ -11,7 +11,7 @@
         %h3 {{ 'siup' | translate }}
       %form.w3-container.w3-card-4{:action => "{% path_to 'sign_up' %}", :method => "POST"}
         %input{:name => "auth_action", :type => "hidden", :value => "sign_up"}/
-        %input{:name => "auth_content_type", :type => "hidden", :value => "users"}/
+        %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
         %input{:name => "auth_id_field", :type => "hidden", :value => "email"}/
         %input{:name => "auth_password_field", :type => "hidden", :value => "password"}/
         %input{:name => "auth_email_handle", :type => "hidden", :value => "welcome_message"}/
