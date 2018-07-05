@@ -3,8 +3,8 @@ title: Home page
 published: true
 handle: index
 editable_elements:
-  main/welcome: 'Welcome to the #1 LocomotiveCMS ressources website.<br>Signup or
-    signin to upload your ressources and share them with the world.'
+  main/welcome: 'Welcome to the #1 LocomotiveCMS ressources website.<br><strong>Signup</strong> or
+    <strong>signin</strong> to upload your ressources and share them with the world.'
   main/photo: "/samples/pages/tgv.jpg"
   main/overlay: It's&nbsp;coming...
   main/legend: "Either stick your ear to the rails or just use the menu on the left
@@ -23,7 +23,6 @@ editable_elements:
         .w3-display-middle.w3-text-white.w3-jumbo {% editable_text 'overlay', format: 'raw', rows: 1 %}{% endeditable_text %}
         .w3-container.w3-display-bottomright.w3-text-white.w3-large
     %p {% editable_text 'legend', format: 'raw', rows: 2 %}{% endeditable_text %}
-
   {% include 'footer' %}
   / End page content
 {% endblock %}

@@ -56,11 +56,11 @@ mail:
   en: Your E-mail
   fr: Votre E-mail
 pass:
-  en: Password confirmation
-  fr: Mot de passe à nouveau
-pasc:
   en: Password
   fr: Mot de passe
+pasc:
+  en: Password confirmation
+  fr: Mot de passe à nouveau
 forg:
   en: Forgot your password?
   fr: Mot de passe oublié?
