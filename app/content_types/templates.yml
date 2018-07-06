@@ -11,11 +11,11 @@ fields:
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
-- user:
-    label: User
+- account:
+    label: Account
     hint: A description of the relationship for the editors
     type: belongs_to
-    class_name: users
+    class_name: accounts
 - desc:
     label: Desc
     type: text

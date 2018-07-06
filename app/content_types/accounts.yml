@@ -24,9 +24,11 @@ fields:
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
+- avatar:
     label: Avatar
     type: file
     required: false
+    hint: Explanatory text displayed in the back office
     localized: false
 - actions:
     label: Actions

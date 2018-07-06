@@ -3,7 +3,7 @@
       en: members
       fr: members
     name: Members
-    user: manuchap
+    account: manuchap
     desc:
       en: A simple table to demonstrate <a target="_blank" href="https://locomotive-v3.readme.io/v3.4/docs/introduction"
         title="Locomotive actions dov">actions</a> in Locomotive.
@@ -17,7 +17,7 @@
       en: my-locomotive-sites
       fr: my-locomotive-sites
     name: My Locomotive Sites
-    user: manuchap
+    account: manuchap
     desc:
       en: Mini monitoring app for your LocomotiveCMS engine.<br>The index page contains
         only logic (liquid) instructions.<br>All of the markup is in the template
@@ -30,12 +30,12 @@
     pict: "/samples/content_entries/My-Locomotive-Sites.jpg"
     url: https://github.com/manuchap/My-Locomotive-Sites
     demo: https://admin.studiowan.fr
-- Wordpress Importer:
+- Wordpress Consumer:
     _slug:
-      en: wordpress-importer
-      fr: wordpress-importer
-    name: Wordpress Importer
-    user: manuchap
+      en: wordpress-Consumer
+      fr: wordpress-Consumer
+    name: Wordpress Consumer
+    account: manuchap
     desc:
       en: "<p>Import you old wordpress site into locomotive.<br>No front end except
         the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
@@ -50,7 +50,7 @@
       en: agendastudio
       fr: agendastudio
     name: Agendastudio
-    user: manuchap
+    account: manuchap
     desc:
       en: A little app for rehearsal studio bookings.<br>Contains a news caroussel,
         bands info, beautiful soundcloud player and a contact form.

@@ -10,6 +10,24 @@ hello:
 guest:
   en: guest
   fr: invité
+come:
+  en: It's&nbsp;coming...
+  fr: Il&nbsp;arrive...
+boar:
+  en: Welcome&nbsp;aboard!
+  fr: Bienvenue&nbsp;à&nbsp;bord!
+wel1:
+  en: "Welcome to the #1 LocomotiveCMS ressources website."
+  fr: "Bienvenue sur le site #1 de ressources pour LocomotiveCMS."
+wel2:
+  en: <strong>Signup</strong> or <strong>signin</strong> to upload your ressources and share them with the world.
+  fr: <strong>Incrivez vous</strong> ou <strong>connectez vous</strong> pour partager vos ressources avec le monde.
+wel3:
+  en: <strong>Thank you!</strong> You can now access your account and start sharing.
+  fr: <strong>Incrivez vous</strong> ou <strong>connectez</strong> vous pour partager vos ressources avec le monde.
+haha:
+  en: "Either stick your ear to the rails or just use the menu on the left \U0001F913."
+  fr: "Collez votre oreille sur les rails ou utilisez le menu de gauche \U0001F913."
 whos:
   en: by
   fr: par
@@ -19,6 +37,9 @@ siin:
 siup:
   en: Signup
   fr: Inscription
+subm:
+  en: Submit
+  fr: Envoyer
 sear:
   en: Search
   fr: Chercher
@@ -46,9 +67,15 @@ demo:
 back:
   en: Back to the list
   fr: Retour à la liste
+bksi:
+  en: Go back to the sign in page
+  fr: Retour à la connexion
 wcre:
   en: Wrong credentials!
   fr: Mauvais identifiants!
+wmai:
+  en: Wrong email!
+  fr: Mauvais email!
 name:
   en: Your name
   fr: Votre nom
@@ -73,3 +100,6 @@ auth:
 sorr:
   en: We're sorry, we couldn't create your account.
   fr: Votre compte ne peut pas être créé.
+sent:
+  en: The instructions for changing your password have been emailed to you.
+  fr: Les instructions de changement de mot de passe vous ont été envoyées.

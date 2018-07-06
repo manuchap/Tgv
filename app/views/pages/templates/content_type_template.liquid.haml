@@ -9,24 +9,20 @@ content_type: templates
 ---
 {% extends 'layouts/default' %}
 {% block 'main' %}
-.w3-main{:style => "margin-left:300px;margin-top:43px;"}
-  .w3-container{:style => "padding-top:22px"}
-    %h3 {{ template.name }}
-    %p {{ template.desc }}
-    %img.w3-card{:src => "{{ template.pict.url }}", :style => "max-width: 100%"}/
-    %br
-    %hr
-  .w3-container
-    .w3-bar
-      %button.w3-bar-item.w3-button.w3-green
-        %a{:href => "{{ template.url }}", :target => "_blank"} {{ 'sour' | translate }}
-      %button.w3-bar-item.w3-button.w3-red
-        %a{:href => "{{ template.demo }}", :target => "_blank"} {{ 'demo' | translate }}
-    %br
-  .w3-container
-    %a{:href => "{% path_to 'list' %}?type=templates"}
-      %i.fa.fa-arrow-left.fa-fw>
-      \&#160; {{ 'back' | translate }}
-  {% include 'comments' %}
-  {% include 'footer' %}
+%h3 {{ template.name }}
+%p {{ template.desc }}
+%img.w3-card{:src => "{{ template.pict.url }}", :style => "max-width: 100%"}/
+%br
+%hr
+.w3-container
+  .w3-bar
+    %button.w3-bar-item.w3-button.w3-green
+      %a{:href => "{{ template.url }}", :target => "_blank"} {{ 'sour' | translate }}
+    %button.w3-bar-item.w3-button.w3-red
+      %a{:href => "{{ template.demo }}", :target => "_blank"} {{ 'demo' | translate }}
+  %br
+.w3-container
+  %a{:href => "{% path_to 'list' %}?type=templates"}
+    %i.fa.fa-arrow-left.fa-fw>
+    \&#160; {{ 'back' | translate }}
 {% endblock %}

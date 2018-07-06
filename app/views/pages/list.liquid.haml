@@ -6,94 +6,91 @@ handle: list
 {% capture 'cat' %}{{ params.type }}{% endcapture %}
 {% extends 'layouts/default' %}
 {% block 'main' %}
-.w3-main{:style => "margin-left:300px;margin-top:43px;"}
-  %header.w3-container{:style => "padding-top:22px"}
-    .w3-container
-      {% case cat %}
-      {% when 'actions' %}
-      {% for action in contents.actions %}
-      %a{:href => "{% path_to action %}?type=action"} {{ action.name }}
-      {{ 'whos' | translate }} {{ action.account.name }}
-      %br
-      %p {{ action.desc | truncatewords: '25' }}
-      %hr
-      {% endfor %}
-      {% when 'apps' %}
-      {% for app in contents.apps %}
-      %a{:href => "{% path_to app %}?type=app"} {{ app.name }}
-      {{ 'whos' | translate }} {{ app.account.name }}
-      %br
-      .w3-row
-        .w3-quarter
-          %img{:src => "{{ app.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
-        .w3-rest
-          %p {{ app.desc | truncatewords: '25' }}
-      %hr
-      {% endfor %}
-      {% when 'gists' %}
-      {% for gist in contents.gists %}
-      %a{:href => "{% path_to gist %}?type=gist"} {{ gist.name }}
-      {{ 'whos' | translate }} {{ gist.account.name }}
-      %br
-      %p {{ gist.desc | truncatewords: '25' }}
-      %hr
-      {% endfor %}
-      {% when 'miscs' %}
-      {% for misc in contents.miscs %}
-      {% case misc.type %}
-      {% when 'Config' %}
-      .w3-container.conf{:style => 'display: block'}
-        %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
-        %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
-        {{ 'whos' | translate }} {{ misc.account.name }}
-        %br
-        %p {{ misc.desc | truncatewords: '25' }}
-        %hr
-      {% when 'Gemfile' %}
-      .w3-container.gemf{:style => 'display: block'}
-        %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
-        %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
-        {{ 'whos' | translate }} {{ misc.account.name }}
-        %br
-        %p {{ misc.desc | truncatewords: '25' }}
-        %hr
-      {% when 'System' %}
-      .w3-container.syst{:style => 'display: block'}
-        %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
-        %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
-        {{ 'whos' | translate }} {{ misc.account.name }}
-        %br
-        %p {{ misc.desc | truncatewords: '25' }}
-        %hr
+.w3-container
+  {% case cat %}
+  {% when 'actions' %}
+  {% for action in contents.actions %}
+  %a{:href => "{% path_to action %}?type=action"} {{ action.name }}
+  {{ 'whos' | translate }} {{ action.account.name }}
+  %br
+  %p {{ action.desc | truncatewords: '25' }}
+  %hr
+  {% endfor %}
+  {% when 'apps' %}
+  {% for app in contents.apps %}
+  %a{:href => "{% path_to app %}?type=app"} {{ app.name }}
+  {{ 'whos' | translate }} {{ app.account.name }}
+  %br
+  .w3-row
+    .w3-quarter
+      %img{:src => "{{ app.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
+    .w3-threequarter
+      %p {{ app.desc | truncatewords: '25' }}
+  %hr
+  {% endfor %}
+  {% when 'gists' %}
+  {% for gist in contents.gists %}
+  %a{:href => "{% path_to gist %}?type=gist"} {{ gist.name }}
+  {{ 'whos' | translate }} {{ gist.account.name }}
+  %br
+  %p {{ gist.desc | truncatewords: '25' }}
+  %hr
+  {% endfor %}
+  {% when 'miscs' %}
+  {% for misc in contents.miscs %}
+  {% case misc.type %}
+  {% when 'Config' %}
+  .w3-container.conf{:style => 'display: block'}
+    %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
+    %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
+    {{ 'whos' | translate }} {{ misc.account.name }}
+    %br
+    %p {{ misc.desc | truncatewords: '25' }}
+    %hr
+  {% when 'Gemfile' %}
+  .w3-container.gemf{:style => 'display: block'}
+    %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
+    %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
+    {{ 'whos' | translate }} {{ misc.account.name }}
+    %br
+    %p {{ misc.desc | truncatewords: '25' }}
+    %hr
+  {% when 'System' %}
+  .w3-container.syst{:style => 'display: block'}
+    %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
+    %a{:href => "{% path_to misc %}?type=misc"} {{ misc.name }}
+    {{ 'whos' | translate }} {{ misc.account.name }}
+    %br
+    %p {{ misc.desc | truncatewords: '25' }}
+    %hr
+  {% endcase %}
+  {% endfor %}
+  {% when 'templates' %}
+  {% for template in contents.templates %}
+  %a{:href => "{% path_to template %}?type=template"} {{ template.name }}
+  {{ 'whos' | translate }} {{ template.account.name }}
+  %br
+  .w3-row
+    .w3-quarter
+      %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
+    .w3-threequarter
+      %p {{ template.desc | truncatewords: '25' }}
+  %hr
+  {% endfor %}
+  {% when 'videos' %}
+  {% for video in contents.videos %}
+  %a{:href => "{% path_to video %}?type=video"} {{ video.name }}
+  {{ 'whos' | translate }} {{ video.account.name }}
+  %br
+  .w3-row
+    .w3-quarter
+      {% case video.origin %}
+      {% when 'youtube' %}
+      %img{:src => "http://img.youtube.com/vi/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}/sddefault.jpg", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
       {% endcase %}
-      {% endfor %}
-      {% when 'templates' %}
-      {% for template in contents.templates %}
-      %a{:href => "{% path_to template %}?type=template"} {{ template.name }}
-      {{ 'whos' | translate }} {{ template.account.name }}
-      %br
-      .w3-row
-        .w3-quarter
-          %img{:src => "{{ template.pict.url }}", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
-        .w3-rest
-          %p {{ template.desc | truncatewords: '25' }}
-      %hr
-      {% endfor %}
-      {% when 'videos' %}
-      {% for video in contents.videos %}
-      %a{:href => "{% path_to video %}?type=video"} {{ video.name }}
-      {{ 'whos' | translate }} {{ video.account.name }}
-      %br
-      .w3-row
-        .w3-quarter
-          {% case video.origin %}
-          {% when 'youtube' %}
-          %img{:src => "http://img.youtube.com/vi/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}/sddefault.jpg", :style => "min-width: 100px;max-width: 100px;max-height: 80px;margin-top:1em;"}/
-          {% endcase %}
-        .w3-rest
-          %p {{ video.desc | truncatewords: '25' }}
-      %hr
-      {% endfor %}
-      {% endcase %}
-  {% include 'footer' %}
+    .w3-threequarter
+      %p {{ video.desc | truncatewords: '25' }}
+  %hr
+  {% endfor %}
+  {% endcase %}
 {% endblock %}

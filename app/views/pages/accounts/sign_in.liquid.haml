@@ -9,28 +9,25 @@ is_layout: false
 ---
 {% extends 'layouts/default' %}
 {% block main %}
-.w3-main.w3-container{:style => "margin-left:300px;margin-top:43px;"}
-  %header{:style => "padding-top:12px"}
-  %form.w3-container.w3-card-4{:action => "{% path_to 'sign_in' %}", :method => "POST"}
-    %input{:name => "auth_action", :type => "hidden", :value => "sign_in"}/
-    %input{:name => "auth_content_type", :type => "hidden", :value => "users"}/
-    %input{:name => "auth_id_field", :type => "hidden", :value => "email"}/
-    %input{:name => "auth_password_field", :type => "hidden", :value => "password"}/
-    %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to me %}"}/
-    {% if auth_wrong_credentials %}
-    .alert.alert-warning
-      %h2.w3-center.w3-red {{ 'wcre' | translate }}
-    {% endif %}
-    .form-group
-      %br
-      %label{:for => "auth-email"} {{ 'mail' | translate }}
-      %input#auth-email.w3-input{:name => "auth_id", :placeholder => "{{ 'mail' | translate }}", :type => "email", :value => "{{ params.auth_id }}"}/
-    .form-group
-      %label{:for => "auth-password"} {{ 'pass' | translate }}
-      %span
-        %a{:href => "{% path_to 'forgot_password' %}"} {{ 'forg' | translate }}
-      %input#auth-password.w3-input{:name => "auth_password", :placeholder => "{{ 'pass' | translate }}", :type => "password", :value => ""}/
-    %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'siin' | translate }}
-  %br
-  {% include 'footer' %}
+%form.w3-container.w3-card-4{:action => "{% path_to 'sign_in' %}", :method => "POST"}
+  %input{:name => "auth_action", :type => "hidden", :value => "sign_in"}/
+  %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
+  %input{:name => "auth_id_field", :type => "hidden", :value => "email"}/
+  %input{:name => "auth_password_field", :type => "hidden", :value => "password"}/
+  %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to me %}"}/
+  {% if auth_wrong_credentials %}
+  .alert.alert-warning
+    %h2.w3-center.w3-red {{ 'wcre' | translate }}
+  {% endif %}
+  .form-group
+    %br
+    %label{:for => "auth-email"} {{ 'mail' | translate }}
+    %input#auth-email.w3-input{:name => "auth_id", :placeholder => "{{ 'mail' | translate }}", :type => "email", :value => "{{ params.auth_id }}"}/
+  .form-group
+    %label{:for => "auth-password"} {{ 'pass' | translate }}
+    %span
+      %a{:href => "{% path_to 'forgot_password' %}"} {{ 'forg' | translate }}
+    %input#auth-password.w3-input{:name => "auth_password", :placeholder => "{{ 'pass' | translate }}", :type => "password", :value => ""}/
+  %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'siin' | translate }}
+%br
 {% endblock %}

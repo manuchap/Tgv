@@ -10,21 +10,17 @@ content_type: miscs
 {% capture account %}{{ misc.account.name | downcase }}{% endcapture %}
 {% extends 'layouts/default' %}
 {% block 'main' %}
-.w3-main{:style => "margin-left:300px;margin-top:43px;"}
-  .w3-container{:style => "padding-top:22px"}
-    %span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
-    %h3 {{ misc.name }}
-    %p {{ 'whos' | translate }} <a href="#">{{ misc.account.name }}</a>
-    %p {{ misc.desc }}
-    .w3-panel.w3-card.w3-light-grey
-      .w3-code.jsHigh.notranslate {{ misc.code }}
-    %hr
-  .w3-container
-    %a{:href => "{% path_to 'list' %}?type=miscs"}
-      %i.fa.fa-arrow-left.fa-fw>
-      \&#160; {{ 'back' | translate }}
-  {% include 'comments' %}
-  {% include 'footer' %}
+%span.w3-tag.w3-round-large.w3-red.w3-center.w3-right {{ misc.type }}
+%h3 {{ misc.name }}
+%p {{ 'whos' | translate }} <a href="#">{{ misc.account.name }}</a>
+%p {{ misc.desc }}
+.w3-panel.w3-card.w3-light-grey
+  .w3-code.jsHigh.notranslate {{ misc.code }}
+%hr
+.w3-container
+  %a{:href => "{% path_to 'list' %}?type=miscs"}
+    %i.fa.fa-arrow-left.fa-fw>
+    \&#160; {{ 'back' | translate }}
 %script{:src => "https://www.w3schools.com/lib/w3codecolor.js"}
 :javascript
   w3CodeColor();

@@ -3,7 +3,6 @@ title: Page not found
 slug: 404
 published: true
 ---
-{% extends 'layouts/default' %}
-{% block 'main' %}
-%h5 Page not found
-{% endblock %}
+{% action 'Redirection' %}
+redirectTo('index');
+{% endaction %}

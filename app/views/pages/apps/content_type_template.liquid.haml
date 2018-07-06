@@ -9,27 +9,23 @@ content_type: apps
 ---
 {% extends 'layouts/default' %}
 {% block 'main' %}
-.w3-main{:style => "margin-left:300px;margin-top:43px;"}
-  .w3-container{:style => "padding-top:22px"}
-    %h3 {{ app.name }}
-    %p {{ app.desc }}
-    %img.w3-card{:src => "{{ app.pict.url }}", :style => "max-width: 100%"}/
-    %hr
-  .w3-container
-    .w3-bar
-      {% if app.url %}
-      %button.w3-bar-item.w3-button.w3-green
-        %a{:href => "{{ app.url }}", :target => "_blank"} {{ 'sour' | translate }}
-      {% endif %}
-      {% if app.demo %}
-      %button.w3-bar-item.w3-button.w3-red
-        %a{:href => "{{ app.demo }}", :target => "_blank"} {{ 'demo' | translate }}
-      {% endif %}
-    %br
-  .w3-container
-    %a{:href => "{% path_to 'list' %}?type=apps"}
-      %i.fa.fa-arrow-left.fa-fw>
-      \&#160; {{ 'back' | translate }}
-  {% include 'comments' %}
-  {% include 'footer' %}
+%h3 {{ app.name }}
+%p {{ app.desc }}
+%img.w3-card{:src => "{{ app.pict.url }}", :style => "max-width: 100%"}/
+%hr
+.w3-container
+  .w3-bar
+    {% if app.url %}
+    %button.w3-bar-item.w3-button.w3-green
+      %a{:href => "{{ app.url }}", :target => "_blank"} {{ 'sour' | translate }}
+    {% endif %}
+    {% if app.demo %}
+    %button.w3-bar-item.w3-button.w3-red
+      %a{:href => "{{ app.demo }}", :target => "_blank"} {{ 'demo' | translate }}
+    {% endif %}
+  %br
+.w3-container
+  %a{:href => "{% path_to 'list' %}?type=apps"}
+    %i.fa.fa-arrow-left.fa-fw>
+    \&#160; {{ 'back' | translate }}
 {% endblock %}

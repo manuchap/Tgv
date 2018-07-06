@@ -3,7 +3,7 @@
       en: w3css
       fr: w3css
     name: W3css
-    user: manuchap
+    account: manuchap
     desc:
       en: 'Smaller and faster than any other CSS frameworks.<br>Easier to learn, and
         easier to use than any other CSS frameworks.<br>Better cross-browser compatibility
@@ -27,7 +27,7 @@
       en: ecwid
       fr: ecwid
     name: Ecwid
-    user: manuchap
+    account: manuchap
     desc:
       en: "<p>Simple to use online shop.<br>Ecwid resides outside of Locomotive and
         is a breeze to implement and use front/back.</p>"
@@ -41,7 +41,7 @@
       en: cube
       fr: cube
     name: Cube
-    user: manuchap
+    account: manuchap
     desc:
       en: "Fully editable front page.<br>You'll have to create the other pages \U0001F609<br>Based
         on a <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">free
@@ -57,7 +57,7 @@
       en: webagency
       fr: webagency
     name: Webagency
-    user: manuchap
+    account: manuchap
     desc:
       en: <p></p><p>A webagency onepager locomotive template with Bootstrap 4.<br>This
         is my fist attempt to adapt a website created with <a target="_blank" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwiEyqywp-zbAhUBzxQKHeYjBL0QFggoMAA&amp;url=https%3A%2F%2Fmobirise.com%2Ffr%2F&amp;usg=AOvVaw2Xvy1T_rqyUUfjhaAyHkPK"
@@ -75,7 +75,7 @@
       en: locof7
       fr: locof7
     name: LocoF7
-    user: manuchap
+    account: manuchap
     desc:
       en: A Framework7 ready LocomotiveCMS template (ios &amp; android themes)<br>Clone,
         add a wagon gemfile and serve<br>The demo is a screen recording of wagon running

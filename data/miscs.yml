@@ -3,7 +3,7 @@
       en: my-zshrc
       fr: my-zshrc
     name: My .zshrc
-    user: manuchap
+    account: manuchap
     desc:
       en: <p>This is my&nbsp;.zshrc file since I'm usin zsh as my shell interpretor.<br>It
         mostly consists in coloring stuff, giving me info about the dir I'm in and
@@ -36,7 +36,7 @@
       en: heroku-gemfile
       fr: heroku-gemfile
     name: Heroku Gemfile
-    user: manuchap
+    account: manuchap
     desc:
       en: "<p>Working on a Heroku-16 stack with ruby 2.5.1, rails 5.1.5.<br>Served
         by Passenger 5.1.2</p>"
@@ -59,7 +59,7 @@
       en: s3-bucket-cors-config
       fr: s3-bucket-cors-config
     name: S3 bucket cors Config
-    user: manuchap
+    account: manuchap
     desc:
       en: <p>S3 bucket cors config necessary to edit images as stated in the <a target="_blank"
         href="https://locomotive-v3.readme.io/v3.4/docs/heroku">docs</a>.</p>

@@ -11,11 +11,11 @@ fields:
     required: true
     hint: Name of your video
     localized: false
-- user:
-    label: User
+- account:
+    label: Account
     hint: Creator of the video
     type: belongs_to
-    class_name: users
+    class_name: accounts
 - desc:
     label: Desc
     type: text

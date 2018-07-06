@@ -5,4 +5,5 @@
 - "Manuchap":
     _slug: manuchap
     email: manuchap@gmail.com
+    password: 'iliketrains'
     avatar: "/samples/content_entries/bugz.png"

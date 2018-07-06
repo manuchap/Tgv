@@ -19,7 +19,7 @@
         %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
         %input{:name => "auth_id_field", :type => "hidden", :value => "email"}/
         %input{:name => "auth_password_field", :type => "hidden", :value => "password"}/
-        %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to me %}"}/
+        %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to index %}"}/
         {% if auth_wrong_credentials %}
         .alert.alert-warning
           {{ 'wcre' | translate }}

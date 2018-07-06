@@ -11,11 +11,11 @@ fields:
     required: true
     hint: Name of your action
     localized: false
-- user:
-    label: User
+- account:
+    label: Account
     hint: The misc's creator
     type: belongs_to
-    class_name: users
+    class_name: accounts
 - desc:
     label: Desc
     type: text

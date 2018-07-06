@@ -1,10 +1,3 @@
-// Rendertime
-var renderStart = new Date().getTime();
-window.onload=function() {
-var elapsed = new Date().getTime()-renderStart;
-document.getElementById("speed").innerHTML = elapsed;
-};
-
 // Sidebar
 var mySidebar = document.getElementById("mySidebar");
 var overlayBg = document.getElementById("myOverlay");
@@ -33,3 +26,11 @@ function toggleGeneric(element) {
   else
     for (e = 0; e < n.length; e++) n[e].style.display = "none";
 }
+
+// Rendertime
+var renderStart = new Date().getTime();
+window.onload=function() {
+var elapsed = new Date().getTime()-renderStart;
+document.getElementById("speed").innerHTML = elapsed;
+};
+

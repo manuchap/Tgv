@@ -35,22 +35,17 @@ is_layout: true
       %br/
       .w3-container.w3-row
         .w3-col.s4
-          %img.w3-circle.w3-margin-right{:src => "{{ 'avatar.png' | theme_image_url }}", :style => "width:46px"}/
+          %img.w3-circle.w3-margin-right{:src => "{% unless current_account %}{{ 'avatar.png' | theme_image_url }}{% else %}{{ current_account.avatar.url }}{% endunless %}", :style => "width:46px"}/
         .w3-col.s8.w3-bar
           %span
-            {{ 'hello' | translate }},
-            %strong {% unless current_account %}{{ 'guest' | translate }}
+            {{ 'hello' | translate }}, {% unless current_account %}<b>{{ 'guest' | translate }}</b>
           %br/
           <a href="#" onclick="document.getElementById('signup').style.display='block'">{{ 'siup' | translate }}</a>
-          <a href="#" onclick="document.getElementById('signin').style.display='block'">{{ 'siin' | translate }}</a>{% else %}
-          {{ current_account.name }}
+          <a href="#" onclick="document.getElementById('signin').style.display='block'">{{ 'siin' | translate }}</a>
+          {% else %}
+          <b>{{ current_account.name }}</b>
           %br/
-          %a.w3-bar-item.w3-button{:href => "#"}
-            %i.fa.fa-envelope
-          %a.w3-bar-item.w3-button{:href => "#"}
-            %i.fa.fa-user
-          %a.w3-bar-item.w3-button{:href => "#"}
-            %i.fa.fa-cog
+          %a{:href => "{% path_to me %}"} Your account
           {% endunless %}
       %hr/
       .w3-bar-block
@@ -111,12 +106,20 @@ is_layout: true
         %br/
     / Overlay effect when opening sidebar on small screens
     #myOverlay.w3-overlay.w3-hide-large.w3-animate-opacity{:onclick => "w3_close()", :style => "cursor:pointer", :title => "close side menu"}
-    {% block 'main' %}
-    {% endblock %}
-    {% include 'modal_signup' %}
-    {% include 'modal_signin' %}
-    {{ 'app' | javascript_tag }}
-    {% if fullpath contains 'search' %}
-    {{ 'instantsearch.min' | javascript_tag }}
-    {{ 'search' | javascript_tag }}
+    .w3-main.w3-container{:style => "margin-left:300px;margin-top:43px;"}
+      %header{:style => "padding-top:14px"}
+      / !PAGE CONTENT!
+      {% block 'main' %}
+      {% endblock %}
+      / End page content
+      {% if page.depth == 2 and params.type %}
+      {% include 'comments' %}
+      {% endif %}
+      {% include 'footer' %}
+      {% include 'modal_signup' %}
+      {% include 'modal_signin' %}
+      {{ 'app' | javascript_tag }}
+      {% if fullpath contains 'search' %}
+      {{ 'instantsearch.min' | javascript_tag }}
+      {{ 'search' | javascript_tag }}
     {% endif %}

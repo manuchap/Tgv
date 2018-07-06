@@ -3,7 +3,7 @@
       en: call-api
       fr: call-api
     name: Call API
-    user: manuchap
+    account: manuchap
     desc:
       en: Query the restful v3 api and get a json response.
       fr: Envoyer un requête sur l'API V3 et obtenir une répons en Json.
@@ -23,7 +23,7 @@
       en: edit-member
       fr: edit-member
     name: Edit member
-    user: manuchap
+    account: manuchap
     desc:
       en: 'Action used to edit a member on the <a href="/apps/members?type=apps" title="Link:
         /apps/members?type=apps">Members</a>&nbsp;app.'
