@@ -24,7 +24,7 @@ fields:
 - ip:
     label: ip
     type: string
-    required: true
+    required: false
     localized: false
 - avatar:
     label: Avatar
