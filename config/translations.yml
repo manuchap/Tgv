@@ -148,3 +148,6 @@ iman:
 reco:
   en: to recover them.
   fr: pour les récupérer
+warn:
+  en: (your ip's being recorded, abusers will be banned.)
+  fr: (votre ip est enregistrée, tout abus sera banni)

@@ -9,26 +9,27 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
     localized: false
 - email:
     label: Email
     type: email
     required: true
     unique: true
-    hint: Explanatory text displayed in the back office
     localized: false
 - password:
     label: Password
     type: password
     required: false
-    hint: Explanatory text displayed in the back office
+    localized: false
+- ip:
+    label: ip
+    type: string
+    required: true
     localized: false
 - avatar:
     label: Avatar
     type: file
     required: false
-    hint: Explanatory text displayed in the back office
     localized: false
 - actions:
     label: Actions
