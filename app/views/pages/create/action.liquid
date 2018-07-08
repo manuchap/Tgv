@@ -1,0 +1,10 @@
+---
+title: CreateAction
+published: true
+handle: create_action
+---
+{% action 'createAction' %}
+var params = getProp('params');
+createEntry('actions', { name: params.name, desc: params.desc, code: params.code, account_id: params.account });
+redirectTo('me');
+{% endaction %}

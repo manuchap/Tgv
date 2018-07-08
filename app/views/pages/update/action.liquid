@@ -1,0 +1,10 @@
+---
+title: UpdateAction
+published: true
+handle: update_action
+---
+{% action 'updateAction' %}
+var params = getProp('params');
+updateEntry('actions', params.name, { name: params.name, desc: params.desc, code: params.code, account_id: params.account });
+redirectTo('me');
+{% endaction %}

@@ -3,11 +3,10 @@ title: List
 published: true
 handle: list
 ---
-{% capture 'cat' %}{{ params.type }}{% endcapture %}
 {% extends 'layouts/default' %}
 {% block 'main' %}
 .w3-container
-  {% case cat %}
+  {% case params.type %}
   {% when 'actions' %}
   {% for action in contents.actions %}
   %a{:href => "{% path_to action %}?type=action"} {{ action.name }}

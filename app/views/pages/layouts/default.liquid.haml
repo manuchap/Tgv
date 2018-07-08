@@ -35,7 +35,7 @@ is_layout: true
       %br/
       .w3-container.w3-row
         .w3-col.s4
-          %img.w3-circle.w3-margin-right{:src => "{% unless current_account %}{{ 'avatar.png' | theme_image_url }}{% else %}{{ current_account.avatar.url }}{% endunless %}", :style => "width:46px"}/
+          %img.w3-circle.w3-margin-right{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:46px"}/
         .w3-col.s8.w3-bar
           %span
             {{ 'hello' | translate }}, {% unless current_account %}<b>{{ 'guest' | translate }}</b>
@@ -52,7 +52,9 @@ is_layout: true
         %a.w3-bar-item.w3-button.w3-padding-16.w3-hide-large.w3-dark-grey.w3-hover-black{:href => "#", :onclick => "w3_close()", :title => "close menu"}
           %i.fa.fa-remove.fa-fw
           \&#160; Close Menu
-        <a class="w3-bar-item w3-button w3-padding" href="{% path_to 'index' %}"><i class="fa fa-home fa-fw"></i>&nbsp; {{ 'home' | translate }}</a>
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'index' %}"}
+          %i.fa.fa-home.fa-fw
+          \&#160; {{ 'home' | translate }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=actions"}
           %i.fa.fa-wrench.fa-fw
           \&#160; Actions

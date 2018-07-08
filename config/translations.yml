@@ -28,6 +28,9 @@ wel3:
 haha:
   en: "Either stick your ear to the rails or just use the menu on the left \U0001F913."
   fr: "Collez votre oreille sur les rails ou utilisez le menu de gauche \U0001F913."
+hihi:
+  en: "Please take a seat, open your laptop and start coding  \U0001F913."
+  fr: "Veuillez prendre place, ouvrez votre portable et codez \U0001F913."
 whos:
   en: by
   fr: par
@@ -37,6 +40,12 @@ siin:
 siup:
   en: Signup
   fr: Inscription
+myac:
+  en: My account
+  fr: Mon compte
+mysh:
+  en: My shares
+  fr: Mes partages
 subm:
   en: Submit
   fr: Envoyer
@@ -76,7 +85,7 @@ wcre:
 wmai:
   en: Wrong email!
   fr: Mauvais email!
-name:
+ynam:
   en: Your name
   fr: Votre nom
 mail:
@@ -91,6 +100,9 @@ pasc:
 forg:
   en: Forgot your password?
   fr: Mot de passe oublié?
+repa:
+  en: Reset password
+  fr: Changer de mot de passe
 disc:
   en: You've been disconnected!
   fr: Vous êtes déconnecté!
@@ -103,3 +115,36 @@ sorr:
 sent:
   en: The instructions for changing your password have been emailed to you.
   fr: Les instructions de changement de mot de passe vous ont été envoyées.
+nact:
+  en: New action
+  fr: Nouvelle action
+dact:
+  en: Delete action
+  fr: Supprimer l'action
+uact:
+  en: Edit action
+  fr: 2diter l'action
+name:
+  en: Name
+  fr: Nom
+desc:
+  en: Description
+  fr: Description
+code:
+  en: Code
+  fr: Code
+tras:
+  en: Trash
+  fr: Corbeille
+dele:
+  en: Your deleted files are still on the server.
+  fr: Vos fichier supprimés sont encore sur le serveur.
+ctcz:
+  en: Contact
+  fr: Contactez
+iman:
+  en: me
+  fr: moi
+reco:
+  en: to recover them.
+  fr: pour les récupérer

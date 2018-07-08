@@ -11,9 +11,13 @@ handle: index
   .w3-display-container.w3-animate-opacity
     %img{:src => "{% unless current_account %}{{ 'tgv.jpg' | theme_image_url }}{% else %}{{ 'tgv-inside.jpg' | theme_image_url }}{% endunless %}", :style => "min-width: 100%;max-width: 100%"}/
     {% unless current_account %}
-    .w3-display-middle.w3-text-white.w3-jumbo {{ 'come' | translate }}
+    .w3-display-middle.w3-text-white.w3-jumbo{:style => "text-shadow: 0px 0px 4px black;;"} {{ 'come' | translate }}
     {% else %}
-    .w3-display-middle.w3-text-red.w3-jumbo {{ 'boar' | translate }}
+    .w3-display-middle.w3-text-white.w3-jumbo{:style => "text-shadow: 0px 0px 4px black;;"} {{ 'boar' | translate }}
     {% endunless %}
+{% unless current_account %}
 %p {{ 'haha' | translate }}
+{% else %}
+%p {{ 'hihi' | translate }}
+{% endunless %}
 {% endblock %}

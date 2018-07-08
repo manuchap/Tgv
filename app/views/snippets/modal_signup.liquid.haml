@@ -19,7 +19,7 @@
         {% if auth_invalid_entry %}
         {{ 'sorr' | translate }}
         {% endif %}
-        %label{:for => "auth-name"} {{ 'name' | translate }}
+        %label{:for => "auth-name"} {{ 'ynam' | translate }}
         %input#auth-name.w3-input{:name => "auth_entry[name]", :type => "text", :value => "{{ auth_entry.name }}"}/
         {% if auth_entry.errors.name.size &gt; 0 %}
         {{ auth_entry.errors.name.first }}

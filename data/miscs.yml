@@ -8,11 +8,11 @@
       en: <p>This is my&nbsp;.zshrc file since I'm usin zsh as my shell interpretor.<br>It
         mostly consists in coloring stuff, giving me info about the dir I'm in and
         leveraging typing via aliases.</p><p><img title="manuchap_teminal.jpg" alt="undefined"
-        src="/samples/assets/manuchap_teminal.jpg"><br></p>
+        src="/samples/content_entries/manuchap_teminal.jpg"><br></p>
       fr: <p>This is my&nbsp;.zshrc file since I'm usin zsh as my shell interpretor.<br>It
         mostly consists in coloring stuff, giving me info about the dir I'm in and
-        leveraging typing via aliases.</p><p><img title="manuchap_teminal.jpg" alt="undefined"
-        src="/samples/assets/manuchap_teminal.jpg"><br></p>
+        leveraging typing via aliases.</p><p><img title="manuchap_teminal.jpg" alt="manuchap_teminal.jpg"
+        src="/samples/content_entries/manuchap_teminal.jpg"><br></p>
     type: System
     code: <p># Oh-my-zsh<br>export ZSH=/Users/manuchap/.oh-my-zsh<br>ZSH_THEME="nebirhos"<br>DISABLE_UNTRACKED_FILES_DIRTY="true"<br>HIST_STAMPS="dd/mm/yyyy"<br>plugins=(command-coloring
       compleat git)<br>export CLICOLOR=1<br>export GREP_OPTIONS="--color=auto"<br>ENABLE_CORRECTION="true"<br>COMPLETION_WAITING_DOTS="true"<br>source
@@ -21,7 +21,7 @@
       nz="nano ~/.zshrc"<br>alias sz="source ~/.zshrc"<br>alias ls="ls -sla"<br>alias
       ni='npm install'<br>alias bi='bundle install'<br>alias bu='bundle update'<br>alias
       rh='rbenv rehash'<br>alias hl='cd ~/Sites/Loco/manuchap &amp;&amp; heroku local
-      web'<br>alias pp='python -mjson.tool'<br>alias composer='~/.bin/composer.phar'<br>alias
+      web'<br>alias pp='python -mjson.tool'<br>alias
       24g='rbenv global 2.4.3'<br>alias 25g='rbenv global 2.5.1'<br>alias 24s='rbenv
       shell 2.4.3'<br>alias 25s='rbenv shell 2.5.1'<br>alias su='subl .'<br><br>#
       Locomotive<br>alias bg='bundle exec guard'<br>alias ws='bundle exec wagon serve'<br>alias

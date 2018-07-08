@@ -1,0 +1,132 @@
+---
+title: My account
+slug: me
+handle: me
+position: 2
+listed: false
+published: true
+is_layout: false
+---
+{% extends 'layouts/default' %}
+{% block main %}
+{% authorize "accounts", "sign_in" %}
+.w3-row-padding{:style => "margin:0 -16px"}
+  .w3-third.w3-center.w3-card
+    %h5 {{ 'myac' | translate }}
+    {% if current_account %}
+    %a{:href => "#"}
+      %img#avatar.w3-circle{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:96px;height:96px"}/
+    %p {{ current_account.name }}
+    %p {{ current_account.email }}
+    %form{:action => "{% path_to 'sign_in' %}", :method => "POST"}
+      %input{:name => "auth_action", :type => "hidden", :value => "sign_out"}/
+      %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
+      %input.w3-button.w3-red.w3-ripple{:type => "submit", :value => "Sign out"}/
+      {% else %}
+      .alert.alert-warning
+        You need to
+        = succeed "." do
+          %a{:href => "{% path_to 'sign_in' %}"} sign in
+      {% endif %}
+    %br
+  .w3-twothird
+    %h5 {{ 'mysh' | translate }}
+    .w3-border
+      .w3-bar.w3-border-bottom.w3-light-grey
+        <button class="w3-bar-item w3-button" onclick="openTab('Actions')">Actions</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('Apps')">Apps</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('Gists')">Gists</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('Miscs')">Miscs</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('Templates')">Templates</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('Videos')">Videos</button>
+        <button class="w3-bar-item w3-button w3-border-left" onclick="openTab('Trash')">{{ 'tras' | translate }}</button>
+      #Actions.w3-container.tab.w3-animate-opacity{:style => "display: block;"}
+        {% with_scope account: current_account %}
+        {% for action in contents.actions %}
+        %a{:href => "{% path_to action %}"} {{ action.name }}
+        %a{:href => "{% path_to delete_action %}?name={{ action.name }}"}
+          %i.fa.fa-trash.fa-fw.w3-right
+        <a id="{{action.name}}" href="#" onclick="populateActionmodal(this.id);"><i class="fa fa-pencil fa-fw w3-right"></i></a>
+        %br
+        {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_action').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
+        {% endwith_scope %}
+      #Apps.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        {% with_scope account: current_account %}
+        {% for app in contents.apps %}
+        %a{:href => "{% path_to app %}"} {{ app.name }}
+        %a{:href => "#"}
+          %i.fa.fa-trash.fa-fw.w3-right
+        %a{:href => "#"}
+          %i.fa.fa-pencil.fa-fw.w3-right
+        %br
+        {% endfor %}
+        {% endwith_scope %}
+      #Gists.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        {% with_scope account: current_account %}
+        {% for gist in contents.gists %}
+        %a{:href => "{% path_to gist %}"} {{ gist.name }}
+        %a{:href => "#"}
+          %i.fa.fa-trash.fa-fw.w3-right
+        %a{:href => "#"}
+          %i.fa.fa-pencil.fa-fw.w3-right
+        %br
+        {% endfor %}
+        {% endwith_scope %}
+      #Miscs.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        {% with_scope account: current_account %}
+        {% for misc in contents.miscs %}
+        %a{:href => "{% path_to misc %}"} {{ misc.name }}
+        %a{:href => "#"}
+          %i.fa.fa-trash.fa-fw.w3-right
+        %a{:href => "#"}
+          %i.fa.fa-pencil.fa-fw.w3-right
+        %br
+        {% endfor %}
+        {% endwith_scope %}
+      #Templates.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        {% with_scope account: current_account %}
+        {% for template in contents.templates %}
+        %a{:href => "{% path_to template %}"} {{ template.name }}
+        %a{:href => "#"}
+          %i.fa.fa-trash.fa-fw.w3-right
+        %a{:href => "#"}
+          %i.fa.fa-pencil.fa-fw.w3-right
+        %br
+        {% endfor %}
+        {% endwith_scope %}
+      #Videos.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        {% with_scope account: current_account %}
+        {% for video in contents.videos %}
+        %a{:href => "{% path_to video %}"} {{ video.name }}
+        %a{:href => "#"}
+          %i.fa.fa-trash.fa-fw.w3-right
+        %a{:href => ""}
+          %i.fa.fa-pencil.fa-fw.w3-right
+        %br
+        {% endfor %}
+        {% endwith_scope %}
+      #Trash.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
+    %br
+    :javascript
+      function openTab(tabName) {
+      var i;
+      var x = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      };
+      document.getElementById(tabName).style.display = "block";
+      };
+      function populateActionmodal(clicked) {
+      document.getElementById('aaccount').value='{{current_account.name | downcase}}';
+      document.getElementById('aname').value=clicked;
+      document.getElementById('adesc').value='';
+      document.getElementById('acode').value='';
+      document.getElementById('update_action').style.display='block'
+      }
+{% include 'modal_create_action' %}
+{% include 'modal_update_action' %}
+{% endblock %}
