@@ -1,0 +1,16 @@
+---
+title: Action data
+published: true
+handle: actiondata
+response_type: application/json
+---
+{% with_scope _slug: params.slug %}
+{% for action in contents.actions %}
+{
+    "account": "{{action.account._slug}}",
+    {% include 'json', key: 'name', value: action.name %},
+    {% include 'json', key: 'desc', value: action.desc %},
+    {% include 'json', key: 'code', value: action.code %}
+}
+{% endfor %}
+{% endwith_scope %}
