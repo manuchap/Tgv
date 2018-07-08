@@ -56,7 +56,6 @@ fields:
     ui_enabled: true
 - videos:
     label: Videos
-    hint: A description of the relationship for the editors
     type: has_many
     class_name: videos
     inverse_of: user
