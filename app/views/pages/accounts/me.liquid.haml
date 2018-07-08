@@ -46,7 +46,7 @@ is_layout: false
         %a{:href => "{% path_to action %}"} {{ action.name }}
         %a{:href => "{% path_to delete_action %}?name={{ action.name }}"}
           %i.fa.fa-trash.fa-fw.w3-right
-        <a id="{{action.name}}" href="#" onclick="populateActionmodal(this.id);"><i class="fa fa-pencil fa-fw w3-right"></i></a>
+        <a id="{{action._slug}}" href="#" onclick="popactModal(this.id, '/update/actiondata.json', loadactFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>
         %br
         {% endfor %}
         <a href="#" class="w3-red" onclick="document.getElementById('create_action').style.display='block'">
@@ -109,7 +109,7 @@ is_layout: false
         {% endfor %}
         {% endwith_scope %}
       #Trash.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
+        %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
     :javascript
       function openTab(tabName) {
@@ -120,12 +120,31 @@ is_layout: false
       };
       document.getElementById(tabName).style.display = "block";
       };
-      function populateActionmodal(clicked) {
-      document.getElementById('aaccount').value='{{current_account.name | downcase}}';
-      document.getElementById('aname').value=clicked;
-      document.getElementById('adesc').value='';
-      document.getElementById('acode').value='';
-      document.getElementById('update_action').style.display='block'
+      function popactModal(clicked_id, url, lFunction) {
+      var xhttp;
+      var url = url + '?slug=' + clicked_id;
+        xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            lFunction(this);
+          }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+      }
+      function loadactFunction(xhttp) {
+        var obj = JSON.parse(xhttp.responseText);
+        console.log(obj);
+        var code = Object.values(obj)[3];
+        console.log(code);
+        var tpl = document.createElement('template');
+        tpl.innerHTML = code;
+        console.log(tpl);
+        document.getElementById('aaccount').value=Object.values(obj)[0];
+        document.getElementById('aname').value=Object.values(obj)[1];
+        document.getElementById('adesc').value=Object.values(obj)[2];
+        document.getElementById('acode').appendChild(tpl.content);
+        document.getElementById('update_action').style.display='block'
       }
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}

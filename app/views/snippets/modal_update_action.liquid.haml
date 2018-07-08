@@ -3,19 +3,19 @@
   .w3-modal-content
     .w3-container
       %span.w3-button.w3-red.w3-display-topright
-        <a href="#" style="text-decoration: none;" onclick="document.getElementById('update_action').style.display='none'"> X</a>
+        <a href="#" style="text-decoration: none;" onclick="document.getElementById('update_action').style.display='none'">X</a>
       %header.w3-container
         %h3 {{ 'uact' | translate }}
-      %form.w3-container.w3-card-4{:action => "{% path_to 'update_action' %}", :method => "POST"}
-        %input#aaccount{:name => "account", :type => "hidden", :value => ""}/
+      %form.w3-container.w3-card-4{:action => "{% path_to 'update_action' %}?name={{ action.name }}", :method => "POST"}
+        %input#aaccount{:name => "account", :type => "hidden", :value => "{{action.account}}"}/
         .form-group
           %label {{ 'name' | translate }}
-          %input#aname.w3-input{:name => "name", :type => "text", :value => ""}/
+          %input#aname.w3-input{:name => "name", :type => "text", :value => "{{ action.name }}"}/
         .form-group
           %label {{ 'desc' | translate }}
-          %input#adesc.w3-input{:name => "desc", :type => "text", :value => ""}/
+          %input#adesc.w3-input{:name => "desc", :type => "text", :value => "{{ action.desc }}"}/
         .form-group
           %label {{ 'code' | translate }}
-          %textarea#acode.w3-input{:name => "code", :rows => 10, :value => ""}
+          %textarea#acode.w3-input{:name => "code", :rows => 10, :value => "{{ action.code }}"}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
       %br
