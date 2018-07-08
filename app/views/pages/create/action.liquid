@@ -5,6 +5,11 @@ handle: create_action
 ---
 {% action 'createAction' %}
 var params = getProp('params');
+{% case wagon %}
+{% when true %}
 createEntry('actions', { name: params.name, desc: params.desc, code: params.code, account_id: params.account });
+{% else %}
+createEntry('actions', { name: params.name, desc: params.desc, code: params.code, account: params.account });
+{% endcase %}
 redirectTo('me');
 {% endaction %}
