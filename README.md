@@ -8,7 +8,7 @@
 * ~accounts pages~
 * search
 * rating system
-* ~filters
+* ~filters~
 * tags?
 * gh auth
 ...
