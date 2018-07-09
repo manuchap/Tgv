@@ -76,13 +76,13 @@ is_layout: true
         {% if fullpath contains 'miscs' %}
         %form.w3-container.w3-margin-left
           %input#conf.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleConf()"}/
-          %label Config
+          %label.w3-round-large.w3-blue Config
           %br/
           %input#gemf.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleGemf()"}/
-          %label Gemfile
+          %label.w3-round-large.w3-green Gemfile
           %br/
           %input#syst.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleSyst()"}/
-          %label System
+          %label.w3-round-large.w3-yellow System
         {% endif %}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=templates"}
           %i.fa.fa-html5.fa-fw
