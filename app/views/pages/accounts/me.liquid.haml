@@ -14,8 +14,10 @@ is_layout: false
   .w3-third.w3-center.w3-card
     %h5 {{ 'myac' | translate }}
     {% if current_account %}
-    %a{:href => "#"}
-      %img#avatar.w3-circle{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:96px;height:96px"}/
+    %form{:id => "savatar", :action => "{% path_to update_avatar %}", :enctype => "multipart/form-data", :method => "POST"}
+      %input{:name => "account", :value => "{{current_account._id}}", :type => "hidden"}/
+      %input{:name => "avatar", :accept => "image/jpeg, image/jpg, image/png", "data-max-size" => "2097152", :type => "file", :value => "{{ current_account._id.avatar.url }}", :onchange => "loadFile(event)", :style => "display:none"}/
+      %img#avatar.w3-circle{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:96px;height:96px;cursor:pointer"}/
     %p {{ current_account.name }}
     %p {{ current_account.email }}
     %form{:action => "{% path_to 'sign_in' %}", :method => "POST"}
@@ -112,6 +114,17 @@ is_layout: false
         %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
     :javascript
+      var imgBtn = document.getElementById("avatar");
+      var fileInp = document.querySelector('[type="file"]');
+      imgBtn.addEventListener('click', function() {
+        fileInp.click();
+      });
+      var loadFile = function(event) {
+        var output = document.getElementById('avatar');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        form=document.getElementById("savatar");
+        form.submit();
+      };
       function openTab(tabName) {
       var i;
       var x = document.getElementsByClassName("tab");
@@ -134,15 +147,11 @@ is_layout: false
       }
       function loadactFunction(xhttp) {
         var obj = JSON.parse(xhttp.responseText);
-        console.log(obj);
-        var code = Object.values(obj)[3];
-        console.log(code);
+        var code = Object.values(obj)[2];
         var tpl = document.createElement('template');
-        tpl.innerHTML = code;
-        console.log(tpl);
-        document.getElementById('aaccount').value=Object.values(obj)[0];
-        document.getElementById('aname').value=Object.values(obj)[1];
-        document.getElementById('adesc').value=Object.values(obj)[2];
+        tpl.innerHTML = code.replace(/<br\s*\/?>/ig, "\r\n");
+        document.getElementById('aname').value=Object.values(obj)[0];
+        document.getElementById('adesc').value=Object.values(obj)[1];
         document.getElementById('acode').appendChild(tpl.content);
         document.getElementById('update_action').style.display='block'
       }

@@ -40,7 +40,7 @@
       en: "<p>Import you old wordpress site into locomotive.<br>No front end except
         the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
         soon but was a nice try.</p>"
-      fr: "<p>Importez votre viex wordpress dans locomotive.<br>Pas de frontend à
+      fr: "<p>Importez votre vieux wordpress dans locomotive.<br>Pas de frontend à
         part l'importateur.<br>Aspirez votre blog et synchronisez!<br>Projet temporairement
         abandonné.</p>"
     pict: "/samples/content_entries/Wpimport.jpg"

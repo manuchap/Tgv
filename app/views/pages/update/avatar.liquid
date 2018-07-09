@@ -1,0 +1,10 @@
+---
+title: UpdateAvatar
+published: true
+handle: update_avatar
+---
+{% action 'updateAvatar' %}
+var params = getProp('params');
+updateEntry('accounts', params.account, { avatar: params.avatar });
+redirectTo('me');
+{% endaction %}

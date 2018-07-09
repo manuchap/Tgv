@@ -43,6 +43,9 @@ siup:
 myac:
   en: My account
   fr: Mon compte
+yrac:
+  en: Your account
+  fr: Votre compte
 mysh:
   en: My shares
   fr: Mes partages

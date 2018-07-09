@@ -7,15 +7,14 @@
       %header.w3-container
         %h3 {{ 'uact' | translate }}
       %form.w3-container.w3-card-4{:action => "{% path_to 'update_action' %}?name={{ action.name }}", :method => "POST"}
-        %input#aaccount{:name => "account", :type => "hidden", :value => "{{action.account}}"}/
         .form-group
           %label {{ 'name' | translate }}
-          %input#aname.w3-input{:name => "name", :type => "text", :value => "{{ action.name }}"}/
+          %input#aname.w3-input{:name => "name", :type => "text", :value => "", :disabled => "disabled"}/
         .form-group
           %label {{ 'desc' | translate }}
-          %input#adesc.w3-input{:name => "desc", :type => "text", :value => "{{ action.desc }}"}/
+          %input#adesc.w3-input{:name => "desc", :type => "text", :value => ""}/
         .form-group
           %label {{ 'code' | translate }}
-          %textarea#acode.w3-input{:name => "code", :rows => 10, :value => "{{ action.code }}"}
+          %textarea#acode.w3-input{:name => "code", :rows => 10, :value => ""}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
       %br
