@@ -23,8 +23,8 @@ wel2:
   en: <strong>Signup</strong> or <strong>signin</strong> to upload your ressources and share them with the world.
   fr: <strong>Incrivez vous</strong> ou <strong>connectez vous</strong> pour partager vos ressources avec le monde.
 wel3:
-  en: <strong>Thank you!</strong> You can now access your account and start sharing.
-  fr: <strong>Incrivez vous</strong> ou <strong>connectez</strong> vous pour partager vos ressources avec le monde.
+  en: <strong>Thank you!</strong> You can now access <strong>your account</strong> and start sharing.
+  fr: <strong>Merci!</strong> Vous pouvez à présent accéder à <strong>votre compte</strong> et commencer à partager.
 haha:
   en: "Either stick your ear to the rails or just use the menu on the left \U0001F913."
   fr: "Collez votre oreille sur les rails ou utilisez le menu de gauche \U0001F913."
@@ -61,7 +61,7 @@ push:
 time:
   en: in
   fr: en
-code:
+codd:
   en: Coded
   fr: Codé
 clot:

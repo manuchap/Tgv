@@ -6,7 +6,7 @@ handle: index
 {% extends 'layouts/default' %}
 {% block 'main' %}
 %p {{ 'wel1' | translate }}<br/>{% unless current_account %}{{ 'wel2' | translate }}{% else %}{{ 'wel3' | translate }}{% endunless %}
-.w3-container.w3-display-bo
+.w3-container
 .w3-card-4
   .w3-display-container.w3-animate-opacity
     %img{:src => "{% unless current_account %}{{ 'tgv.jpg' | theme_image_url }}{% else %}{{ 'tgv-inside.jpg' | theme_image_url }}{% endunless %}", :style => "min-width: 100%;max-width: 100%"}/
