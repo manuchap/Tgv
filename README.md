@@ -5,10 +5,10 @@
 * add tutorials
 * add tips
 * browse user's stuff
-* accounts pages
+* ~accounts pages~
 * search
 * rating system
-* filters
+* ~filters~
 * tags?
 * gh auth
 ...
