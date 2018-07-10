@@ -35,13 +35,13 @@ is_layout: false
     %h5 {{ 'mysh' | translate }}
     .w3-border
       .w3-bar.w3-border-bottom.w3-light-grey
-        <button class="w3-bar-item w3-button" onclick="openTab('Actions')">Actions</button>
-        <button class="w3-bar-item w3-button" onclick="openTab('Apps')">Apps</button>
-        <button class="w3-bar-item w3-button" onclick="openTab('Gists')">Gists</button>
-        <button class="w3-bar-item w3-button" onclick="openTab('Miscs')">Miscs</button>
-        <button class="w3-bar-item w3-button" onclick="openTab('Templates')">Templates</button>
-        <button class="w3-bar-item w3-button" onclick="openTab('Videos')">Videos</button>
-        <button class="w3-bar-item w3-button w3-border-left" onclick="openTab('Trash')">{{ 'tras' | translate }}</button>
+        <button class="w3-bar-item w3-button tablink w3-red" onclick="openTab(event, 'Actions')">Actions</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Apps')">Apps</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Gists')">Gists</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Miscs')">Miscs</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Templates')">Templates</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Videos')">Videos</button>
+        <button class="w3-bar-item w3-button tablink w3-border-left" onclick="openTab(event, 'Trash')">{{ 'tras' | translate }}</button>
       #Actions.w3-container.tab.w3-animate-opacity{:style => "display: block;"}
         {% with_scope account: current_account %}
         {% for action in contents.actions %}
@@ -114,6 +114,7 @@ is_layout: false
         %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
     :javascript
+      // Change Avatar
       var imgBtn = document.getElementById("avatar");
       var fileInp = document.querySelector('[type="file"]');
       imgBtn.addEventListener('click', function() {
@@ -125,15 +126,23 @@ is_layout: false
         form=document.getElementById("savatar");
         form.submit();
       };
-      function openTab(tabName) {
-      var i;
-      var x = document.getElementsByClassName("tab");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      };
-      document.getElementById(tabName).style.display = "block";
-      };
+      // Toggle Tabs
+      function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " w3-red";
+      }
+      // Populate Action Modal
       function popactModal(clicked_id, url, lFunction) {
+      // -> Ajax Call
       var xhttp;
       var url = url + '?slug=' + clicked_id;
         xhttp=new XMLHttpRequest();
@@ -145,6 +154,7 @@ is_layout: false
         xhttp.open("GET", url, true);
         xhttp.send();
       }
+      // -> Ajax wc
       function loadactFunction(xhttp) {
         var obj = JSON.parse(xhttp.responseText);
         var code = Object.values(obj)[2];
@@ -153,7 +163,7 @@ is_layout: false
         document.getElementById('aname').value=Object.values(obj)[0];
         document.getElementById('adesc').value=Object.values(obj)[1];
         document.getElementById('acode').appendChild(tpl.content);
-        document.getElementById('update_action').style.display='block'
+        document.getElementById('update_action').style.display='block';
       }
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
