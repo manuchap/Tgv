@@ -20,7 +20,7 @@
         IE, Safari, Opera, ...<br>Fournit l''égalité CSS pour tous les périphériques:
         ordinateur de bureau, ordinateur portable, tablette et mobile.<br>'
     pict: "/samples/content_entries/W3css.jpg"
-    url: https://www.w3schools.com/w3css/default.asp
+    url: https://github.com/manuchap/W3CSS
     demo: http://w3c.studiowan.fr
 - Ecwid:
     _slug:
