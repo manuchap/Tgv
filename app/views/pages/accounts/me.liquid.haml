@@ -20,7 +20,7 @@ is_layout: false
       %img#avatar.w3-circle{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:96px;height:96px;cursor:pointer"}/
     %p {{ current_account.name }}
     %p {{ current_account.email }}
-    %form{:action => "{% path_to 'sign_in' %}", :method => "POST"}
+    %form{:action => "{% path_to 'index' %}", :method => "POST"}
       %input{:name => "auth_action", :type => "hidden", :value => "sign_out"}/
       %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
       %input.w3-button.w3-red.w3-ripple{:type => "submit", :value => "Sign out"}/
