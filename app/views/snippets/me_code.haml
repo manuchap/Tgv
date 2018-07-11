@@ -1,0 +1,52 @@
+:javascript
+  // Change Avatar
+  var imgBtn = document.getElementById("avatar");
+  var fileInp = document.querySelector('[type="file"]');
+  imgBtn.addEventListener('click', function() {
+    fileInp.click();
+  });
+  var loadFile = function(event) {
+    var output = document.getElementById('avatar');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    form=document.getElementById("savatar");
+    form.submit();
+  };
+  // Toggle Tabs
+  function openTab(evt, tabName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " w3-red";
+  }
+  // Populate Action Modal
+  function popactModal(clicked_id, url, lFunction) {
+  // -> Ajax Call
+  var xhttp;
+  var url = url + '?slug=' + clicked_id;
+    xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        lFunction(this);
+      }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  }
+  // -> Ajax wc
+  function loadactFunction(xhttp) {
+    var obj = JSON.parse(xhttp.responseText);
+    var code = Object.values(obj)[2];
+    var tpl = document.createElement('template');
+    tpl.innerHTML = code.replace(/<br\s*\/?>/ig, "\r\n");
+    document.getElementById('aname').value=Object.values(obj)[0];
+    document.getElementById('adesc').value=Object.values(obj)[1];
+    document.getElementById('acode').appendChild(tpl.content);
+    document.getElementById('update_action').style.display='block';
+  }
