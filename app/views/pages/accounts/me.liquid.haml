@@ -10,6 +10,7 @@ is_layout: false
 {% extends 'layouts/default' %}
 {% block main %}
 {% authorize "accounts", "sign_in" %}
+{% with_scope account: current_account %}
 .w3-row-padding{:style => "margin:0 -16px"}
   .w3-third.w3-center.w3-card
     %h5 {{ 'myac' | translate }}
@@ -43,7 +44,6 @@ is_layout: false
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Videos')">Videos</button>
         <button class="w3-bar-item w3-button tablink w3-border-left" onclick="openTab(event, 'Trash')">{{ 'tras' | translate }}</button>
       #Actions.w3-container.tab.w3-animate-opacity{:style => "display: block;"}
-        {% with_scope account: current_account %}
         {% for action in contents.actions %}
         %a{:href => "{% path_to action %}"} {{ action.name }}
         %a{:href => "{% path_to delete_action %}?name={{ action.name }}"}
@@ -54,7 +54,6 @@ is_layout: false
         <a href="#" class="w3-red" onclick="document.getElementById('create_action').style.display='block'">
         %i.fa.fa-plus.fa-fw
         </a>
-        {% endwith_scope %}
       #Apps.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         {% with_scope account: current_account %}
         {% for app in contents.apps %}
@@ -65,6 +64,8 @@ is_layout: false
           %i.fa.fa-pencil.fa-fw.w3-right
         %br
         {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_app').style.display='block'">
+        %i.fa.fa-plus.fa-fw
         {% endwith_scope %}
       #Gists.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         {% with_scope account: current_account %}
@@ -116,4 +117,5 @@ is_layout: false
     {% include 'me_code' %}
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
+{% endwith_scope %}
 {% endblock %}
