@@ -10,7 +10,6 @@ is_layout: false
 {% extends 'layouts/default' %}
 {% block main %}
 {% authorize "accounts", "sign_in" %}
-{% with_scope account: current_account %}
 .w3-row-padding{:style => "margin:0 -16px"}
   .w3-third.w3-center.w3-card
     %h5 {{ 'myac' | translate }}
@@ -44,7 +43,7 @@ is_layout: false
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Videos')">Videos</button>
         <button class="w3-bar-item w3-button tablink w3-border-left" onclick="openTab(event, 'Trash')">{{ 'tras' | translate }}</button>
       #Actions.w3-container.tab.w3-animate-opacity{:style => "display: block;"}
-        {% for action in contents.actions %}
+        {% for action in current_account.actions %}
         %a{:href => "{% path_to action %}"} {{ action.name }}
         %a{:href => "{% path_to delete_action %}?name={{ action.name }}"}
           %i.fa.fa-trash.fa-fw.w3-right
@@ -55,8 +54,7 @@ is_layout: false
         %i.fa.fa-plus.fa-fw
         </a>
       #Apps.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        {% with_scope account: current_account %}
-        {% for app in contents.apps %}
+        {% for app in current_account.apps %}
         %a{:href => "{% path_to app %}"} {{ app.name }}
         %a{:href => "#"}
           %i.fa.fa-trash.fa-fw.w3-right
@@ -66,10 +64,8 @@ is_layout: false
         {% endfor %}
         <a href="#" class="w3-red" onclick="document.getElementById('create_app').style.display='block'">
         %i.fa.fa-plus.fa-fw
-        {% endwith_scope %}
       #Gists.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        {% with_scope account: current_account %}
-        {% for gist in contents.gists %}
+        {% for gist in current_account.gists %}
         %a{:href => "{% path_to gist %}"} {{ gist.name }}
         %a{:href => "#"}
           %i.fa.fa-trash.fa-fw.w3-right
@@ -77,10 +73,8 @@ is_layout: false
           %i.fa.fa-pencil.fa-fw.w3-right
         %br
         {% endfor %}
-        {% endwith_scope %}
       #Miscs.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        {% with_scope account: current_account %}
-        {% for misc in contents.miscs %}
+        {% for misc in current_account.miscs %}
         %a{:href => "{% path_to misc %}"} {{ misc.name }}
         %a{:href => "#"}
           %i.fa.fa-trash.fa-fw.w3-right
@@ -88,10 +82,8 @@ is_layout: false
           %i.fa.fa-pencil.fa-fw.w3-right
         %br
         {% endfor %}
-        {% endwith_scope %}
       #Templates.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        {% with_scope account: current_account %}
-        {% for template in contents.templates %}
+        {% for template in current_account.templates %}
         %a{:href => "{% path_to template %}"} {{ template.name }}
         %a{:href => "#"}
           %i.fa.fa-trash.fa-fw.w3-right
@@ -99,10 +91,8 @@ is_layout: false
           %i.fa.fa-pencil.fa-fw.w3-right
         %br
         {% endfor %}
-        {% endwith_scope %}
       #Videos.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        {% with_scope account: current_account %}
-        {% for video in contents.videos %}
+        {% for video in current_account.videos %}
         %a{:href => "{% path_to video %}"} {{ video.name }}
         %a{:href => "#"}
           %i.fa.fa-trash.fa-fw.w3-right
@@ -110,12 +100,10 @@ is_layout: false
           %i.fa.fa-pencil.fa-fw.w3-right
         %br
         {% endfor %}
-        {% endwith_scope %}
       #Trash.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
-    {% include 'me_code' %}
+{% include 'me_code' %}
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
-{% endwith_scope %}
 {% endblock %}

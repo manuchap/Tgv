@@ -35,29 +35,29 @@ fields:
     label: Actions
     type: has_many
     class_name: actions
-    inverse_of: user
+    inverse_of: account
     ui_enabled: true
 - apps:
     label: Apps
     type: has_many
     class_name: apps
-    inverse_of: user
+    inverse_of: account
     ui_enabled: true
 - gists:
     label: Gists
     type: has_many
     class_name: gists
-    inverse_of: user
+    inverse_of: account
     ui_enabled: true
 - templates:
     label: Templates
     type: has_many
     class_name: templates
-    inverse_of: user
+    inverse_of: account
     ui_enabled: true
 - videos:
     label: Videos
     type: has_many
     class_name: videos
-    inverse_of: user
+    inverse_of: account
     ui_enabled: true
