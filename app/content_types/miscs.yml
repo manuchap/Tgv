@@ -9,24 +9,16 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Name of your action
     localized: false
-- account:
-    label: Account
-    hint: The misc's creator
-    type: belongs_to
-    class_name: accounts
 - desc:
     label: Desc
     type: text
     required: false
-    hint: A short description of your thing
     localized: true
 - type:
     label: Type
     type: select
     required: false
-    hint: Type of snippet
     localized: false
     select_options:
       - Config
@@ -36,5 +28,8 @@ fields:
     label: Code
     type: text
     required: false
-    hint: Paste you misc code here (in editor mode)
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts

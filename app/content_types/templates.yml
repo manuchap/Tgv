@@ -9,34 +9,28 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
     localized: false
-- account:
-    label: Account
-    hint: A description of the relationship for the editors
-    type: belongs_to
-    class_name: accounts
 - desc:
     label: Desc
     type: text
     required: false
-    hint: Explanatory text displayed in the back office
     localized: true
 - pict:
     label: Picture
     type: file
     required: false
-    hint: Explanatory text displayed in the back office
     localized: false
 - url:
-    label: Url
+    label: Source
     type: string
     required: false
-    hint: Explanatory text displayed in the back office
     localized: false
 - demo:
     label: Demo
     type: string
     required: false
-    hint: Optional link to a demo
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts

@@ -9,29 +9,24 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Name of your video
     localized: false
 - account:
     label: Account
-    hint: Creator of the video
     type: belongs_to
     class_name: accounts
 - desc:
     label: Desc
     type: text
     required: false
-    hint: Short description of your video
     localized: true
 - url:
     label: Url
     type: string
     required: false
-    hint: Url of your video
     localized: false
 - origin:
     label: Origin
     type: select
     required: false
-    hint: Video origin
     localized: false
     select_options: ['mp4', 'youtube', 'vimeo']

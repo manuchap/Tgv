@@ -9,22 +9,18 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Name of your action
     localized: false
 - desc:
-    label: Desc
+    label: Description
     type: text
     required: false
-    hint: A short description of your app
     localized: true
 - code:
     label: Code
     type: text
     required: false
-    hint: Paste you action code here (in editor mode)
     localized: false
 - account:
     label: Account
-    hint: The action's creator
     type: belongs_to
     class_name: accounts

@@ -9,34 +9,28 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Name of your app
     localized: false
-- account:
-    label: Account
-    hint: The app's creator
-    type: belongs_to
-    class_name: accounts
 - desc:
-    label: Desc
+    label: Description
     type: text
     required: false
-    hint: A short description of your app
     localized: true
 - pict:
     label: Picture
     type: file
     required: false
-    hint: A screen grab of your app
     localized: false
 - url:
-    label: Url
+    label: Source
     type: string
     required: false
-    hint: Url to your app's source code
     localized: false
 - demo:
     label: Demo
     type: string
     required: false
-    hint: Optional link to a demo
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts
