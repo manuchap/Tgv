@@ -10,10 +10,10 @@ is_layout: false
 {% extends 'layouts/default' %}
 {% block main %}
 {% authorize "accounts", "sign_in" %}
+{% if current_account %}
 .w3-row-padding{:style => "margin:0 -16px"}
   .w3-third.w3-center.w3-card
     %h5 {{ 'myac' | translate }}
-    {% if current_account %}
     %form{:id => "savatar", :action => "{% path_to update_avatar %}", :enctype => "multipart/form-data", :method => "POST"}
       %input{:name => "account", :value => "{{current_account._id}}", :type => "hidden"}/
       %input{:name => "avatar", :accept => "image/jpeg, image/jpg, image/png", "data-max-size" => "2097152", :type => "file", :value => "{{ current_account._id.avatar.url }}", :onchange => "loadFile(event)", :style => "display:none"}/
@@ -24,12 +24,6 @@ is_layout: false
       %input{:name => "auth_action", :type => "hidden", :value => "sign_out"}/
       %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
       %input.w3-button.w3-red.w3-ripple{:type => "submit", :value => "Sign out"}/
-      {% else %}
-      .alert.alert-warning
-        You need to
-        = succeed "." do
-          %a{:href => "{% path_to 'sign_in' %}"} sign in
-      {% endif %}
     %br
   .w3-twothird
     %h5 {{ 'mysh' | translate }}
@@ -56,54 +50,78 @@ is_layout: false
       #Apps.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         {% for app in current_account.apps %}
         %a{:href => "{% path_to app %}"} {{ app.name }}
-        %a{:href => "#"}
+        %a{:href => "{% path_to delete_app %}?name={{ app.name }}"}
           %i.fa.fa-trash.fa-fw.w3-right
-        %a{:href => "#"}
-          %i.fa.fa-pencil.fa-fw.w3-right
+        <a id="{{app._slug}}" href="#" onclick="popappModal(this.id, '/update/appdata.json', loadappFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>
         %br
         {% endfor %}
         <a href="#" class="w3-red" onclick="document.getElementById('create_app').style.display='block'">
         %i.fa.fa-plus.fa-fw
+        </a>
       #Gists.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         {% for gist in current_account.gists %}
         %a{:href => "{% path_to gist %}"} {{ gist.name }}
-        %a{:href => "#"}
+        %a{:href => "{% path_to delete_gist %}?name={{ gist.name }}"}
           %i.fa.fa-trash.fa-fw.w3-right
-        %a{:href => "#"}
-          %i.fa.fa-pencil.fa-fw.w3-right
+        <a id="{{gist._slug}}" href="#" onclick="popgistModal(this.id, '/update/gistdata.json', loadgistFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>
         %br
         {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_gist').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
       #Miscs.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         {% for misc in current_account.miscs %}
         %a{:href => "{% path_to misc %}"} {{ misc.name }}
-        %a{:href => "#"}
+        %a{:href => "{% path_to delete_misc %}?name={{ misc.name }}"}
           %i.fa.fa-trash.fa-fw.w3-right
-        %a{:href => "#"}
-          %i.fa.fa-pencil.fa-fw.w3-right
+        <a id="{{misc._slug}}" href="#" onclick="popmiscModal(this.id, '/update/miscdata.json', loadmiscFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>
         %br
         {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_misc').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
       #Templates.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         {% for template in current_account.templates %}
         %a{:href => "{% path_to template %}"} {{ template.name }}
-        %a{:href => "#"}
+        %a{:href => "{% path_to delete_template %}?name={{ template.name }}"}
           %i.fa.fa-trash.fa-fw.w3-right
-        %a{:href => "#"}
-          %i.fa.fa-pencil.fa-fw.w3-right
+        <a id="{{template._slug}}" href="#" onclick="poptemplateModal(this.id, '/update/templatedata.json', loadtemplateFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>
         %br
         {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_template').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
       #Videos.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         {% for video in current_account.videos %}
         %a{:href => "{% path_to video %}"} {{ video.name }}
-        %a{:href => "#"}
+        %a{:href => "{% path_to delete_video %}?name={{ video.name }}"}
           %i.fa.fa-trash.fa-fw.w3-right
-        %a{:href => ""}
-          %i.fa.fa-pencil.fa-fw.w3-right
+        <a id="{{video._slug}}" href="#" onclick="popvideoModal(this.id, '/update/videodata.json', loadvideoFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>
         %br
         {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_video').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
       #Trash.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
+{% else %}
+.alert.alert-warning
+  You need to
+  = succeed "." do
+    %a{:href => "{% path_to 'sign_in' %}"} sign in
+{% endif %}
 {% include 'me_code' %}
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
-{% endblock %}
+{% include 'modal_create_app' %}
+{% comment %}{% include 'modal_update_app' %}
+{% endcomment %}{% include 'modal_create_gist' %}
+{% comment %}{% include 'modal_update_gist' %}
+{% endcomment %}{% include 'modal_create_misc' %}
+{% comment %}{% include 'modal_update_misc' %}
+{% endcomment %}{% include 'modal_create_template' %}
+{% comment %}{% include 'modal_update_template' %}
+{% endcomment %}{% include 'modal_create_video' %}
+{% comment %}{% include 'modal_update_video' %}
+{% endcomment %}{% endblock %}

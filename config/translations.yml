@@ -1,21 +1,162 @@
-title:
-  en: 'TGV: Train with Great Velocity'
-  fr: 'TGV: Train à Grande Vitesse'
-home:
-  en: Home
-  fr: Accueil
-hello:
-  en: Hello
-  fr: Bonjour
-guest:
-  en: guest
-  fr: invité
-come:
-  en: It's&nbsp;coming...
-  fr: Il&nbsp;arrive...
+auth:
+  en: You're already authenticated!
+  fr: Vous êtes déjà connecté!
+back:
+  en: Back to the list
+  fr: Retour à la liste
+bksi:
+  en: Go back to the sign in page
+  fr: Retour à la connexion
 boar:
   en: Welcome&nbsp;aboard!
   fr: Bienvenue&nbsp;à&nbsp;bord!
+clot:
+  en: Clothed
+  fr: Habillé
+codd:
+  en: Coded
+  fr: Codé
+code:
+  en: Code
+  fr: Code
+come:
+  en: It's&nbsp;coming...
+  fr: Il&nbsp;arrive...
+ctcz:
+  en: Contact
+  fr: Contactez
+dact:
+  en: Delete action
+  fr: Supprimer l'action
+dele:
+  en: Your deleted files are still on the server.
+  fr: Vos fichier supprimés sont encore sur le serveur.
+demo:
+  en: Demo
+  fr: Demo
+desc:
+  en: Description
+  fr: Description
+disc:
+  en: You've been disconnected!
+  fr: Vous êtes déconnecté!
+forg:
+  en: Forgot your password?
+  fr: Mot de passe oublié?
+guest:
+  en: guest
+  fr: invité
+haha:
+  en: "Either stick your ear to the rails or just use the menu on the left \U0001F913."
+  fr: "Collez votre oreille sur les rails ou utilisez le menu de gauche \U0001F913."
+hello:
+  en: Hello
+  fr: Bonjour
+hihi:
+  en: "Please take a seat, open your laptop and start coding  \U0001F913."
+  fr: "Veuillez prendre place, ouvrez votre portable et codez \U0001F913."
+home:
+  en: Home
+  fr: Accueil
+iman:
+  en: me
+  fr: moi
+mail:
+  en: Your E-mail
+  fr: Votre E-mail
+myac:
+  en: My account
+  fr: Mon compte
+mysh:
+  en: My shares
+  fr: Mes partages
+nact:
+  en: New action
+  fr: Nouvelle action
+name:
+  en: Name
+  fr: Nom
+napp:
+  en: New app
+  fr: Nouvelle app
+ngis:
+  en: New gist
+  fr: Nouveau gist
+nmis:
+  en: New misc
+  fr: Nouveau misc
+ntem:
+  en: New template
+  fr: Nouveau template
+nvid:
+  en: New video
+  fr: Nouvelle vidéo
+orig:
+  en: Origin
+  fr: Origine
+pasc:
+  en: Password confirmation
+  fr: Mot de passe à nouveau
+pass:
+  en: Password
+  fr: Mot de passe
+pict:
+  en: Picture
+  fr: Image
+push:
+  en: Pushed
+  fr: Propulsé
+reco:
+  en: to recover them.
+  fr: pour les récupérer
+repa:
+  en: Reset password
+  fr: Changer de mot de passe
+sear:
+  en: Search
+  fr: Chercher
+sent:
+  en: The instructions for changing your password have been emailed to you.
+  fr: Les instructions de changement de mot de passe vous ont été envoyées.
+siin:
+  en: Sign in
+  fr: Connexion
+siup:
+  en: Signup
+  fr: Inscription
+sorr:
+  en: We're sorry, we couldn't create your account.
+  fr: Votre compte ne peut pas être créé.
+sour:
+  en: Source
+  fr: Source
+subm:
+  en: Submit
+  fr: Envoyer
+time:
+  en: in
+  fr: en
+title:
+  en: 'TGV: Train with Great Velocity'
+  fr: 'TGV: Train à Grande Vitesse'
+tras:
+  en: Trash
+  fr: Corbeille
+type:
+  en: Type
+  fr: Type
+uact:
+  en: Edit action
+  fr: 2diter l'action
+warn:
+  en: (your ip's being recorded, abusers will be banned.)
+  fr: (votre ip est enregistrée, tout abus sera banni)
+wcre:
+  en: Wrong credentials!
+  fr: Mauvais identifiants!
+weee:
+  en: We
+  fr: Nous
 wel1:
   en: "Welcome to the #1 LocomotiveCMS ressources website."
   fr: "Bienvenue sur le site #1 de ressources pour LocomotiveCMS."
@@ -25,132 +166,15 @@ wel2:
 wel3:
   en: <strong>Thank you!</strong> You can now access <strong>your account</strong> and start sharing.
   fr: <strong>Merci!</strong> Vous pouvez à présent accéder à <strong>votre compte</strong> et commencer à partager.
-haha:
-  en: "Either stick your ear to the rails or just use the menu on the left \U0001F913."
-  fr: "Collez votre oreille sur les rails ou utilisez le menu de gauche \U0001F913."
-hihi:
-  en: "Please take a seat, open your laptop and start coding  \U0001F913."
-  fr: "Veuillez prendre place, ouvrez votre portable et codez \U0001F913."
 whos:
   en: by
   fr: par
-siin:
-  en: Sign in
-  fr: Connexion
-siup:
-  en: Signup
-  fr: Inscription
-myac:
-  en: My account
-  fr: Mon compte
-yrac:
-  en: Your account
-  fr: Votre compte
-mysh:
-  en: My shares
-  fr: Mes partages
-subm:
-  en: Submit
-  fr: Envoyer
-sear:
-  en: Search
-  fr: Chercher
-push:
-  en: Pushed
-  fr: Propulsé
-time:
-  en: in
-  fr: en
-codd:
-  en: Coded
-  fr: Codé
-clot:
-  en: Clothed
-  fr: Habillé
-weee:
-  en: We
-  fr: Nous
-sour:
-  en: Source
-  fr: Source
-demo:
-  en: Demo
-  fr: Demo
-back:
-  en: Back to the list
-  fr: Retour à la liste
-bksi:
-  en: Go back to the sign in page
-  fr: Retour à la connexion
-wcre:
-  en: Wrong credentials!
-  fr: Mauvais identifiants!
 wmai:
   en: Wrong email!
   fr: Mauvais email!
 ynam:
   en: Your name
   fr: Votre nom
-mail:
-  en: Your E-mail
-  fr: Votre E-mail
-pass:
-  en: Password
-  fr: Mot de passe
-pasc:
-  en: Password confirmation
-  fr: Mot de passe à nouveau
-forg:
-  en: Forgot your password?
-  fr: Mot de passe oublié?
-repa:
-  en: Reset password
-  fr: Changer de mot de passe
-disc:
-  en: You've been disconnected!
-  fr: Vous êtes déconnecté!
-auth:
-  en: You're already authenticated!
-  fr: Vous êtes déjà connecté!
-sorr:
-  en: We're sorry, we couldn't create your account.
-  fr: Votre compte ne peut pas être créé.
-sent:
-  en: The instructions for changing your password have been emailed to you.
-  fr: Les instructions de changement de mot de passe vous ont été envoyées.
-nact:
-  en: New action
-  fr: Nouvelle action
-dact:
-  en: Delete action
-  fr: Supprimer l'action
-uact:
-  en: Edit action
-  fr: 2diter l'action
-name:
-  en: Name
-  fr: Nom
-desc:
-  en: Description
-  fr: Description
-code:
-  en: Code
-  fr: Code
-tras:
-  en: Trash
-  fr: Corbeille
-dele:
-  en: Your deleted files are still on the server.
-  fr: Vos fichier supprimés sont encore sur le serveur.
-ctcz:
-  en: Contact
-  fr: Contactez
-iman:
-  en: me
-  fr: moi
-reco:
-  en: to recover them.
-  fr: pour les récupérer
-warn:
-  en: (your ip's being recorded, abusers will be banned.)
-  fr: (votre ip est enregistrée, tout abus sera banni)
+yrac:
+  en: Your account
+  fr: Votre compte

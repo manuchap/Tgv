@@ -1,0 +1,27 @@
+/ Create Template Modal
+#create_template.w3-modal
+  .w3-modal-content
+    .w3-container
+      %span.w3-button.w3-red.w3-display-topright
+        <a href="#" style="text-decoration: none;" onclick="document.getElementById('create_template').style.display='none'"> X</a>
+      %header.w3-container
+        %h3 {{ 'ntem' | translate }}
+      %form.w3-container.w3-card-4{:template => "{% path_to 'create_template' %}", :method => "POST"}
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._slug}}"}/
+        .form-group
+          %label {{ 'name' | translate }}
+          %input.w3-input{:name => "name", :type => "text", :value => "{{template.name}}"}/
+        .form-group
+          %label {{ 'desc' | translate }}
+          %input.w3-input{:name => "desc", :type => "text", :value => "{{template.desc}}"}/
+        .form-group
+          %label {{ 'pict' | translate }}
+          %input.w3-input{:name => "pict", :type => 'file', :value => "{{template.pict}}"}
+        .form-group
+          %label {{ 'sour' | translate }}
+          %input.w3-input{:name => "url", :type => 'text', :value => "{{template.url}}"}
+        .form-group
+          %label {{ 'demo' | translate }}
+          %input.w3-input{:name => "demo", :type => 'text', :value => "{{template.demo}}"}
+        %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
+      %br
