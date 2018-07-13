@@ -7,15 +7,15 @@
       %header.w3-container
         %h3 {{ 'nact' | translate }}
       %form.w3-container.w3-card-4{:action => "{% path_to 'create_action' %}", :method => "POST"}
-        %input{:name => "account", :type => "hidden", :value => "{{current_account.name | downcase}}"}/
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._slug}}"}/
         .form-group
-          %label name
-          %input.w3-input{:name => "name", :type => "text", :value => "{{acion.name}}"}/
+          %label {{ 'name' | translate }}
+          %input.w3-input{:name => "name", :type => "text", :value => "{{action.name}}"}/
         .form-group
-          %label desc
-          %input.w3-input{:name => "desc", :type => "text", :value => "{{acion.desc}}"}/
+          %label {{ 'desc' | translate }}
+          %input.w3-input{:name => "desc", :type => "text", :value => "{{action.desc}}"}/
         .form-group
-          %label code
-          %textarea.w3-input{:name => "code", :rows => 10, :value => "{{acion.code}}"}
+          %label {{ 'code' | translate }}
+          %textarea.w3-input{:name => "code", :rows => 10, :value => "{{action.code}}"}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
       %br

@@ -1,0 +1,27 @@
+/ Create App Modal
+#create_app.w3-modal
+  .w3-modal-content
+    .w3-container
+      %span.w3-button.w3-red.w3-display-topright
+        <a href="#" style="text-decoration: none;" onclick="document.getElementById('create_app').style.display='none'"> X</a>
+      %header.w3-container
+        %h3 {{ 'napp' | translate }}
+      %form.w3-container.w3-card-4{:app => "{% path_to 'create_app' %}", :method => "POST"}
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._slug}}"}/
+        .form-group
+          %label {{ 'name' | translate }}
+          %input.w3-input{:name => "name", :type => "text", :value => "{{app.name}}"}/
+        .form-group
+          %label {{ 'desc' | translate }}
+          %input.w3-input{:name => "desc", :type => "text", :value => "{{app.desc}}"}/
+        .form-group
+          %label {{ 'pict' | translate }}
+          %input.w3-input{:name => "pict", :type => 'file', :value => "{{app.pict}}"}
+        .form-group
+          %label {{ 'sour' | translate }}
+          %input.w3-input{:name => "url", :type => 'text', :value => "{{app.url}}"}
+        .form-group
+          %label {{ 'demo' | translate }}
+          %input.w3-input{:name => "demo", :type => 'text', :value => "{{app.demo}}"}
+        %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
+      %br

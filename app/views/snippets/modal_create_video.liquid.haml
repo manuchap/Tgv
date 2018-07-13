@@ -1,0 +1,28 @@
+/ Create Video Modal
+#create_video.w3-modal
+  .w3-modal-content
+    .w3-container
+      %span.w3-button.w3-red.w3-display-topright
+        <a href="#" style="text-decoration: none;" onclick="document.getElementById('create_video').style.display='none'"> X</a>
+      %header.w3-container
+        %h3 {{ 'nvid' | translate }}
+      %form.w3-container.w3-card-4{:video => "{% path_to 'create_video' %}", :method => "POST"}
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._slug}}"}/
+        .form-group
+          %label {{ 'name' | translate }}
+          %input.w3-input{:name => "name", :type => "text", :value => "{{video.name}}"}/
+        .form-group
+          %label {{ 'desc' | translate }}
+          %input.w3-input{:name => "desc", :type => "text", :value => "{{video.desc}}"}/
+        .form-group
+          %label {{ 'sour' | translate }}
+          %input.w3-input{:name => "url", :type => 'text', :value => "{{video.url}}"}
+        .form-group
+          %label {{ 'orig' | translate }}
+          %select.form-control{:name => "origin"}
+            %option{:value => ""}
+            {% for option in contents.videos.origin_options %}
+            %option{:value => "{{ option }}"} {{ option }}
+            {% endfor %}
+        %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
+      %br
