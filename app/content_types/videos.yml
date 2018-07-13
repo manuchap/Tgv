@@ -3,7 +3,6 @@ slug: videos
 label_field_name: name
 order_by: updated_at
 order_direction: desc
-public_submission_enabled: true
 fields:
 - name:
     label: Name
@@ -29,4 +28,4 @@ fields:
     type: select
     required: false
     localized: false
-    select_options: ['mp4', 'youtube', 'vimeo']
+    select_options: ['youtube', 'vimeo']

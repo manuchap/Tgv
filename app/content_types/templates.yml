@@ -3,13 +3,16 @@ slug: templates
 label_field_name: name
 order_by: updated_at
 order_direction: desc
-public_submission_enabled: true
 fields:
 - name:
     label: Name
     type: string
     required: true
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts
 - desc:
     label: Desc
     type: text
@@ -30,7 +33,3 @@ fields:
     type: string
     required: false
     localized: false
-- account:
-    label: Account
-    type: belongs_to
-    class_name: accounts
