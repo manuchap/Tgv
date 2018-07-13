@@ -103,6 +103,9 @@ pass:
 pict:
   en: Picture
   fr: Image
+publ:
+  en: Published
+  fr: Publié(e)
 push:
   en: Pushed
   fr: Propulsé

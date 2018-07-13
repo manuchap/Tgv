@@ -8,11 +8,11 @@
       en: <p>This is my&nbsp;.zshrc file since I'm usin zsh as my shell interpretor.<br>It
         mostly consists in coloring stuff, giving me info about the dir I'm in and
         leveraging typing via aliases.</p><p><img title="manuchap_teminal.jpg" alt="undefined"
-        src="/samples/content_entries/manuchap_teminal.jpg"><br></p>
+        src="/samples/assets/manuchap_teminal.jpg"><br></p>
       fr: <p>This is my&nbsp;.zshrc file since I'm usin zsh as my shell interpretor.<br>It
         mostly consists in coloring stuff, giving me info about the dir I'm in and
         leveraging typing via aliases.</p><p><img title="manuchap_teminal.jpg" alt="manuchap_teminal.jpg"
-        src="/samples/content_entries/manuchap_teminal.jpg"><br></p>
+        src="/samples/assets/manuchap_teminal.jpg"><br></p>
     type: System
     code: <p># Oh-my-zsh<br>export ZSH=/Users/manuchap/.oh-my-zsh<br>ZSH_THEME="nebirhos"<br>DISABLE_UNTRACKED_FILES_DIRTY="true"<br>HIST_STAMPS="dd/mm/yyyy"<br>plugins=(command-coloring
       compleat git)<br>export CLICOLOR=1<br>export GREP_OPTIONS="--color=auto"<br>ENABLE_CORRECTION="true"<br>COMPLETION_WAITING_DOTS="true"<br>source

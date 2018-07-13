@@ -6,8 +6,8 @@
         <a href="#" style="text-decoration: none;" onclick="document.getElementById('create_app').style.display='none'"> X</a>
       %header.w3-container
         %h3 {{ 'napp' | translate }}
-      %form.w3-container.w3-card-4{:app => "{% path_to 'create_app' %}", :method => "POST"}
-        %input{:name => "account", :type => "hidden", :value => "{{current_account._slug}}"}/
+      %form.w3-container.w3-card-4{:action => "{% path_to 'create_app' %}", :enctype => "multipart/form-data", :method => "POST"}
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._id}}"}/
         .form-group
           %label {{ 'name' | translate }}
           %input.w3-input{:name => "name", :type => "text", :value => "{{app.name}}"}/
@@ -16,7 +16,7 @@
           %input.w3-input{:name => "desc", :type => "text", :value => "{{app.desc}}"}/
         .form-group
           %label {{ 'pict' | translate }}
-          %input.w3-input{:name => "pict", :type => 'file', :value => "{{app.pict}}"}
+          %input.w3-input{:name => "pict", :type => 'file', :value => "{{app.pict.url}}"}
         .form-group
           %label {{ 'sour' | translate }}
           %input.w3-input{:name => "url", :type => 'text', :value => "{{app.url}}"}

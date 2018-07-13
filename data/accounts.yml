@@ -1,8 +1,8 @@
-- "John":
+- John:
     _slug: john
     email: 'john@locomotivecms.com'
     password: 'easyone'
-- "Manuchap":
+- Manuchap:
     _slug: manuchap
     email: manuchap@gmail.com
     password: 'iliketrains'

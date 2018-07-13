@@ -1,0 +1,10 @@
+---
+title: DeleteTemplate
+published: true
+handle: delete_template
+---
+{% action 'deleteTemplate' %}
+var params = getProp('params');
+updateEntry('templates', params.name, { _visible: false });
+redirectTo('me');
+{% endaction %}

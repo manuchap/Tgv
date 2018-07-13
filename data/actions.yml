@@ -36,3 +36,13 @@
       nickname: params.nick, first_name: params.firs, last_name: params.last, description:
       params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction
       %}"
+- Test:
+    _slug:
+      en: test
+      fr: test
+    name: Test
+    account: john
+    desc:
+      en: 'desc'
+      fr: 'desc'
+    code: "test"

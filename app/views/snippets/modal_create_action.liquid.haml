@@ -7,7 +7,7 @@
       %header.w3-container
         %h3 {{ 'nact' | translate }}
       %form.w3-container.w3-card-4{:action => "{% path_to 'create_action' %}", :method => "POST"}
-        %input{:name => "account", :type => "hidden", :value => "{{current_account._slug}}"}/
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._id}}"}/
         .form-group
           %label {{ 'name' | translate }}
           %input.w3-input{:name => "name", :type => "text", :value => "{{action.name}}"}/

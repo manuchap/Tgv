@@ -6,8 +6,8 @@
         <a href="#" style="text-decoration: none;" onclick="document.getElementById('create_misc').style.display='none'"> X</a>
       %header.w3-container
         %h3 {{ 'nmis' | translate }}
-      %form.w3-container.w3-card-4{:misc => "{% path_to 'create_misc' %}", :method => "POST"}
-        %input{:name => "account", :type => "hidden", :value => "{{current_account._slug}}"}/
+      %form.w3-container.w3-card-4{:action => "{% path_to 'create_misc' %}", :method => "POST"}
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._id}}"}/
         .form-group
           %label {{ 'name' | translate }}
           %input.w3-input{:name => "name", :type => "text", :value => "{{misc.name}}"}/

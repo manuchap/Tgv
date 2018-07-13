@@ -1,0 +1,15 @@
+---
+title: CreateTemplate
+published: true
+handle: create_template
+---
+{% action 'createTemplate' %}
+var params = getProp('params');
+{% case wagon %}
+{% when true %}
+createEntry('templates', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, demo: params.demo, account_id: params.account });
+{% else %}
+createEntry('templates', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, demo: params.demo, account: params.account });
+{% endcase %}
+redirectTo('me');
+{% endaction %}

@@ -10,7 +10,12 @@ is_layout: false
 {% extends 'layouts/default' %}
 {% block main %}
 {% authorize "accounts", "sign_in" %}
-{% if current_account %}
+{% unless current_account %}
+.alert.alert-warning
+  You need to
+  = succeed "." do
+    %a{:href => "{% path_to 'sign_in' %}"} sign in
+{% else %}
 .w3-row-padding{:style => "margin:0 -16px"}
   .w3-third.w3-center.w3-card
     %h5 {{ 'myac' | translate }}
@@ -105,23 +110,18 @@ is_layout: false
       #Trash.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
-{% else %}
-.alert.alert-warning
-  You need to
-  = succeed "." do
-    %a{:href => "{% path_to 'sign_in' %}"} sign in
-{% endif %}
-{% include 'me_code' %}
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
 {% include 'modal_create_app' %}
-{% comment %}{% include 'modal_update_app' %}
-{% endcomment %}{% include 'modal_create_gist' %}
-{% comment %}{% include 'modal_update_gist' %}
-{% endcomment %}{% include 'modal_create_misc' %}
-{% comment %}{% include 'modal_update_misc' %}
-{% endcomment %}{% include 'modal_create_template' %}
-{% comment %}{% include 'modal_update_template' %}
-{% endcomment %}{% include 'modal_create_video' %}
-{% comment %}{% include 'modal_update_video' %}
-{% endcomment %}{% endblock %}
+{% comment %}{% include 'modal_update_app' %}{% endcomment %}
+{% include 'modal_create_gist' %}
+{% comment %}{% include 'modal_update_gist' %}{% endcomment %}
+{% include 'modal_create_misc' %}
+{% comment %}{% include 'modal_update_misc' %}{% endcomment %}
+{% include 'modal_create_template' %}
+{% comment %}{% include 'modal_update_template' %}{% endcomment %}
+{% include 'modal_create_video' %}
+{% comment %}{% include 'modal_update_video' %}{% endcomment %}
+{% include 'me_code' %}
+{% endunless %}
+{% endblock %}

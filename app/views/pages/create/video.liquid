@@ -1,0 +1,15 @@
+---
+title: CreateVideo
+published: true
+handle: create_video
+---
+{% action 'createVideo' %}
+var params = getProp('params');
+{% case wagon %}
+{% when true %}
+createEntry('videos', { name: params.name, desc: params.desc, url: params.url, origin: params.origin, demo: params.demo, account_id: params.account });
+{% else %}
+createEntry('videos', { name: params.name, desc: params.desc, url: params.url, origin: params.origin, account: params.account });
+{% endcase %}
+redirectTo('me');
+{% endaction %}

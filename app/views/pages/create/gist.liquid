@@ -1,0 +1,15 @@
+---
+title: CreateGist
+published: true
+handle: create_gist
+---
+{% action 'createGist' %}
+var params = getProp('params');
+{% case wagon %}
+{% when true %}
+createEntry('gists', { name: params.name, desc: params.desc, url: params.url, account_id: params.account });
+{% else %}
+createEntry('gists', { name: params.name, desc: params.desc, url: params.url, account: params.account });
+{% endcase %}
+redirectTo('me');
+{% endaction %}
