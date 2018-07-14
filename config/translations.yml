@@ -79,6 +79,9 @@ name:
 napp:
   en: New app
   fr: Nouvelle app
+next:
+  en: Next
+  fr: Suivant
 ngis:
   en: New gist
   fr: Nouveau gist
@@ -103,6 +106,9 @@ pass:
 pict:
   en: Picture
   fr: Image
+prev:
+  en: Previous
+  fr: Précédent
 publ:
   en: Published
   fr: Publié(e)

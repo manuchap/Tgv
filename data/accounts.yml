@@ -1,7 +1,3 @@
-- John:
-    _slug: john
-    email: 'john@locomotivecms.com'
-    password: 'easyone'
 - Manuchap:
     _slug: manuchap
     email: manuchap@gmail.com

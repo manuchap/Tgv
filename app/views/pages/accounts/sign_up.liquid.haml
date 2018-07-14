@@ -20,7 +20,7 @@ is_layout: false
   %input{:name => "auth_password_field", :type => "hidden", :value => "password"}/
   %input{:name => "auth_email_handle", :type => "hidden", :value => "welcome_message"}/
   %input{:name => "auth_disable_email", :type => "hidden", :value => "true"}/
-  %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to me %}"}/
+  %input{:name => "auth_callback", :type => "hidden", :value => "{% path_to index %}"}/
   %input{:name => "auth_entry[ip]", :type => "hidden", :value => "{{ ip_address }}"}/
   {% if auth_invalid_entry %}
   %h2.w3-center.w3-red {{ 'sorr' | translate }}

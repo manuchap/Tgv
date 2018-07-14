@@ -8,15 +8,31 @@ handle: list
 .w3-container
   {% case params.type %}
   {% when 'actions' %}
-  {% for action in contents.actions %}
+  {% paginate contents.actions by 10 %}
+  {% for action in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to action %}?type=action", :style => "font-size=large"} {{ action.name }}
   {{ 'whos' | translate }} {{ action.account.name }}
   %br
   %p {{ action.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=actions&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=actions&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
+  {% endpaginate %}
   {% when 'apps' %}
-  {% for app in contents.apps %}
+  {% paginate contents.apps by 10 %}
+  {% for app in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to app %}?type=app", :style => "font-size=large"} {{ app.name }}
   {{ 'whos' | translate }} {{ app.account.name }}
   %br
@@ -27,16 +43,46 @@ handle: list
       %p {{ app.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=apps&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=apps&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
+  {% endpaginate %}
   {% when 'gists' %}
-  {% for gist in contents.gists %}
+  {% paginate contents.gists by 10 %}
+  {% for gist in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to gist %}?type=gist", :style => "font-size=large"} {{ gist.name }}
   {{ 'whos' | translate }} {{ gist.account.name }}
   %br
   %p {{ gist.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=gists&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=gists&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
+  {% endpaginate %}
   {% when 'miscs' %}
-  {% for misc in contents.miscs %}
+  {% paginate contents.miscs by 10 %}
+  {% for misc in paginate.collection %}
   {% case misc.type %}
   {% when 'Config' %}
   .w3-container.conf{:style => 'display: block'}
@@ -63,9 +109,24 @@ handle: list
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% endcase %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=miscs&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=miscs&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
   {% endfor %}
+  {% endpaginate %}
   {% when 'templates' %}
-  {% for template in contents.templates %}
+  {% paginate contents.templates by 10 %}
+  {% for template in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to template %}?type=template", :style => "font-size=large"} {{ template.name }}
   {{ 'whos' | translate }} {{ template.account.name }}
   %br
@@ -76,7 +137,22 @@ handle: list
       %p {{ template.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=templates&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=templates&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
+  {% endpaginate %}
   {% when 'videos' %}
+  {% paginate contents.videos by 10 %}
   {% for video in contents.videos %}
   %a.w3-red.w3-padding{:href => "{% path_to video %}?type=video", :style => "font-size=large"} {{ video.name }}
   {{ 'whos' | translate }} {{ video.account.name }}
@@ -91,5 +167,19 @@ handle: list
       %p {{ video.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=templates&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=templates&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
+  {% endpaginate %}
   {% endcase %}
 {% endblock %}
