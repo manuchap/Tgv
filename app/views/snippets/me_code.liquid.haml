@@ -25,7 +25,7 @@
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " w3-red";
   }
-  // Populate Action Modal
+  // Populate Modal
   function popactModal(clicked_id, url, lFunction) {
   // -> Ajax Call
   var xhttp;
@@ -39,7 +39,7 @@
     xhttp.open("GET", url, true);
     xhttp.send();
   }
-  // -> Ajax wc
+  // -> Ajax action
   function loadactFunction(xhttp) {
     var obj = JSON.parse(xhttp.responseText);
     var code = Object.values(obj)[2];
