@@ -13,7 +13,7 @@ content_type: actions
 %p  {{ 'whos' | translate }}  {{ action.account.name }}
 %p {{ action.desc }}
 .w3-panel.w3-card.w3-light-grey
-  .w3-code.jsHigh.notranslate {{ action.code }}
+  .w3-code.jsHigh.notranslate {{ action.code | newline_to_br }}
 %hr
 .w3-container
   %a{:href => "{% path_to 'list' %}?type=actions"}

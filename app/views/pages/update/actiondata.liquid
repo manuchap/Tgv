@@ -9,7 +9,7 @@ response_type: application/json
 {
     {% include 'json', key: 'name', value: action.name %},
     {% include 'json', key: 'desc', value: action.desc %},
-    {% include 'json', key: 'code', value: action.code %}
+    "code": "{{ action.code | multi_line | replace: '"', ''' }}"
 }
 {% endfor %}
 {% endwith_scope %}
