@@ -1,3 +1,19 @@
+- Cube:
+    _slug:
+      en: cube
+      fr: cube
+    name: Cube
+    account: manuchap
+    desc:
+      en: "Fully editable front page.<br>You'll have to create the other pages \U0001F609<br>Based
+        on a <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">free
+        html5 template</a>."
+      fr: "Page unique totalement éditable.<br>Les autres pages sont à créer \U0001F609.<br>Basé
+        sur un <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">template
+        html5 open source</a>.<div><br></div>"
+    pict: "/samples/content_entries/Cube.jpg"
+    url: https://github.com/manuchap/Cube
+    demo: https://cube.studiowan.fr
 - W3css:
     _slug:
       en: w3css
@@ -22,6 +38,32 @@
     pict: "/samples/content_entries/W3css.jpg"
     url: https://github.com/manuchap/W3CSS
     demo: http://w3c.studiowan.fr
+- Rb&b:
+    _slug:
+      en: rb-and-b
+      fr: rb-and-b
+    name: Rb&b
+    account: manuchap
+    desc:
+      en: Quick Boostrap3 rb&b site from a discontinued client.
+      fr: Quick Boostrap3 rb&b site from a discontinued client.
+    pict: "/samples/content_entries/rbnb_bs3.jpg"
+    url: https://github.com/manuchap/Rb-b
+    demo: https://manuchap.herokuapp.com/locomotive/tranquil-sunset-40/preview
+- Bootstrap3 Switcher:
+    _slug:
+      en: bootstrap3-switcher
+      fr: bootstrap3-switcher
+    name: Bootstrap3 Switcher
+    account: manuchap
+    desc:
+      en: Every boostrap3 element on a single page with a selector to switch between
+        themes from Bootswatch (api).
+      fr: Every boostrap3 element on a single page with a selector to switch between
+        themes from Bootswatch (api).
+    pict: "/samples/content_entries/bs3switch.jpg"
+    url: https://github.com/manuchap/bootstrap3_switcher
+    demo: http://bs3switch.studiowan.fr
 - Ecwid:
     _slug:
       en: ecwid
@@ -36,22 +78,6 @@
     pict: "/samples/content_entries/Ecwid.jpg"
     url: https://github.com/manuchap/Ecwid
     demo: http://ecwid.studiowan.fr
-- Cube:
-    _slug:
-      en: cube
-      fr: cube
-    name: Cube
-    account: manuchap
-    desc:
-      en: "Fully editable front page.<br>You'll have to create the other pages \U0001F609<br>Based
-        on a <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">free
-        html5 template</a>."
-      fr: "Page unique totalement éditable.<br>Les autres pages sont à créer \U0001F609.<br>Basé
-        sur un <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">template
-        html5 open source</a>.<div><br></div>"
-    pict: "/samples/content_entries/Cube.jpg"
-    url: https://github.com/manuchap/Cube
-    demo: https://cube.studiowan.fr
 - Webagency:
     _slug:
       en: webagency

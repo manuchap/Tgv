@@ -1,5 +1,6 @@
 - Manuchap:
     _slug: manuchap
+    name: Manuchap
     email: manuchap@gmail.com
-    password: 'iliketrains'
+    password: iliketrains
     avatar: "/samples/content_entries/bugz.png"

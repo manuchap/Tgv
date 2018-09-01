@@ -30,21 +30,6 @@
     pict: "/samples/content_entries/My-Locomotive-Sites.jpg"
     url: https://github.com/manuchap/My-Locomotive-Sites
     demo: https://admin.studiowan.fr
-- Wordpress Consumer:
-    _slug:
-      en: wordpress-Consumer
-      fr: wordpress-Consumer
-    name: Wordpress Consumer
-    account: manuchap
-    desc:
-      en: "<p>Import you old wordpress site into locomotive.<br>No front end except
-        the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
-        soon but was a nice try.</p>"
-      fr: "<p>Importez votre vieux wordpress dans locomotive.<br>Pas de frontend à
-        part l'importateur.<br>Aspirez votre blog et synchronisez!<br>Projet temporairement
-        abandonné.</p>"
-    pict: "/samples/content_entries/Wpimport.jpg"
-    url: https://github.com/manuchap/loco_templates/tree/wp-import
 - Agendastudio:
     _slug:
       en: agendastudio
@@ -60,3 +45,18 @@
     pict: "/samples/content_entries/Agendastudio.jpg"
     url: https://github.com/manuchap/Agendastudio
     demo: http://agendastudio.studiowan.fr
+- Wordpress Consumer:
+    _slug:
+      en: wordpress-consumer-1
+      fr: wordpress-consumer-1
+    name: Wordpress Consumer
+    account: manuchap
+    desc:
+      en: "<p>Import you old wordpress site into locomotive.<br>No front end except
+        the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
+        soon but was a nice try.</p>"
+      fr: "<p>Importez votre vieux wordpress dans locomotive.<br>Pas de frontend à
+        part l'importateur.<br>Aspirez votre blog et synchronisez!<br>Projet temporairement
+        abandonné.</p>"
+    pict: "/samples/content_entries/Wpimport.jpg"
+    url: https://github.com/manuchap/loco_templates/tree/wp-import
