@@ -33,4 +33,3 @@ window.onload=function() {
   var elapsed = new Date().getTime()-renderStart;
   document.getElementById("speed").innerHTML = elapsed;
 };
-

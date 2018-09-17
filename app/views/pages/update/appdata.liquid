@@ -1,0 +1,17 @@
+---
+title: App data
+published: true
+handle: appdata
+response_type: application/json
+---
+{% with_scope _slug: params.slug %}
+{% for app in contents.apps %}
+{
+    {% include 'json', key: 'name', value: app.name %},
+    {% include 'json', key: 'desc', value: app.desc %},
+    {% include 'json', key: 'pict', value: app.pict %},
+    {% include 'json', key: 'url', value: app.url %},
+    {% include 'json', key: 'demo', value: app.demo %}
+}
+{% endfor %}
+{% endwith_scope %}

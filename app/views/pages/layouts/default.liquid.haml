@@ -26,7 +26,7 @@ is_layout: true
       {% if page.handle == 'index' %}
       %span.w3-bar-item.w3-red.w3-left {% locale_switcher %}
       {% endif %}
-      %span.w3-bar-item.w3-right.w3-animate-right.w3-red.w3-hide-small {{ 'title' | translate }}
+      %span.w3-bar-item.w3-right.w3-animate-right.w3-red.w3-hide-small {{ 'titl' | translate }}
       {% if params.type %}
       %span.w3-bar-item.w3-right.w3-animate-left {{ params.type | upcase }}
       {% else %}
@@ -40,7 +40,7 @@ is_layout: true
           %img.w3-circle.w3-margin-right{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:46px"}/
         .w3-col.s8.w3-bar
           %span
-            {{ 'hello' | translate }}, {% unless current_account %}<b>{{ 'guest' | translate }}</b>
+            {{ 'helo' | translate }}, {% unless current_account %}<b>{{ 'gues' | translate }}</b>
           %br/
           <a href="#" onclick="document.getElementById('signup').style.display='block'">{{ 'siup' | translate }}</a>
           <a href="#" onclick="document.getElementById('signin').style.display='block'">{{ 'siin' | translate }}</a>
@@ -92,21 +92,21 @@ is_layout: true
           %i.fa.fa-youtube-play.fa-fw
           \&#160; Videos
           %span.w3-badge.w3-red.w3-small {{ contents.videos.size }}
-        .w3-bar-item
-          %input#search-input.w3-input.w3-right{:placeholder => "{{ 'sear' | translate }}"}/
-          #hits
-          #pagination
-          %script#hit-template{:type => "text/html"}
-            <div class="hit">
-            <div class="hit-image">
-            <img src="{{image}}" alt="{{name}}">
-            </div>
-            <div class="hit-content">
-            <h3 class="hit-price">${{price}}</h3>
-            <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
-            <p class="hit-description">{{{_highlightResult.description.value}}}</p>
-            </div>
-            </div>
+        / .w3-bar-item
+        /   %input#search-input.w3-input.w3-right{:placeholder => "{{ 'sear' | translate }}"}/
+        /   #hits
+        /   #pagination
+        /   %script#hit-template{:type => "text/html"}
+        /     <div class="hit">
+        /     <div class="hit-image">
+        /     <img src="{{image}}" alt="{{name}}">
+        /     </div>
+        /     <div class="hit-content">
+        /     <h3 class="hit-price">${{price}}</h3>
+        /     <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+        /     <p class="hit-description">{{{_highlightResult.description.value}}}</p>
+        /     </div>
+        /     </div>
         %br/
     / Overlay effect when opening sidebar on small screens
     #myOverlay.w3-overlay.w3-hide-large.w3-animate-opacity{:onclick => "w3_close()", :style => "cursor:pointer", :title => "close side menu"}
@@ -123,7 +123,7 @@ is_layout: true
       {% include 'modal_signup' %}
       {% include 'modal_signin' %}
       {{ 'app' | javascript_tag }}
-      {% if fullpath contains 'search' %}
-      {{ 'instantsearch.min' | javascript_tag }}
-      {{ 'search' | javascript_tag }}
-    {% endif %}
+      / {% if fullpath contains 'search' %}
+      / {{ 'instantsearch.min' | javascript_tag }}
+      / {{ 'search' | javascript_tag }}
+      / {% endif %}

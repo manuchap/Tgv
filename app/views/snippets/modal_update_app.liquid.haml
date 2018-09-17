@@ -1,12 +1,12 @@
-/ Update Action Modal
-#update_action.w3-modal
+/ Update app Modal
+#update_app.w3-modal
   .w3-modal-content
     .w3-container
       %span.w3-button.w3-red.w3-display-topright
-        <a href="#" style="text-decoration: none;" onclick="document.getElementById('update_action').style.display='none'">X</a>
+        <a href="#" style="text-decoration: none;" onclick="document.getElementById('update_app').style.display='none'">X</a>
       %header.w3-container
-        %h3 {{ 'uact' | translate }}
-      %form#uact.w3-container.w3-card-4{:action => "", :method => "POST"}
+        %h3 {{ 'uapp' | translate }}
+      %form.w3-container.w3-card-4{:action => "{% path_to 'update_app' %}?name={{ app.name }}", :method => "POST"}
         .form-group
           %label {{ 'name' | translate }}
           %input#aname.w3-input{:name => "name", :type => "text", :value => "", :disabled => "disabled"}/

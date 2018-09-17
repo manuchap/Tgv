@@ -25,8 +25,9 @@
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " w3-red";
   }
-  // Populate Modal
+  // Action Modal
   function popactModal(clicked_id, url, lFunction) {
+  document.getElementById('uact').action="{% path_to 'update_action' %}?name=" + clicked_id;
   // -> Ajax Call
   var xhttp;
   var url = url + '?slug=' + clicked_id;
@@ -41,6 +42,28 @@
   }
   // -> Ajax action
   function loadactFunction(xhttp) {
+    var obj = JSON.parse(xhttp.responseText);
+    document.getElementById('aname').value=Object.values(obj)[0];
+    document.getElementById('adesc').value=Object.values(obj)[1];
+    document.getElementById('acode').value=Object.values(obj)[2].replace(/<br\s*\/?>/ig, "\r\n");
+    document.getElementById('update_action').style.display='block';
+  }
+  // App Modal
+  function popappModal(clicked_id, url, lFunction) {
+  // -> Ajax Call
+  var xhttp;
+  var url = url + '?slug=' + clicked_id;
+    xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        lFunction(this);
+      }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  }
+  // -> Ajax action
+  function loadappFunction(xhttp) {
     var obj = JSON.parse(xhttp.responseText);
     var code = Object.values(obj)[2];
     var tpl = document.createElement('template');
