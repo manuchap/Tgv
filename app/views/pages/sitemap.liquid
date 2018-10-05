@@ -1,0 +1,35 @@
+---
+title: Sitemap
+slug: sitemap
+is_layout: false
+listed: false
+published: true
+cache_strategy: none
+response_type: text/xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+  {% if page.published? and page.listed? %}
+  {% case page.slug %}
+  {% when 'index' %}
+  <url>
+    <loc>https://{{ host }}</loc>
+    <lastmod>{{ now | date: "%F" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% else %}
+  {% if page.templatized? %}
+  {% else %}
+  <url>
+    <loc>https://{{ host }}/{{ page.fullpath }}</loc>
+    <lastmod>{{ now | date: "%F" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endif %}
+  {% endcase %}
+  {% endif %}
+  {% endfor %}
+</urlset>
