@@ -3,6 +3,7 @@ slug: templates
 label_field_name: name
 order_by: updated_at
 order_direction: desc
+entry_template: '<a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }}'
 fields:
 - name:
     label: Name
