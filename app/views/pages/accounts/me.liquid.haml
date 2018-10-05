@@ -46,7 +46,7 @@ is_layout: false
           {% for action in current_account.actions %}
           %li
             %a{:href => "{% path_to action %}"} {{ action.name }}
-            %a{:href => "{% path_to delete_action %}?name={{ action.name }}"}
+            %a{:href => "{% path_to delete_action %}?name={{ action._slug }}"}
               %i.fa.fa-trash.fa-fw.w3-right
             {% comment %}<a id="{{action._slug}}" href="#" onclick="popactModal(this.id, '/update/actiondata.json', loadactFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
             %br
@@ -59,7 +59,7 @@ is_layout: false
           {% for app in current_account.apps %}
           %li
             %a{:href => "{% path_to app %}"} {{ app.name }}
-            %a{:href => "{% path_to delete_app %}?name={{ app.name }}"}
+            %a{:href => "{% path_to delete_app %}?name={{ app._slug }}"}
               %i.fa.fa-trash.fa-fw.w3-right
             {% comment %}<a id="{{app._slug}}" href="#" onclick="popappModal(this.id, '/update/appdata.json', loadappFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
             %br
@@ -72,7 +72,7 @@ is_layout: false
           {% for gist in current_account.gists %}
           %li
             %a{:href => "{% path_to gist %}"} {{ gist.name }}
-            %a{:href => "{% path_to delete_gist %}?name={{ gist.name }}"}
+            %a{:href => "{% path_to delete_gist %}?name={{ gist._slug }}"}
               %i.fa.fa-trash.fa-fw.w3-right
             {% comment %}<a id="{{gist._slug}}" href="#" onclick="popgistModal(this.id, '/update/gistdata.json', loadgistFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
             %br
@@ -85,7 +85,7 @@ is_layout: false
           {% for misc in current_account.miscs %}
           %li
             %a{:href => "{% path_to misc %}"} {{ misc.name }}
-            %a{:href => "{% path_to delete_misc %}?name={{ misc.name }}"}
+            %a{:href => "{% path_to delete_misc %}?name={{ misc._slug }}"}
               %i.fa.fa-trash.fa-fw.w3-right
             {% comment %}<a id="{{misc._slug}}" href="#" onclick="popmiscModal(this.id, '/update/miscdata.json', loadmiscFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
             %br
@@ -98,7 +98,7 @@ is_layout: false
           {% for template in current_account.templates %}
           %li
             %a{:href => "{% path_to template %}"} {{ template.name }}
-            %a{:href => "{% path_to delete_template %}?name={{ template.name }}"}
+            %a{:href => "{% path_to delete_template %}?name={{ template._slug }}"}
               %i.fa.fa-trash.fa-fw.w3-right
             {% comment %}<a id="{{template._slug}}" href="#" onclick="poptemplateModal(this.id, '/update/templatedata.json', loadtemplateFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
             %br
@@ -111,7 +111,7 @@ is_layout: false
           {% for video in current_account.videos %}
           %li
             %a{:href => "{% path_to video %}"} {{ video.name }}
-            %a{:href => "{% path_to delete_video %}?name={{ video.name }}"}
+            %a{:href => "{% path_to delete_video %}?name={{ video._slug }}"}
               %i.fa.fa-trash.fa-fw.w3-right
             {% comment %}<a id="{{video._slug}}" href="#" onclick="popvideoModal(this.id, '/update/videodata.json', loadvideoFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
             %br
