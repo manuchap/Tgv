@@ -5,11 +5,6 @@ handle: create_misc
 ---
 {% action 'createMisc' %}
 var params = getProp('params');
-{% case wagon %}
-{% when true %}
-createEntry('miscs', { name: params.name, desc: params.desc, type: params.type, code: params.code, account_id: params.account });
-{% else %}
-createEntry('miscs', { name: params.name, desc: params.desc, type: params.type, code: params.code, account: params.account });
-{% endcase %}
+createEntry('miscs', { name: params.name, desc: params.desc, type: params.type, code: params.code.replace(/\n/g, "<br>"), account: params.account });
 redirectTo('me');
 {% endaction %}
