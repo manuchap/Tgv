@@ -14,7 +14,7 @@ content_type: apps
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ app.account.email }}"} {{ app.account.name }}
 %p {{ app.desc }}
-%img.w3-card{:src => "{{ app.pict.url | resize: '900x>' }}", :style => "max-width: 100%"}/
+%img.w3-card{:src => "{{ app.pict.url | resize: '900x>', strip: 'true' }}", :style => "max-width: 100%"}/
 %hr
 .w3-container
   .w3-bar
