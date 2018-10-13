@@ -3,7 +3,6 @@
       en: members
       fr: members
     name: Members
-    account: manuchap
     desc:
       en: A simple table to demonstrate <a target="_blank" href="https://locomotive-v3.readme.io/v3.4/docs/introduction"
         title="Locomotive actions dov">actions</a> in Locomotive.
@@ -12,12 +11,12 @@
     pict: "/samples/content_entries/Members.jpg"
     url: https://github.com/manuchap/loco_templates/tree/actions
     demo: http://actions.studiowan.fr
+    account: manuchap
 - My Locomotive Sites:
     _slug:
       en: my-locomotive-sites
       fr: my-locomotive-sites
     name: My Locomotive Sites
-    account: manuchap
     desc:
       en: Mini monitoring app for your LocomotiveCMS engine.<br>The index page contains
         only logic (liquid) instructions.<br>All of the markup is in the template
@@ -30,12 +29,12 @@
     pict: "/samples/content_entries/My-Locomotive-Sites.jpg"
     url: https://github.com/manuchap/My-Locomotive-Sites
     demo: https://admin.studiowan.fr
+    account: manuchap
 - Agendastudio:
     _slug:
       en: agendastudio
       fr: agendastudio
     name: Agendastudio
-    account: manuchap
     desc:
       en: A little app for rehearsal studio bookings.<br>Contains a news caroussel,
         bands info, beautiful soundcloud player and a contact form.
@@ -45,12 +44,12 @@
     pict: "/samples/content_entries/Agendastudio.jpg"
     url: https://github.com/manuchap/Agendastudio
     demo: http://agendastudio.studiowan.fr
+    account: manuchap
 - Wordpress Consumer:
     _slug:
       en: wordpress-consumer-1
       fr: wordpress-consumer-1
     name: Wordpress Consumer
-    account: manuchap
     desc:
       en: "<p>Import you old wordpress site into locomotive.<br>No front end except
         the importer iself.<br>Grab your blog and sync!<br>Might not evolve anytime
@@ -60,3 +59,4 @@
         abandonné.</p>"
     pict: "/samples/content_entries/Wpimport.jpg"
     url: https://github.com/manuchap/loco_templates/tree/wp-import
+    account: manuchap

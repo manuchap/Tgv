@@ -1,28 +1,40 @@
-- Call API:
-    _slug:
-      en: call-api
-      fr: call-api
-    name: Call API
-    account: manuchap
-    desc:
-      en: Query the restful v3 api and get a json response.
-      fr: Envoyer un requête sur l'API V3 et obtenir une répons en Json.
-    code: "---<br>title: Info page<br>response_type: application/json<br>---<br>{% capture token %}{{site.metafields.info.token}}{% endcapture %}<br>{% capture email %}{{site.metafields.info.email}}{% endcapture %}<br>{% capture handle %}{{site.metafields.info.handle}}{% endcapture %}<br>{% action 'Call API' %}<br>var token = getProp('token');<br>var email = getProp('email');<br>var handle = getProp('handle');<br>var info = false;<br>info = callAPI('GET', '<a href=\"http://YOURENGINE/locomotive/api/v3/current_site.json\" title=\"Link: http://YOURENGINE/locomotive/api/v3/current_site.json\">http://YOURENGINE/locomotive/api/v3/current_site.json</a>', {<br>  data: {<br>  },<br>  headers: {<br>    'X-Locomotive-Account-Token': token,<br>    'X-Locomotive-Account-Email': email,<br>    'X-Locomotive-Site-Handle': handle<br>  }<br>});<br>setProp('info', info);<br>{% endaction %}<br>{% if info %}<br>{{ info | split: \"=&gt;\" | join: \": \" | split: \"nil\" | join: '\"NULL\"' }}<br>{% else %}<br>Failure!<br>{% endif %}"
 - Edit member:
     _slug:
       en: edit-member
       fr: edit-member
     name: Edit member
-    account: manuchap
     desc:
       en: 'Action used to edit a member on the <a href="/apps/members?type=apps" title="Link:
         /apps/members?type=apps">Members</a>&nbsp;app.'
       fr: 'Action utilisée dans l''app <a href="/apps/members?type=apps" title="Link:
         /apps/members?type=apps">Members</a>'
-    code: "---<br>title: Saving<br>published: true<br>handle: edit_member<br>---<br>%h1
-      {{ page.title }}<br>{% capture member %}{{ params.slug }}{% endcapture %}<br>{%
-      action 'editMember' %}<br>setProp('member', '{{member}}');<br>var params = getProp('params');<br>var
+    code: "---<br>title: Saving<br>published: true<br>handle: edit_member<br>---<br>{%
+      capture member %}{{ params.slug }}{% endcapture %}<br>{% action 'editMember'
+      %}<br>setProp('member', '{{member}}');<br>var params = getProp('params');<br>var
       member = getProp('member');<br>updateEntry('members', member, { genre: params.genre,
       nickname: params.nick, first_name: params.firs, last_name: params.last, description:
       params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction
       %}"
+    account: manuchap
+- Call API:
+    _slug:
+      en: call-api
+      fr: call-api
+    name: Call API
+    desc:
+      en: Query the restful v3 api and get a json response.
+      fr: Envoyer un requête sur l'API V3 et obtenir une répons en Json.
+    code: '---<br>title: Info page<br>response_type: application/json<br>---<br>{%
+      capture token %}{{site.metafields.info.token}}{% endcapture %}<br>{% capture
+      email %}{{site.metafields.info.email}}{% endcapture %}<br>{% capture handle
+      %}{{site.metafields.info.handle}}{% endcapture %}<br>{% action ''Call API''
+      %}<br>var token = getProp(''token'');<br>var email = getProp(''email'');<br>var
+      handle = getProp(''handle'');<br>var info = false;<br>info = callAPI(''GET'',
+      ''<a href="http://YOURENGINE/locomotive/api/v3/current_site.json" title="Link:
+      http://YOURENGINE/locomotive/api/v3/current_site.json">http://YOURENGINE/locomotive/api/v3/current_site.json</a>'',
+      {<br>  data: {<br>  },<br>  headers: {<br>    ''X-Locomotive-Account-Token'':
+      token,<br>    ''X-Locomotive-Account-Email'': email,<br>    ''X-Locomotive-Site-Handle'':
+      handle<br>  }<br>});<br>setProp(''info'', info);<br>{% endaction %}<br>{% if
+      info %}<br>{{ info | split: "=&gt;" | join: ": " | split: "nil" | join: ''"NULL"''
+      }}<br>{% else %}<br>Failure!<br>{% endif %}'
+    account: manuchap

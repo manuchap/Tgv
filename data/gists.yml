@@ -1,9 +1,20 @@
+- Locomotive vs Wordpress:
+    _slug:
+      en: locomotive-vs-wordpress
+      fr: locomotive-vs-wordpress
+    name: Locomotive vs Wordpress
+    desc:
+      en: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
+        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
+      fr: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
+        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
+    url: https://gist.github.com/manuchap/38ddf8dd88272219a6acb28b362a26a1
+    account: manuchap
 - FAQ Export:
     _slug:
       en: faq-export
       fr: faq-export
     name: FAQ Export
-    account: manuchap
     desc:
       en: Export FAQ entries to Algolia (forked from<span class="Apple-converted-space">&nbsp;</span><a
         href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).
@@ -11,15 +22,4 @@
         href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183"
         title="Link: https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).<br>'
     url: https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db
-- Locomotive vs Wordpress:
-    _slug:
-      en: locomotive-vs-wordpress
-      fr: locomotive-vs-wordpress
-    name: Locomotive vs Wordpress
     account: manuchap
-    desc:
-      en: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
-        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
-      fr: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
-        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
-    url: https://gist.github.com/manuchap/38ddf8dd88272219a6acb28b362a26a1
