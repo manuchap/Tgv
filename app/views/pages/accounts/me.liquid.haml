@@ -40,6 +40,7 @@ is_layout: false
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Miscs')">Miscs</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Templates')">Templates</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Videos')">Videos</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Showcases')">Showcases</button>
         <button class="w3-bar-item w3-button tablink w3-border-left" onclick="openTab(event, 'Trash')">{{ 'tras' | translate }}</button>
       #Actions.w3-container.tab.w3-animate-opacity{:style => "display: block;"}
         %ul.w3-ul.w3-hoverable
@@ -119,21 +120,30 @@ is_layout: false
         <a href="#" class="w3-red" onclick="document.getElementById('create_video').style.display='block'">
         %i.fa.fa-plus.fa-fw
         </a>
+      #Showcases.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        %ul.w3-ul.w3-hoverable
+          {% for showcase in current_account.showcases %}
+          %li
+            %a{:href => "{% path_to showcase %}"} {{ showcase.name }}
+            %a{:href => "{% path_to delete_showcase %}?name={{ showcase.name }}"}
+              %i.fa.fa-trash.fa-fw.w3-right
+            {% comment %}<a id="{{showcase._slug}}" href="#" onclick="popshowcaseModal(this.id, '/update/showcasedata.json', loadshowcaseFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
+            %br
+          {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_showcase').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
       #Trash.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
 {% include 'modal_create_app' %}
-{% comment %}{% include 'modal_update_app' %}{% endcomment %}
 {% include 'modal_create_gist' %}
-{% comment %}{% include 'modal_update_gist' %}{% endcomment %}
 {% include 'modal_create_misc' %}
-{% comment %}{% include 'modal_update_misc' %}{% endcomment %}
 {% include 'modal_create_template' %}
-{% comment %}{% include 'modal_update_template' %}{% endcomment %}
 {% include 'modal_create_video' %}
-{% comment %}{% include 'modal_update_video' %}{% endcomment %}
+{% include 'modal_create_showcase' %}
 {% include 'me_code' %}
 {% endunless %}
 {% endblock %}

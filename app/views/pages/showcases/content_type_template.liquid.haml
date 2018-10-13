@@ -1,0 +1,30 @@
+---
+title: Showcases
+slug: content_type_showcase
+position: 0
+listed: false
+published: true
+is_layout: false
+content_type: showcases
+---
+{% extends 'layouts/default' %}
+{% block 'main' %}
+%h3 {{ showcase.name }}
+%p{:style => "margin-top: -18px"}
+  %i {{ 'whos' | translate }}  {{ showcase.account.name }}
+%p {{ showcase.desc }}
+%img.w3-card{:src => "{{ showcase.pict.url }}", :style => "max-width: 100%"}/
+%br
+%hr
+.w3-container
+  .w3-bar
+    %button.w3-bar-item.w3-button.w3-green
+      %a{:href => "{{ showcase.url }}", :target => "_blank"} {{ 'webs' | translate }}
+    %button.w3-bar-item.w3-button.w3-red
+      %a{:href => "{{ showcase.by_url }}", :target => "_blank"} {{ 'crea' | translate }}
+  %br
+.w3-container
+  %a{:href => "{% path_to 'list' %}?type=showcases"}
+    %i.fa.fa-arrow-left.fa-fw>
+    \&#160; {{ 'back' | translate }}
+{% endblock %}

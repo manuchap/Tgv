@@ -1,0 +1,15 @@
+---
+title: CreateShowcase
+published: true
+handle: create_showcase
+---
+{% action 'createShowcase' %}
+var params = getProp('params');
+{% case wagon %}
+{% when true %}
+createEntry('showcases', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, by_url: params.by_url, account_id: params.account });
+{% else %}
+createEntry('showcases', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, by_url: params.by_url, account: params.account });
+{% endcase %}
+redirectTo('me');
+{% endaction %}

@@ -183,5 +183,32 @@ position: 1
     {%endif%}
     {% endunless %}
   {% endpaginate %}
+  {% when 'showcases' %}
+  {% paginate contents.showcases by 10 %}
+  {% for showcase in paginate.collection %}
+  %a.w3-red.w3-padding{:href => "{% path_to showcase %}?type=showcase", :style => "font-size=large"} {{ showcase.name }}
+  {{ 'whos' | translate }} {{ showcase.account.name }}
+  %br
+  .w3-row
+    .w3-quarter
+      %img{:src => "{{ showcase.pict.url }}", :style => "min-width: 180px; max-width: 100px; max-height: 130px; margin-top:1.4em;"}/
+    .w3-threequarter.w3-padding
+      %p {{ showcase.desc | truncatewords: '25' }}
+  %hr
+  {% endfor %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=showcases&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=showcases&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
+  {% endpaginate %}
   {% endcase %}
 {% endblock %}
