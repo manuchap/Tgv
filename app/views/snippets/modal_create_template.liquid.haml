@@ -9,13 +9,13 @@
       %form.w3-container.w3-card-4{:action => "{% path_to 'create_template' %}", :enctype => "multipart/form-data", :method => "POST"}
         %input{:name => "account", :type => "hidden", :value => "{{current_account._id}}"}/
         .form-group
-          %label {{ 'name' | translate }}
+          %label {{ 'name' | translate }} *
           %input.w3-input{:name => "name", :type => "text", :value => "{{template.name}}"}/
         .form-group
-          %label {{ 'desc' | translate }}
+          %label {{ 'desc' | translate }} *
           %input.w3-input{:name => "desc", :type => "text", :value => "{{template.desc}}"}/
         .form-group
-          %label {{ 'pict' | translate }}
+          %label {{ 'pict' | translate }} *
           %input.w3-input{:name => "pict", :type => 'file', :value => "{{template.pict.url}}"}
         .form-group
           %label {{ 'sour' | translate }}
@@ -23,5 +23,7 @@
         .form-group
           %label {{ 'demo' | translate }}
           %input.w3-input{:name => "demo", :type => 'text', :value => "{{template.demo}}"}
+        %p
+          %i * {{ 'comp' | translate }}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
       %br

@@ -9,19 +9,15 @@ fields:
     type: string
     required: true
     localized: false
-- account:
-    label: Account
-    type: belongs_to
-    class_name: accounts
 - desc:
     label: Desc
     type: text
-    required: false
+    required: true
     localized: true
 - type:
     label: Type
     type: select
-    required: false
+    required: true
     localized: false
     select_options:
       - Config
@@ -30,5 +26,9 @@ fields:
 - code:
     label: Code
     type: text
-    required: false
+    required: true
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts

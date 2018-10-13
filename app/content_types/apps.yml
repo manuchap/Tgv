@@ -9,19 +9,15 @@ fields:
     type: string
     required: true
     localized: false
-- account:
-    label: Account
-    type: belongs_to
-    class_name: accounts
 - desc:
     label: Description
     type: text
-    required: false
+    required: true
     localized: true
 - pict:
     label: Picture
     type: file
-    required: false
+    required: true
     localized: false
 - url:
     label: Source
@@ -33,3 +29,7 @@ fields:
     type: string
     required: false
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts
