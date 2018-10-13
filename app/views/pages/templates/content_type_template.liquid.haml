@@ -10,6 +10,8 @@ content_type: templates
 {% extends 'layouts/default' %}
 {% block 'main' %}
 %h3 {{ template.name }}
+%p{:style => "margin-top: -18px"}
+  %i {{ 'whos' | translate }}  {{ template.account.name }}
 %p {{ template.desc }}
 %img.w3-card{:src => "{{ template.pict.url }}", :style => "max-width: 100%"}/
 %br

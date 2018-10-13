@@ -1,7 +1,7 @@
 name: Miscs
 slug: miscs
 label_field_name: name
-order_by: updated_at
+order_by: created_at
 order_direction: desc
 entry_template: '<a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }}'
 fields:
@@ -10,19 +10,15 @@ fields:
     type: string
     required: true
     localized: false
-- account:
-    label: Account
-    type: belongs_to
-    class_name: accounts
 - desc:
     label: Desc
     type: text
-    required: false
+    required: true
     localized: true
 - type:
     label: Type
     type: select
-    required: false
+    required: true
     localized: false
     select_options:
       - Config
@@ -31,5 +27,9 @@ fields:
 - code:
     label: Code
     type: text
-    required: false
+    required: true
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts

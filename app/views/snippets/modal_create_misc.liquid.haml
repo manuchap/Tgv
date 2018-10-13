@@ -9,20 +9,22 @@
       %form.w3-container.w3-card-4{:action => "{% path_to 'create_misc' %}", :method => "POST"}
         %input{:name => "account", :type => "hidden", :value => "{{current_account._id}}"}/
         .form-group
-          %label {{ 'name' | translate }}
+          %label {{ 'name' | translate }} *
           %input.w3-input{:name => "name", :type => "text", :value => "{{misc.name}}"}/
         .form-group
-          %label {{ 'desc' | translate }}
+          %label {{ 'desc' | translate }} *
           %input.w3-input{:name => "desc", :type => "text", :value => "{{misc.desc}}"}/
         .form-group
-          %label {{ 'type' | translate }}
+          %label code *
+          %textarea.w3-input{:name => "code", :rows => 10, :value => "{{misc.code}}"}
+        .form-group
+          %label {{ 'type' | translate }} *
           %select.form-control{:name => "type"}
             %option{:value => ""}
             {% for option in contents.miscs.type_options %}
             %option{:value => "{{ option }}"} {{ option }}
             {% endfor %}
-        .form-group
-          %label code
-          %textarea.w3-input{:name => "code", :rows => 10, :value => "{{misc.code}}"}
+        %p
+          %i * {{ 'comp' | translate }}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
       %br

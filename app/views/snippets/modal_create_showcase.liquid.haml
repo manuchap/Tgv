@@ -1,0 +1,29 @@
+/ Create Showcase Modal
+#create_showcase.w3-modal
+  .w3-modal-content
+    .w3-container
+      %span.w3-button.w3-red.w3-display-topright
+        <a href="#" style="text-decoration: none;" onclick="document.getElementById('create_showcase').style.display='none'"> X</a>
+      %header.w3-container
+        %h3 {{ 'nsho' | translate }}
+      %form.w3-container.w3-card-4{:action => "{% path_to 'create_showcase' %}", :enctype => "multipart/form-data", :method => "POST"}
+        %input{:name => "account", :type => "hidden", :value => "{{current_account._id}}"}/
+        .form-group
+          %label {{ 'name' | translate }} *
+          %input.w3-input{:name => "name", :type => "text", :value => "{{showcase.name}}"}/
+        .form-group
+          %label {{ 'desc' | translate }} *
+          %input.w3-input{:name => "desc", :type => "text", :value => "{{showcase.desc}}"}/
+        .form-group
+          %label {{ 'pict' | translate }} *
+          %input.w3-input{:name => "pict", :type => 'file', :value => "{{showcase.pict.url}}"}
+        .form-group
+          %label {{ 'webs' | translate }} *
+          %input.w3-input{:name => "url", :type => 'text', :value => "{{showcase.url}}"}
+        .form-group
+          %label {{ 'crea' | translate }}
+          %input.w3-input{:name => "dby_url", :type => 'text', :value => "{{showcase.by_url}}"}
+        %p
+          %i * {{ 'comp' | translate }}
+        %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
+      %br

@@ -1,7 +1,7 @@
 name: Gists
 slug: gists
 label_field_name: name
-order_by: updated_at
+order_by: created_at
 order_direction: desc
 entry_template: '<a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }}'
 fields:
@@ -10,17 +10,17 @@ fields:
     type: string
     required: true
     localized: false
-- account:
-    label: Account
-    type: belongs_to
-    class_name: accounts
 - desc:
     label: Description
     type: text
-    required: false
+    required: true
     localized: true
 - url:
     label: Url
     type: string
-    required: false
+    required: true
     localized: false
+- account:
+    label: Account
+    type: belongs_to
+    class_name: accounts

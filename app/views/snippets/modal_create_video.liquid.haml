@@ -9,20 +9,22 @@
       %form.w3-container.w3-card-4{:action => "{% path_to 'create_video' %}", :method => "POST"}
         %input{:name => "account", :type => "hidden", :value => "{{current_account._id}}"}/
         .form-group
-          %label {{ 'name' | translate }}
+          %label {{ 'name' | translate }} *
           %input.w3-input{:name => "name", :type => "text", :value => "{{video.name}}"}/
         .form-group
-          %label {{ 'desc' | translate }}
+          %label {{ 'desc' | translate }} *
           %input.w3-input{:name => "desc", :type => "text", :value => "{{video.desc}}"}/
         .form-group
-          %label {{ 'sour' | translate }}
+          %label {{ 'sour' | translate }} *
           %input.w3-input{:name => "url", :type => 'text', :value => "{{video.url}}"}
         .form-group
-          %label {{ 'orig' | translate }}
+          %label {{ 'orig' | translate }} *
           %select.form-control{:name => "origin"}
             %option{:value => ""}
             {% for option in contents.videos.origin_options %}
             %option{:value => "{{ option }}"} {{ option }}
             {% endfor %}
+        %p
+          %i * {{ 'comp' | translate }}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}
       %br

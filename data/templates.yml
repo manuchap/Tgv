@@ -1,9 +1,22 @@
+- Bootstrap3 Switcher:
+    _slug:
+      en: bootstrap3-switcher
+      fr: bootstrap3-switcher
+    name: Bootstrap3 Switcher
+    desc:
+      en: Every boostrap3 element on a single page with a selector to switch between
+        themes from Bootswatch (api).
+      fr: Every boostrap3 element on a single page with a selector to switch between
+        themes from Bootswatch (api).
+    pict: "/samples/content_entries/bs3switch.jpg"
+    url: https://github.com/manuchap/bootstrap3_switcher
+    demo: http://bs3switch.studiowan.fr
+    account: manuchap
 - Cube:
     _slug:
       en: cube
       fr: cube
     name: Cube
-    account: manuchap
     desc:
       en: "Fully editable front page.<br>You'll have to create the other pages \U0001F609<br>Based
         on a <a target=\"_blank\" href=\"https://freehtml5.co/cube-free-html5-bootstrap-website-template/\">free
@@ -14,12 +27,12 @@
     pict: "/samples/content_entries/Cube.jpg"
     url: https://github.com/manuchap/Cube
     demo: https://cube.studiowan.fr
+    account: manuchap
 - W3css:
     _slug:
       en: w3css
       fr: w3css
     name: W3css
-    account: manuchap
     desc:
       en: 'Smaller and faster than any other CSS frameworks.<br>Easier to learn, and
         easier to use than any other CSS frameworks.<br>Better cross-browser compatibility
@@ -38,38 +51,24 @@
     pict: "/samples/content_entries/W3css.jpg"
     url: https://github.com/manuchap/W3CSS
     demo: http://w3c.studiowan.fr
+    account: manuchap
 - Rb&b:
     _slug:
       en: rb-and-b
       fr: rb-and-b
     name: Rb&b
-    account: manuchap
     desc:
       en: Quick Boostrap3 rb&b site from a discontinued client.
       fr: Quick Boostrap3 rb&b site from a discontinued client.
     pict: "/samples/content_entries/rbnb_bs3.jpg"
     url: https://github.com/manuchap/Rb-b
     demo: https://manuchap.herokuapp.com/locomotive/tranquil-sunset-40/preview
-- Bootstrap3 Switcher:
-    _slug:
-      en: bootstrap3-switcher
-      fr: bootstrap3-switcher
-    name: Bootstrap3 Switcher
     account: manuchap
-    desc:
-      en: Every boostrap3 element on a single page with a selector to switch between
-        themes from Bootswatch (api).
-      fr: Every boostrap3 element on a single page with a selector to switch between
-        themes from Bootswatch (api).
-    pict: "/samples/content_entries/bs3switch.jpg"
-    url: https://github.com/manuchap/bootstrap3_switcher
-    demo: http://bs3switch.studiowan.fr
 - Ecwid:
     _slug:
       en: ecwid
       fr: ecwid
     name: Ecwid
-    account: manuchap
     desc:
       en: "<p>Simple to use online shop.<br>Ecwid resides outside of Locomotive and
         is a breeze to implement and use front/back.</p>"
@@ -78,12 +77,12 @@
     pict: "/samples/content_entries/Ecwid.jpg"
     url: https://github.com/manuchap/Ecwid
     demo: http://ecwid.studiowan.fr
+    account: manuchap
 - Webagency:
     _slug:
       en: webagency
       fr: webagency
     name: Webagency
-    account: manuchap
     desc:
       en: <p></p><p>A webagency onepager locomotive template with Bootstrap 4.<br>This
         is my fist attempt to adapt a website created with <a target="_blank" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwiEyqywp-zbAhUBzxQKHeYjBL0QFggoMAA&amp;url=https%3A%2F%2Fmobirise.com%2Ffr%2F&amp;usg=AOvVaw2Xvy1T_rqyUUfjhaAyHkPK"
@@ -96,12 +95,12 @@
     pict: "/samples/content_entries/Agency.jpg"
     url: https://github.com/manuchap/webagency
     demo: http://agency.studiowan.fr
+    account: manuchap
 - LocoF7:
     _slug:
       en: locof7
       fr: locof7
     name: LocoF7
-    account: manuchap
     desc:
       en: A Framework7 ready LocomotiveCMS template (ios &amp; android themes)<br>Clone,
         add a wagon gemfile and serve<br>The demo is a screen recording of wagon running
@@ -112,3 +111,4 @@
     pict: "/samples/content_entries/LocoF7.jpg"
     url: https://github.com/manuchap/LocoF7
     demo: http://recordit.co/9CERYWgiYQ
+    account: manuchap

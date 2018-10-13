@@ -3,7 +3,6 @@
       en: locomotivecms-plus-bootswatch
       fr: locomotivecms-plus-bootswatch
     name: LocomotiveCMS+Bootswatch
-    account: manuchap
     desc:
       en: "<p>It's outdated but was fun to do!<br>Probably still works though.<br>It's
         silent btw...</p>"
@@ -11,3 +10,4 @@
         silencieuse...</p>"
     url: https://www.youtube.com/watch?v=C-9V2TzqtxQ
     origin: youtube
+    account: manuchap
