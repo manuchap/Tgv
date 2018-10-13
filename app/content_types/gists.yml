@@ -1,7 +1,7 @@
 name: Gists
 slug: gists
 label_field_name: name
-order_by: updated_at
+order_by: created_at
 order_direction: desc
 fields:
 - name:
