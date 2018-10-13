@@ -14,7 +14,7 @@ content_type: showcases
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
 %p {{ showcase.desc }}
-%img.w3-card{:src => "{{ showcase.pict.url }}", :style => "max-width: 100%"}/
+%img.w3-card{:src => "{{ showcase.pict.url | resize: '900x>' }}", :style => "max-width: 100%"}/
 %br
 %hr
 .w3-container
