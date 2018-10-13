@@ -10,6 +10,8 @@ content_type: apps
 {% extends 'layouts/default' %}
 {% block 'main' %}
 %h3 {{ app.name }}
+%p{:style => "margin-top: -18px"}
+  %i {{ 'whos' | translate }}  {{ app.account.name }}
 %p {{ app.desc }}
 %img.w3-card{:src => "{{ app.pict.url }}", :style => "max-width: 100%"}/
 %hr

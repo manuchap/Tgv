@@ -10,7 +10,8 @@ content_type: actions
 {% extends 'layouts/default' %}
 {% block 'main' %}
 %h3 {{ action.name }}
-%p  {{ 'whos' | translate }}  {{ action.account.name }}
+%p{:style => "margin-top: -18px"}
+  %i {{ 'whos' | translate }}  {{ action.account.name }}
 %p {{ action.desc }}
 .w3-panel.w3-card.w3-light-grey
   .w3-code.jsHigh.notranslate {{ action.code | newline_to_br }}
