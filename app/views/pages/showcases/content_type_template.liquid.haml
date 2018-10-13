@@ -10,8 +10,9 @@ content_type: showcases
 {% extends 'layouts/default' %}
 {% block 'main' %}
 %h3 {{ showcase.name }}
-%p{:style => "margin-top: -18px"}
-  %i {{ 'whos' | translate }}  {{ showcase.account.name }}
+%p{:style => "margin-top: -17px"}
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
 %p {{ showcase.desc }}
 %img.w3-card{:src => "{{ showcase.pict.url }}", :style => "max-width: 100%"}/
 %br

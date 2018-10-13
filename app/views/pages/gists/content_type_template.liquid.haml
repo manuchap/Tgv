@@ -10,8 +10,9 @@ content_type: gists
 {% extends 'layouts/default' %}
 {% block 'main' %}
 %h3 {{ gist.name }}
-%p{:style => "margin-top: -18px"}
-  %i {{ 'whos' | translate }}  {{ gist.account.name }}
+%p{:style => "margin-top: -17px"}
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ gist.account.email }}"} {{ gist.account.name }}
 %p {{ gist.desc }}
 <script src="{{ gist.url }}.js"></script>
 %hr

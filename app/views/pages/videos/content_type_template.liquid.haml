@@ -10,8 +10,9 @@ content_type: videos
 {% extends 'layouts/default' %}
 {% block 'main' %}
 %h3 {{ video.name }}
-%p{:style => "margin-top: -18px"}
-  %i {{ 'whos' | translate }}  {{ video.account.name }}
+%p{:style => "margin-top: -17px"}
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ video.account.email }}"} {{ video.account.name }}
 %p {{ video.desc }}
 {% case video.origin %}
 {% when 'youtube' %}

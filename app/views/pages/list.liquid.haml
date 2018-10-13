@@ -12,8 +12,8 @@ position: 1
   {% when 'actions' %}
   {% paginate contents.actions by 10 %}
   {% for action in paginate.collection %}
-  %a.w3-red.w3-padding{:href => "{% path_to action %}?type=action", :style => "font-size=large"} {{ action.name }}
-  {{ 'whos' | translate }} {{ action.account.name }}
+  %a.w3-red.w3-padding{:href => "{% path_to action %}?type=action", :style => "font-size=large"}
+    {{ action.name }}
   %br
   %p {{ action.desc | truncatewords: '25' }}
   %hr
@@ -35,8 +35,8 @@ position: 1
   {% when 'apps' %}
   {% paginate contents.apps by 10 %}
   {% for app in paginate.collection %}
-  %a.w3-red.w3-padding{:href => "{% path_to app %}?type=app", :style => "font-size=large"} {{ app.name }}
-  {{ 'whos' | translate }} {{ app.account.name }}
+  %a.w3-red.w3-padding{:href => "{% path_to app %}?type=app", :style => "font-size=large"}
+    {{ app.name }}
   %br
   .w3-row
     .w3-quarter
@@ -62,8 +62,8 @@ position: 1
   {% when 'gists' %}
   {% paginate contents.gists by 10 %}
   {% for gist in paginate.collection %}
-  %a.w3-red.w3-padding{:href => "{% path_to gist %}?type=gist", :style => "font-size=large"} {{ gist.name }}
-  {{ 'whos' | translate }} {{ gist.account.name }}
+  %a.w3-red.w3-padding{:href => "{% path_to gist %}?type=gist", :style => "font-size=large"}
+    {{ gist.name }}
   %br
   %p {{ gist.desc | truncatewords: '25' }}
   %hr
@@ -89,25 +89,25 @@ position: 1
   {% when 'Config' %}
   .w3-container.conf{:style => 'display: block'}
     %span.w3-tag.w3-round-large.w3-blue.w3-center.w3-right {{ misc.type }}
-    %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"} {{ misc.name }}
-    {{ 'whos' | translate }} {{ misc.account.name }}
-    %br
+    %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"}
+      {{ misc.name }}
+      %br
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% when 'Gemfile' %}
   .w3-container.gemf{:style => 'display: block'}
     %span.w3-tag.w3-round-large.w3-green.w3-center.w3-right {{ misc.type }}
-    %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"} {{ misc.name }}
-    {{ 'whos' | translate }} {{ misc.account.name }}
-    %br
+    %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"}
+      {{ misc.name }}
+      %br
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% when 'System' %}
   .w3-container.syst{:style => 'display: block'}
     %span.w3-tag.w3-round-large.w3-yellow.w3-center.w3-right {{ misc.type }}
-    %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"} {{ misc.name }}
-    {{ 'whos' | translate }} {{ misc.account.name }}
-    %br
+    %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"}
+      {{ misc.name }}
+      %br
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% endcase %}
@@ -126,11 +126,38 @@ position: 1
     {% endunless %}
   {% endfor %}
   {% endpaginate %}
+  {% when 'showcases' %}
+  {% paginate contents.showcases by 10 %}
+  {% for showcase in paginate.collection %}
+  %a.w3-red.w3-padding{:href => "{% path_to showcase %}?type=showcase", :style => "font-size=large"}
+    {{ showcase.name }}
+  %br
+  .w3-row
+    .w3-quarter
+      %img{:src => "{{ showcase.pict.url }}", :style => "min-width: 180px; max-width: 100px; max-height: 130px; margin-top:1.4em;"}/
+    .w3-threequarter.w3-padding
+      %p {{ showcase.desc | truncatewords: '25' }}
+  %hr
+  {% endfor %}
+  .w3-row-padding.w3-center
+    {% unless paginate.total_entries < 10 %}
+    {% if paginate.previous_page %}
+    %a{:href => "/list?type=showcases&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
+    {% else %}
+    {{ 'prev' | translate }}
+    {%endif%}
+    {% if paginate.next_page %}
+    %a{:href => "/list?type=showcases&page={{paginate.next_page}}"} {{ 'next' | translate }}
+    {% else %}
+    {{ 'next' | translate }}
+    {%endif%}
+    {% endunless %}
+  {% endpaginate %}
   {% when 'templates' %}
   {% paginate contents.templates by 10 %}
   {% for template in paginate.collection %}
-  %a.w3-red.w3-padding{:href => "{% path_to template %}?type=template", :style => "font-size=large"} {{ template.name }}
-  {{ 'whos' | translate }} {{ template.account.name }}
+  %a.w3-red.w3-padding{:href => "{% path_to template %}?type=template", :style => "font-size=large"}
+    {{ template.name }}
   %br
   .w3-row
     .w3-quarter
@@ -156,8 +183,8 @@ position: 1
   {% when 'videos' %}
   {% paginate contents.videos by 10 %}
   {% for video in contents.videos %}
-  %a.w3-red.w3-padding{:href => "{% path_to video %}?type=video", :style => "font-size=large"} {{ video.name }}
-  {{ 'whos' | translate }} {{ video.account.name }}
+  %a.w3-red.w3-padding{:href => "{% path_to video %}?type=video", :style => "font-size=large"}
+    {{ video.name }}
   %br
   .w3-row
     .w3-quarter
@@ -178,33 +205,6 @@ position: 1
     {%endif%}
     {% if paginate.next_page %}
     %a{:href => "/list?type=templates&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {{ 'next' | translate }}
-    {%endif%}
-    {% endunless %}
-  {% endpaginate %}
-  {% when 'showcases' %}
-  {% paginate contents.showcases by 10 %}
-  {% for showcase in paginate.collection %}
-  %a.w3-red.w3-padding{:href => "{% path_to showcase %}?type=showcase", :style => "font-size=large"} {{ showcase.name }}
-  {{ 'whos' | translate }} {{ showcase.account.name }}
-  %br
-  .w3-row
-    .w3-quarter
-      %img{:src => "{{ showcase.pict.url }}", :style => "min-width: 180px; max-width: 100px; max-height: 130px; margin-top:1.4em;"}/
-    .w3-threequarter.w3-padding
-      %p {{ showcase.desc | truncatewords: '25' }}
-  %hr
-  {% endfor %}
-  .w3-row-padding.w3-center
-    {% unless paginate.total_entries < 10 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=showcases&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {{ 'prev' | translate }}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=showcases&page={{paginate.next_page}}"} {{ 'next' | translate }}
     {% else %}
     {{ 'next' | translate }}
     {%endif%}
