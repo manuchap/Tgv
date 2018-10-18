@@ -17,7 +17,7 @@ is_layout: false
     %a{:href => "{% path_to 'sign_in' %}"} sign in
 {% else %}
 .w3-row-padding{:style => "margin:0 -16px"}
-  .w3-third.w3-center.w3-card
+  .w3-quarter.w3-center.w3-card
     %h5 {{ 'myac' | translate }}
     %form{:id => "savatar", :action => "{% path_to update_avatar %}", :enctype => "multipart/form-data", :method => "POST"}
       %input{:name => "account", :value => "{{current_account._id}}", :type => "hidden"}/
@@ -30,7 +30,7 @@ is_layout: false
       %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
       %input.w3-button.w3-red.w3-ripple{:type => "submit", :value => "Sign out"}/
     %br
-  .w3-twothird
+  .w3-threequarter
     %h5 {{ 'mysh' | translate }}
     .w3-border
       .w3-bar.w3-border-bottom.w3-light-grey
