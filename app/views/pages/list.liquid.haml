@@ -190,7 +190,14 @@ position: 1
     .w3-quarter
       {% case video.origin %}
       {% when 'youtube' %}
-      %img{:src => "http://img.youtube.com/vi/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}/sddefault.jpg", :style => "min-width: 180px;max-width: 100px;margin-top:1.4em;"}/
+      %img{:src => "http://img.youtube.com/vi/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}/sddefault.jpg", :style => "min-width: 100%;max-width: 100%;margin-top:1.4em;"}/
+      {% when 'vimeo' %}
+      {% action 'Vimeo API' %}
+      var url = getProp('video.url');
+      call = callAPI('GET', 'https://vimeo.com/api/oembed.json?url=' + url, {data: {}});
+      setProp('thumb', call.data.thumbnail_url);
+      {% endaction %}
+      %img{:src => "{{thumb}}", :style => "min-width: 100%;max-width: 100%;margin-top:1.4em;"}/
       {% endcase %}
     .w3-threequarter.w3-padding
       %p {{ video.desc | truncatewords: '25' }}

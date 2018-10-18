@@ -9,6 +9,20 @@ content_type: videos
 ---
 {% extends 'layouts/default' %}
 {% block 'main' %}
+:css
+  .video-responsive{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+  }
+  .video-responsive iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+  }
 %h3 {{ video.name }}
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
@@ -21,7 +35,11 @@ content_type: videos
 %p {{ video.desc }}
 {% case video.origin %}
 {% when 'youtube' %}
-%iframe.w3-card{:allow => "autoplay; encrypted-media", :allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}", :width => "854"}
+.video-responsive.w3-card
+  %iframe{:allowfullscreen => "", :mozallowfullscreen => "", :webkitallowfullscreen => "", :frameborder => "0", :width => "auto%", :height => "auto", :src => "https://www.youtube.com/embed/{{ video.url | remove: 'https://www.youtube.com/watch?v=' }}"}
+{% when 'vimeo' %}
+.video-responsive.w3-card
+  %iframe{:allowfullscreen => "", :mozallowfullscreen => "", :webkitallowfullscreen => "", :frameborder => "0", :width => "auto%", :height => "auto", :src => "https://player.vimeo.com/video/{{ video.url | remove: 'https://vimeo.com/' }}"}
 {% endcase %}
 %br
 %hr
