@@ -13,6 +13,11 @@ content_type: apps
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ app.account.email }}"} {{ app.account.name }}
+  {% if app.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ app.version }}
+  {% endif %}
 %p {{ app.desc }}
 %img.w3-card{:src => "{{ app.pict.url | resize: '900x>', strip: 'true' }}", :style => "max-width: 100%"}/
 %hr

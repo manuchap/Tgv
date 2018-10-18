@@ -13,6 +13,11 @@ content_type: videos
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ video.account.email }}"} {{ video.account.name }}
+  {% if video.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ video.version }}
+  {% endif %}
 %p {{ video.desc }}
 {% case video.origin %}
 {% when 'youtube' %}

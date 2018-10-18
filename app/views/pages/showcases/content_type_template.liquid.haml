@@ -13,6 +13,11 @@ content_type: showcases
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
+  {% if showcase.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ showcase.version }}
+  {% endif %}
 %p {{ showcase.desc }}
 %img.w3-card{:src => "{{ showcase.pict.url | resize: '900x>', strip: 'true' }}", :style => "max-width: 100%"}/
 %br

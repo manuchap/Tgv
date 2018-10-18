@@ -12,6 +12,7 @@
     url: https://github.com/manuchap/loco_templates/tree/actions
     demo: http://actions.studiowan.fr
     account: manuchap
+    version: 3.4.0
 - My Locomotive Sites:
     _slug:
       en: my-locomotive-sites
@@ -30,6 +31,7 @@
     url: https://github.com/manuchap/My-Locomotive-Sites
     demo: https://admin.studiowan.fr
     account: manuchap
+    version: 3.4.0
 - Agendastudio:
     _slug:
       en: agendastudio
@@ -45,6 +47,7 @@
     url: https://github.com/manuchap/Agendastudio
     demo: http://agendastudio.studiowan.fr
     account: manuchap
+    version: 3.4.0
 - Wordpress Consumer:
     _slug:
       en: wordpress-consumer-1
@@ -60,3 +63,4 @@
     pict: "/samples/content_entries/Wpimport.jpg"
     url: https://github.com/manuchap/loco_templates/tree/wp-import
     account: manuchap
+    version: 3.4.0

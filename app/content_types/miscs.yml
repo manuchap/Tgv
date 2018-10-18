@@ -29,6 +29,11 @@ fields:
     type: text
     required: true
     localized: false
+- version:
+    label: Version
+    type: string
+    required: false
+    localized: false
 - account:
     label: Account
     type: belongs_to

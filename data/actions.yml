@@ -16,6 +16,7 @@
       params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction
       %}"
     account: manuchap
+    version: 3.4.0
 - Call API:
     _slug:
       en: call-api
@@ -38,3 +39,4 @@
       info %}<br>{{ info | split: "=&gt;" | join: ": " | split: "nil" | join: ''"NULL"''
       }}<br>{% else %}<br>Failure!<br>{% endif %}'
     account: manuchap
+    version: 3.4.0

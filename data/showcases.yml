@@ -18,3 +18,4 @@
         to help with the chosen therapy.<div>Online payment is implemented with PayPal's
         buttons/basket since it was integrated in their workflow in the previous site.</div>
     account: manuchap
+    version: 3.4.0

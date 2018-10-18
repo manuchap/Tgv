@@ -13,6 +13,11 @@ content_type: gists
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ gist.account.email }}"} {{ gist.account.name }}
+  {% if gist.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ gist.version }}
+  {% endif %}
 %p {{ gist.desc }}
 <script src="{{ gist.url }}.js"></script>
 %hr

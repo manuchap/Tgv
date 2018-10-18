@@ -15,6 +15,11 @@ content_type: miscs
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
+  {% if misc.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ misc.version }}
+  {% endif %}
 %p {{ misc.desc }}
 .w3-panel.w3-card.w3-light-grey
   .w3-code.jsHigh.notranslate {{ misc.code }}

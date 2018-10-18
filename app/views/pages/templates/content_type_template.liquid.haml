@@ -13,6 +13,11 @@ content_type: templates
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ template.account.email }}"} {{ template.account.name }}
+  {% if template.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ template.version }}
+  {% endif %}
 %p {{ template.desc }}
 %img.w3-card{:src => "{{ template.pict.url | resize: '900x>', strip: 'true' }}", :style => "max-width: 100%"}/
 %br

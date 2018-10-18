@@ -13,6 +13,11 @@ content_type: actions
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ action.account.email }}"} {{ action.account.name }}
+  {% if action.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ action.version }}
+  {% endif %}
 %p {{ action.desc }}
 .w3-panel.w3-card.w3-light-grey
   .w3-code.jsHigh.notranslate {{ action.code | newline_to_br }}

@@ -26,6 +26,11 @@ fields:
     required: true
     localized: false
     select_options: ['youtube', 'vimeo']
+- version:
+    label: Version
+    type: string
+    required: false
+    localized: false
 - account:
     label: Account
     type: belongs_to
