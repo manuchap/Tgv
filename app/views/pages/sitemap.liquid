@@ -20,16 +20,21 @@ response_type: text/xml
     <priority>0.5</priority>
   </url>
   {% else %}
-  {% if page.templatized? %}
-  {% else %}
   <url>
     <loc>https://{{ host }}/{{ page.fullpath }}</loc>
     <lastmod>{{ now | date: "%F" }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-  {% endif %}
   {% endcase %}
+  {% endif %}
+  {% if page.templatized? %}
+  <url>
+    <loc>https://{{ host }}/?type={{ page.fullpath | remove: '/content_type_template' }}</loc>
+    <lastmod>{{ now | date: "%F" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   {% endif %}
   {% endfor %}
 </urlset>
