@@ -14,7 +14,9 @@ position: 1
   {% for action in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to action %}?type=action", :style => "font-size=large"}
     {{ action.name }}
-  %br
+  &nbsp;
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ action.account.email }}"} {{ action.account.name }}
   %p {{ action.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
@@ -37,7 +39,9 @@ position: 1
   {% for app in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to app %}?type=app", :style => "font-size=large"}
     {{ app.name }}
-  %br
+  &nbsp;
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ app.account.email }}"} {{ app.account.name }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ app.pict.url | resize: '241x>', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
@@ -64,7 +68,9 @@ position: 1
   {% for gist in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to gist %}?type=gist", :style => "font-size=large"}
     {{ gist.name }}
-  %br
+  &nbsp;
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ gist.account.email }}"} {{ gist.account.name }}
   %p {{ gist.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
@@ -91,7 +97,9 @@ position: 1
     %span.w3-tag.w3-round-large.w3-blue.w3-center.w3-right {{ misc.type }}
     %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"}
       {{ misc.name }}
-      %br
+    &nbsp;
+    %i {{ 'whos' | translate }}
+    %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% when 'Gemfile' %}
@@ -99,7 +107,9 @@ position: 1
     %span.w3-tag.w3-round-large.w3-green.w3-center.w3-right {{ misc.type }}
     %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"}
       {{ misc.name }}
-      %br
+    &nbsp;
+    %i {{ 'whos' | translate }}
+    %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% when 'System' %}
@@ -107,7 +117,9 @@ position: 1
     %span.w3-tag.w3-round-large.w3-yellow.w3-center.w3-right {{ misc.type }}
     %a.w3-red.w3-padding{:href => "{% path_to misc %}?type=misc", :style => "font-size=large"}
       {{ misc.name }}
-      %br
+    &nbsp;
+    %i {{ 'whos' | translate }}
+    %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% endcase %}
@@ -131,7 +143,9 @@ position: 1
   {% for showcase in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to showcase %}?type=showcase", :style => "font-size=large"}
     {{ showcase.name }}
-  %br
+  &nbsp;
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ showcase.pict.url | resize: '241x>', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
@@ -158,7 +172,9 @@ position: 1
   {% for template in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to template %}?type=template", :style => "font-size=large"}
     {{ template.name }}
-  %br
+  &nbsp;
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ template.account.email }}"} {{ template.account.name }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ template.pict.url | resize: '241x>', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
@@ -185,7 +201,9 @@ position: 1
   {% for video in contents.videos %}
   %a.w3-red.w3-padding{:href => "{% path_to video %}?type=video", :style => "font-size=large"}
     {{ video.name }}
-  %br
+  &nbsp;
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ video.account.email }}"} {{ video.account.name }}
   .w3-row
     .w3-quarter
       {% case video.origin %}
