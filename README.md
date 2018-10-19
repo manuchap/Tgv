@@ -11,6 +11,5 @@ An attempt to create a [LocomotiveCMS](https://www.locomotivecms.com) free marke
 * rating system
 * ~filters~
 * tags
-* gh auth
 * ~pagination~
 ...
