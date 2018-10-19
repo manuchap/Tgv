@@ -2,7 +2,7 @@
 An attempt to create a [LocomotiveCMS](https://www.locomotivecms.com) free marketplace where to find tips and tricks along with ready to use templates and stuff...
 
 ## Todo
-* add videos (~youtube~ vimeo)
+* ~add videos~ (youtube vimeo)
 * ~add tutorials~ -> gists
 * ~add tips~ -> gists
 * browse user's stuff
