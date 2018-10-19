@@ -5,6 +5,6 @@ handle: create_gist
 ---
 {% action 'createGist' %}
 var params = getProp('params');
-createEntry('gists', { name: params.name, desc: params.desc, url: params.url, account: params.account });
+createEntry('gists', { name: params.name, desc: params.desc, url: params.url, version: params.version, account: params.account });
 redirectTo('me');
 {% endaction %}

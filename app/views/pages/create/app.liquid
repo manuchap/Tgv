@@ -5,6 +5,6 @@ handle: create_app
 ---
 {% action 'createApp' %}
 var params = getProp('params');
-createEntry('apps', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, demo: params.demo, account: params.account });
+createEntry('apps', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, demo: params.demo, version: params.version, account: params.account });
 redirectTo('me');
 {% endaction %}

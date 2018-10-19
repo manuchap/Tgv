@@ -22,6 +22,12 @@ code:
 come:
   en: It's&nbsp;coming...
   fr: Il&nbsp;arrive...
+comp:
+  en: Required fields
+  fr: Champs obligatoires
+crea:
+  en: Creator
+  fr: Créateur
 ctcz:
   en: Contact
   fr: Contactez
@@ -88,6 +94,9 @@ ngis:
 nmis:
   en: New misc
   fr: Nouveau misc
+nsho:
+  en: New showcase
+  fr: Nouveau showcase
 ntem:
   en: New template
   fr: Nouveau template
@@ -160,12 +169,18 @@ uact:
 uapp:
   en: Edit app
   fr: Éditer l'app
+vers:
+  en: Locomotive vesion
+  fr: Version de Locomotive
 warn:
   en: "(your ip's being recorded, abusers will be banned.)"
   fr: "(votre ip est enregistrée, tout abus sera banni)"
 wcre:
   en: Wrong credentials!
   fr: Mauvais identifiants!
+webs:
+  en: Website
+  fr: Site
 weee:
   en: We
   fr: Nous
@@ -194,15 +209,3 @@ ynam:
 yrac:
   en: Your account
   fr: Votre compte
-crea:
-  en: Creator
-  fr: Créateur
-nsho:
-  en: New showcase
-  fr: Nouveau showcase
-webs:
-  en: Website
-  fr: Site
-comp:
-  en: Required fields
-  fr: Champs obligatoires

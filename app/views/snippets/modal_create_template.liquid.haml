@@ -23,6 +23,13 @@
         .form-group
           %label {{ 'demo' | translate }}
           %input.w3-input{:name => "demo", :type => 'text', :value => "{{template.demo}}"}
+        .form-group
+          %label {{ 'vers' | translate }}
+          %select.w3-select{:name => "type"}
+            %option{:value => ""}
+            {% for option in contents.templates.version_options %}
+            %option{:value => "{{ option }}"} {{ option }}
+            {% endfor %}
         %p
           %i * {{ 'comp' | translate }}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}

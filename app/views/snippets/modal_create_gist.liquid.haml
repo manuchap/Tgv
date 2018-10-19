@@ -17,6 +17,13 @@
         .form-group
           %label {{ 'sour' | translate }} *
           %input.w3-input{:name => "url", :type => 'text', :value => "{{gist.url}}"}
+        .form-group
+          %label {{ 'vers' | translate }}
+          %select.w3-select{:name => "version", :value => ""}
+            %option{:disabled => "disabled", :selected => "selected"}
+            {% for option in contents.actions.version_options %}
+            %option{:value => "{{ option }}"} {{ option }}
+            {% endfor %}
         %p
           %i * {{ 'comp' | translate }}
         %button.w3-margin-top.w3-margin-bottom.w3-button.w3-red.w3-ripple{:type => "submit"} {{ 'subm' | translate }}

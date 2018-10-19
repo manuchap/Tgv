@@ -5,6 +5,6 @@ handle: create_video
 ---
 {% action 'createVideo' %}
 var params = getProp('params');
-createEntry('videos', { name: params.name, desc: params.desc, url: params.url, origin: params.origin, account: params.account });
+createEntry('videos', { name: params.name, desc: params.desc, url: params.url, origin: params.origin, version: params.version, account: params.account });
 redirectTo('me');
 {% endaction %}

@@ -1,9 +1,10 @@
 name: Showcases
 slug: showcases
-description: A description of the content type for the editors
 label_field_name: name
+group_by: version
 order_by: created_at
 order_direction: desc
+entry_template: '<a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }} - {{ entry.version }}'
 fields:
 - name:
     label: Name
@@ -36,9 +37,15 @@ fields:
     localized: true
 - version:
     label: Version
-    type: string
+    type: select
     required: false
     localized: false
+    select_options:
+    - 2.5.5
+    - 2.5.6
+    - 2.5.7
+    - 3.3.0
+    - 3.4.0
 - account:
     label: Account
     type: belongs_to
