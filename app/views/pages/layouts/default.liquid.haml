@@ -8,12 +8,14 @@ is_layout: true
     {% seo %}
     %meta{:charset => "UTF-8"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "{{ site.metafields.google.site_verification_code }}", :name => "google-site-verification"}
     %link{:href => "https://www.w3schools.com/w3css/4/w3.css", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Raleway", :rel => "stylesheet"}/
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
     {% if fullpath contains 'search' %}
     %link{:href => "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css", :rel => "stylesheet"}/
     {% endif %}
+    {% google_analytics 'UA-10738079-10' %}
     :css
       html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       hr {border-top: 1px solid #f70000;}

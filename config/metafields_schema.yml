@@ -1,9 +1,6 @@
 google:
   label: Google
   fields:
-    analytics_code:
-      hint: Google Analytics ID (ex. UA-9999999)
-      type: string
     site_verification_code:
       hint: Google Search Console site verification code
       type: string
