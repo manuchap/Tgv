@@ -9,8 +9,8 @@
       fr: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
         forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
     url: https://gist.github.com/manuchap/38ddf8dd88272219a6acb28b362a26a1
-    account: manuchap
     version: 3.4.0
+    account: manuchap
 - FAQ Export:
     _slug:
       en: faq-export
@@ -23,5 +23,5 @@
         href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183"
         title="Link: https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).<br>'
     url: https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db
-    account: manuchap
     version: 3.4.0
+    account: manuchap

@@ -15,8 +15,8 @@
       nickname: params.nick, first_name: params.firs, last_name: params.last, description:
       params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction
       %}"
-    account: manuchap
     version: 3.4.0
+    account: manuchap
 - Call API:
     _slug:
       en: call-api
@@ -38,5 +38,5 @@
       handle<br>  }<br>});<br>setProp(''info'', info);<br>{% endaction %}<br>{% if
       info %}<br>{{ info | split: "=&gt;" | join: ": " | split: "nil" | join: ''"NULL"''
       }}<br>{% else %}<br>Failure!<br>{% endif %}'
-    account: manuchap
     version: 3.4.0
+    account: manuchap
