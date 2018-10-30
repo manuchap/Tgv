@@ -41,7 +41,6 @@ is_layout: false
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Showcases')">Showcases</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Templates')">Templates</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Videos')">Videos</button>
-        <button class="w3-bar-item w3-button tablink w3-border-left" onclick="openTab(event, 'Trash')">{{ 'tras' | translate }}</button>
       #Actions.w3-container.tab.w3-animate-opacity{:style => "display: block;"}
         %ul.w3-ul.w3-hoverable
           {% for action in current_account.actions %}
@@ -133,8 +132,7 @@ is_layout: false
         <a href="#" class="w3-red" onclick="document.getElementById('create_showcase').style.display='block'">
         %i.fa.fa-plus.fa-fw
         </a>
-      #Trash.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        %p {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
+    %i {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
