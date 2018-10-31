@@ -24,7 +24,6 @@ is_layout: false
       %input{:name => "avatar", :accept => "image/jpeg, image/jpg, image/png", "data-max-size" => "2097152", :type => "file", :value => "{{ current_account._id.avatar.url }}", :onchange => "loadFile(event)", :style => "display:none"}/
       %img#avatar.w3-circle{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:96px;height:96px;cursor:pointer"}/
     %p {{ current_account.name }}
-    %p {{ current_account.email }}
     %form{:action => "{% path_to 'index' %}", :method => "POST"}
       %input{:name => "auth_action", :type => "hidden", :value => "sign_out"}/
       %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
