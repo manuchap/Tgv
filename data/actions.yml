@@ -24,7 +24,7 @@
     name: Call API
     desc:
       en: Query the restful v3 api and get a json response.
-      fr: Envoyer un requête sur l'API V3 et obtenir une répons en Json.
+      fr: Envoyer un requête sur l'API V3 et obtenir une réponse en Json.
     code: '---<br>title: Info page<br>response_type: application/json<br>---<br>{%
       capture token %}{{site.metafields.info.token}}{% endcapture %}<br>{% capture
       email %}{{site.metafields.info.email}}{% endcapture %}<br>{% capture handle
