@@ -65,10 +65,6 @@ is_layout: true
           %i.fa.fa-cogs.fa-fw
           \&#160; Apps
           %span.w3-badge.w3-red.w3-small {{ contents.apps.size }}
-        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=gists"}
-          %i.fa.fa-github.fa-fw
-          \&#160; Gists
-          %span.w3-badge.w3-red.w3-small {{ contents.gists.size }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=miscs"}
           %i.fa.fa-file.fa-fw
           \&#160; Miscs
@@ -76,13 +72,16 @@ is_layout: true
         {% if fullpath contains 'miscs' %}
         %form.w3-container.w3-margin-left
           %input#conf.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleConf()"}/
-          %label.w3-round-large.w3-blue Config
+          %label.w3-round-large.w3-blue &nbsp;Config&nbsp;
           %br/
           %input#gemf.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleGemf()"}/
-          %label.w3-round-large.w3-green Gemfile
+          %label.w3-round-large.w3-green &nbsp;Gemfile&nbsp;
+          %br/
+          %input#gist.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleGist()"}/
+          %label.w3-round-large.w3-purple &nbsp;Gist&nbsp;
           %br/
           %input#syst.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleSyst()"}/
-          %label.w3-round-large.w3-yellow System
+          %label.w3-round-large.w3-yellow &nbsp;System&nbsp;
         {% endif %}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=showcases"}
           %i.fa.fa-eye.fa-fw
@@ -102,7 +101,9 @@ is_layout: true
       {% block 'main' %}
       {% endblock %}
       {% if page.depth == 2 and params.type %}
+      {% unless wagon %}
       {% include 'comments' %}
+      {% endunless %}
       {% endif %}
       {% include 'footer' %}
       {% include 'modal_signup' %}

@@ -17,26 +17,27 @@ is_layout: false
     %a{:href => "{% path_to 'sign_in' %}"} sign in
 {% else %}
 .w3-row-padding{:style => "margin:0 -16px"}
-  .w3-quarter.w3-center.w3-card
+  .w3-col.s12.m3
     %h5 {{ 'myac' | translate }}
-    %form{:id => "savatar", :action => "{% path_to update_avatar %}", :enctype => "multipart/form-data", :method => "POST"}
-      %input{:name => "account", :value => "{{current_account._id}}", :type => "hidden"}/
-      %input{:name => "avatar", :accept => "image/jpeg, image/jpg, image/png", "data-max-size" => "2097152", :type => "file", :value => "{{ current_account._id.avatar.url }}", :onchange => "loadFile(event)", :style => "display:none"}/
-      %img#avatar.w3-circle{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:96px;height:96px;cursor:pointer"}/
-    %p {{ current_account.name }}
-    %form{:action => "{% path_to 'index' %}", :method => "POST"}
-      %input{:name => "auth_action", :type => "hidden", :value => "sign_out"}/
-      %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
-      %input.w3-button.w3-red.w3-ripple{:type => "submit", :value => "Sign out"}/
-    %br
-  .w3-threequarter
+    .w3-center.w3-card.w3-padding
+      %form{:id => "savatar", :action => "{% path_to update_avatar %}", :enctype => "multipart/form-data", :method => "POST"}
+        %input{:name => "account", :value => "{{current_account._id}}", :type => "hidden"}/
+        %input{:name => "avatar", :accept => "image/jpeg, image/jpg, image/png", "data-max-size" => "2097152", :type => "file", :value => "{{ current_account._id.avatar.url }}", :onchange => "loadFile(event)", :style => "display:none"}/
+        %img#avatar.w3-circle{:src => "{% if current_account.avatar.url %}{{ current_account.avatar.url }}{% else %}{{ 'avatar.png' | theme_image_url }}{% endif %}", :style => "width:96px;height:96px;cursor:pointer"}/
+      %p {{ current_account.name }}
+      %form{:action => "{% path_to 'index' %}", :method => "POST"}
+        %input{:name => "auth_action", :type => "hidden", :value => "sign_out"}/
+        %input{:name => "auth_content_type", :type => "hidden", :value => "accounts"}/
+        %input.w3-button.w3-red.w3-ripple{:type => "submit", :value => "Sign out"}/
+      %br
+  .w3-col.s12.m9
     %h5 {{ 'mysh' | translate }}
-    .w3-border
+    .w3-border.w3-card
       .w3-bar.w3-border-bottom.w3-light-grey
         <button class="w3-bar-item w3-button tablink w3-red" onclick="openTab(event, 'Actions')">Actions</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Apps')">Apps</button>
-        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Gists')">Gists</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Miscs')">Miscs</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Sections')">Sections</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Showcases')">Showcases</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Templates')">Templates</button>
         <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Videos')">Videos</button>
@@ -66,30 +67,43 @@ is_layout: false
         <a href="#" class="w3-red" onclick="document.getElementById('create_app').style.display='block'">
         %i.fa.fa-plus.fa-fw
         </a>
-      #Gists.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        %ul.w3-ul.w3-hoverable
-          {% for gist in current_account.gists %}
-          %li
-            %a{:href => "{% path_to gist %}"} {{ gist.name }}
-            %a{:href => "{% path_to delete_gist %}?name={{ gist._slug }}"}
-              %i.fa.fa-trash.fa-fw.w3-right
-            {% comment %}<a id="{{gist._slug}}" href="#" onclick="popgistModal(this.id, '/update/gistdata.json', loadgistFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
-            %br
-          {% endfor %}
-        <a href="#" class="w3-red" onclick="document.getElementById('create_gist').style.display='block'">
-        %i.fa.fa-plus.fa-fw
-        </a>
       #Miscs.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
         %ul.w3-ul.w3-hoverable
           {% for misc in current_account.miscs %}
           %li
-            %a{:href => "{% path_to misc %}"} {{ misc.name }}
+            %a{:href => "{% path_to misc %}?type={{ misc.type | downcase }}"} {{ misc.name }}
             %a{:href => "{% path_to delete_misc %}?name={{ misc._slug }}"}
               %i.fa.fa-trash.fa-fw.w3-right
             {% comment %}<a id="{{misc._slug}}" href="#" onclick="popmiscModal(this.id, '/update/miscdata.json', loadmiscFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
             %br
           {% endfor %}
         <a href="#" class="w3-red" onclick="document.getElementById('create_misc').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
+      #Sections.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        %ul.w3-ul.w3-hoverable
+          {% for section in current_account.sections %}
+          %li
+            %a{:href => "{% path_to section %}"} {{ section.name }}
+            %a{:href => "{% path_to delete_section %}?name={{ section._slug }}"}
+              %i.fa.fa-trash.fa-fw.w3-right
+            {% comment %}<a id="{{section._slug}}" href="#" onclick="popsectionModal(this.id, '/update/sectiondata.json', loadsectionFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
+            %br
+          {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_section').style.display='block'">
+        %i.fa.fa-plus.fa-fw
+        </a>
+      #Showcases.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
+        %ul.w3-ul.w3-hoverable
+          {% for showcase in current_account.showcases %}
+          %li
+            %a{:href => "{% path_to showcase %}"} {{ showcase.name }}
+            %a{:href => "{% path_to delete_showcase %}?name={{ showcase.name }}"}
+              %i.fa.fa-trash.fa-fw.w3-right
+            {% comment %}<a id="{{showcase._slug}}" href="#" onclick="popshowcaseModal(this.id, '/update/showcasedata.json', loadshowcaseFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
+            %br
+          {% endfor %}
+        <a href="#" class="w3-red" onclick="document.getElementById('create_showcase').style.display='block'">
         %i.fa.fa-plus.fa-fw
         </a>
       #Templates.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
@@ -118,25 +132,11 @@ is_layout: false
         <a href="#" class="w3-red" onclick="document.getElementById('create_video').style.display='block'">
         %i.fa.fa-plus.fa-fw
         </a>
-      #Showcases.w3-container.tab.w3-animate-opacity{:style => "display: none;"}
-        %ul.w3-ul.w3-hoverable
-          {% for showcase in current_account.showcases %}
-          %li
-            %a{:href => "{% path_to showcase %}"} {{ showcase.name }}
-            %a{:href => "{% path_to delete_showcase %}?name={{ showcase.name }}"}
-              %i.fa.fa-trash.fa-fw.w3-right
-            {% comment %}<a id="{{showcase._slug}}" href="#" onclick="popshowcaseModal(this.id, '/update/showcasedata.json', loadshowcaseFunction)"><i class="fa fa-pencil fa-fw w3-right"></i></a>{% endcomment %}
-            %br
-          {% endfor %}
-        <a href="#" class="w3-red" onclick="document.getElementById('create_showcase').style.display='block'">
-        %i.fa.fa-plus.fa-fw
-        </a>
     %i {{ 'dele' | translate }} {{ 'ctcz' | translate }} <a href="mailto:webmaster@studiowan.fr?subject=TGV%20-%20Please%20undelete%20my%20file&body=I%20have%20deleted%20my%20file%20by%20mistake.%0ACan%20you%20recover%20it%20for%20me%3F%0AThe%20name%20is%3A%20">{{ 'iman' | translate }}</a> {{ 'reco' | translate }}
     %br
 {% include 'modal_create_action' %}
 {% include 'modal_update_action' %}
 {% include 'modal_create_app' %}
-{% include 'modal_create_gist' %}
 {% include 'modal_create_misc' %}
 {% include 'modal_create_template' %}
 {% include 'modal_create_video' %}

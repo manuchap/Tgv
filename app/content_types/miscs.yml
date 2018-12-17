@@ -24,6 +24,7 @@ fields:
     select_options:
       - Config
       - Gemfile
+      - Gist
       - System
 - code:
     label: Code

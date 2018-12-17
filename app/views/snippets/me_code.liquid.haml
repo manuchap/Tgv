@@ -1,4 +1,5 @@
 :javascript
+
   // Change Avatar
   var imgBtn = document.getElementById("avatar");
   var fileInp = document.querySelector('[type="file"]');
@@ -11,6 +12,7 @@
     form=document.getElementById("savatar");
     form.submit();
   };
+
   // Toggle Tabs
   function openTab(evt, tabName) {
     var i, x, tablinks;
@@ -25,9 +27,11 @@
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " w3-red";
   }
+
   // Action Modal
   function popactModal(clicked_id, url, lFunction) {
   document.getElementById('uact').action="{% path_to 'update_action' %}?name=" + clicked_id;
+
   // -> Ajax Call
   var xhttp;
   var url = url + '?slug=' + clicked_id;
@@ -40,6 +44,7 @@
     xhttp.open("GET", url, true);
     xhttp.send();
   }
+
   // -> Populate Action
   function loadactFunction(xhttp) {
     var obj = JSON.parse(xhttp.responseText);
@@ -48,8 +53,10 @@
     document.getElementById('acode').value=Object.values(obj)[2].replace(/<br\s*\/?>/ig, "\r\n");
     document.getElementById('update_action').style.display='block';
   }
+
   // App Modal
   function popappModal(clicked_id, url, lFunction) {
+
   // -> Ajax Call
   var xhttp;
   var url = url + '?slug=' + clicked_id;
@@ -62,6 +69,7 @@
     xhttp.open("GET", url, true);
     xhttp.send();
   }
+
   // -> Populate App
   function loadappFunction(xhttp) {
     var obj = JSON.parse(xhttp.responseText);
@@ -75,6 +83,7 @@
   }
 
   // -> Crisp
+  {% unless wagon %}
   window.$crisp = [];
   window.CRISP_WEBSITE_ID = "c56616cb-a297-4c68-891f-32910280eff7";
   (function() { d = document;
@@ -82,3 +91,4 @@
     s.src = "https://client.crisp.chat/l.js";
     s.async = 1;
     d.getElementsByTagName("head")[0].appendChild(s); })();
+  {% endunless %}

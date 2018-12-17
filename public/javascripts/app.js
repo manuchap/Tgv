@@ -18,6 +18,7 @@ function w3_close() {
 // Miscs filter
 function toggleConf() { toggleGeneric("conf"); }
 function toggleGemf() { toggleGeneric("gemf"); }
+function toggleGist() { toggleGeneric("gist"); }
 function toggleSyst() { toggleGeneric("syst"); }
 function toggleGeneric(element) {
   var e, n = document.getElementsByClassName(element);

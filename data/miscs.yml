@@ -1,3 +1,18 @@
+- FAQ Export:
+    _slug:
+      en: faq-export
+      fr: faq-export
+    name: FAQ Export
+    desc:
+      en: Export FAQ entries to Algolia (forked from<span class="Apple-converted-space">&nbsp;</span><a
+        href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).
+      fr: 'Exporter les entrées FAQ vers Algolia (fork de<span class="Apple-converted-space">&nbsp;</span><a
+        href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183"
+        title="Link: https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).<br>'
+    type: Gist
+    code: https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db
+    version: 3.4.0
+    account: manuchap
 - My .zshrc:
     _slug:
       en: my-zshrc
@@ -71,5 +86,19 @@
       &nbsp; &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;<br>&nbsp;
       &nbsp; &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;<br>&nbsp;
       &nbsp; &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;<br>&lt;/CORSRule&gt;<br>&lt;/CORSConfiguration&gt;<br></p>
+    version: 3.4.0
+    account: manuchap
+- Locomotive vs Wordpress:
+    _slug:
+      en: locomotive-vs-wordpress
+      fr: locomotive-vs-wordpress
+    name: Locomotive vs Wordpress
+    desc:
+      en: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
+        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
+      fr: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
+        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
+    type: Gist
+    code: https://gist.github.com/manuchap/38ddf8dd88272219a6acb28b362a26a1
     version: 3.4.0
     account: manuchap
