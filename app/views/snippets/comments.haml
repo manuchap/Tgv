@@ -1,3 +1,4 @@
+{% unless wagon %}
 .W3-container.w3-margin-left
   :javascript
     var idcomments_acct = '{{ site.metafields.comments.application_id }}';
@@ -5,3 +6,4 @@
     var idcomments_post_url;
   %span#IDCommentsPostTitle{:style => "display:none"}
   %script{:src => "https://www.intensedebate.com/js/genericCommentWrapperV2.js", :type => "text/javascript"}
+{% endunless %}

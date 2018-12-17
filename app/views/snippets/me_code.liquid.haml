@@ -40,7 +40,7 @@
     xhttp.open("GET", url, true);
     xhttp.send();
   }
-  // -> Ajax action
+  // -> Populate Action
   function loadactFunction(xhttp) {
     var obj = JSON.parse(xhttp.responseText);
     document.getElementById('aname').value=Object.values(obj)[0];
@@ -62,7 +62,7 @@
     xhttp.open("GET", url, true);
     xhttp.send();
   }
-  // -> Ajax action
+  // -> Populate App
   function loadappFunction(xhttp) {
     var obj = JSON.parse(xhttp.responseText);
     var code = Object.values(obj)[2];
