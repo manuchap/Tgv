@@ -43,12 +43,6 @@ fields:
     class_name: apps
     inverse_of: account
     ui_enabled: true
-- gists:
-    label: Gists
-    type: has_many
-    class_name: gists
-    inverse_of: account
-    ui_enabled: true
 - miscs:
     label: Miscs
     type: has_many

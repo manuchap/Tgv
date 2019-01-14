@@ -1,7 +1,7 @@
 name: Videos
 slug: videos
 label_field_name: name
-group_by: version
+group_by: origin
 order_by: created_at
 order_direction: desc
 entry_template: '<a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }} - {{ entry.version }}'
