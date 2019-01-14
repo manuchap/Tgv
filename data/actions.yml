@@ -15,7 +15,7 @@
       nickname: params.nick, first_name: params.firs, last_name: params.last, description:
       params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction
       %}"
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - Call API:
     _slug:
@@ -34,5 +34,5 @@
       {{site.metafields.info.handle}}<br>  }<br>});<br>setProp(''info'', info);<br>{% endaction %}<br>{% if
       info %}<br>{{ info | split: "=&gt;" | join: ": " | split: "nil" | join: ''"NULL"''
       }}<br>{% else %}<br>Failure!<br>{% endif %}'
-    version: 3.4.0
+    version: 3.x
     account: manuchap

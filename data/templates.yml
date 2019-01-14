@@ -11,7 +11,7 @@
     pict: "/samples/content_entries/bs3switch.jpg"
     url: https://github.com/manuchap/bootstrap3_switcher
     demo: http://bs3switch.studiowan.fr
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - Cube:
     _slug:
@@ -28,7 +28,7 @@
     pict: "/samples/content_entries/Cube.jpg"
     url: https://github.com/manuchap/Cube
     demo: https://cube.studiowan.fr
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - W3css:
     _slug:
@@ -53,7 +53,7 @@
     pict: "/samples/content_entries/W3css.jpg"
     url: https://github.com/manuchap/W3CSS
     demo: http://w3c.studiowan.fr
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - Rb&b:
     _slug:
@@ -66,7 +66,7 @@
     pict: "/samples/content_entries/rbnb_bs3.jpg"
     url: https://github.com/manuchap/Rb-b
     demo: https://manuchap.herokuapp.com/locomotive/tranquil-sunset-40/preview
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - Ecwid:
     _slug:
@@ -81,7 +81,7 @@
     pict: "/samples/content_entries/Ecwid.jpg"
     url: https://github.com/manuchap/Ecwid
     demo: http://ecwid.studiowan.fr
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - Webagency:
     _slug:
@@ -100,7 +100,7 @@
     pict: "/samples/content_entries/Agency.jpg"
     url: https://github.com/manuchap/webagency
     demo: http://agency.studiowan.fr
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - LocoF7:
     _slug:
@@ -117,5 +117,5 @@
     pict: "/samples/content_entries/LocoF7.jpg"
     url: https://github.com/manuchap/LocoF7
     demo: http://recordit.co/9CERYWgiYQ
-    version: 3.4.0
+    version: 3.x
     account: manuchap

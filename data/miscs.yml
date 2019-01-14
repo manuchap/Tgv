@@ -11,7 +11,7 @@
         title="Link: https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).<br>'
     type: Gist
     code: https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - My .zshrc:
     _slug:
@@ -44,7 +44,7 @@
       sync='bundle exec wagon sync'<br>alias supr='bundle exec wagon delete'<br>alias
       md=' mongod --dbpath /Users/manuchap/Sites/Mongo/manuchap'<br>alias hl='cd ~/Sites/Loco/manuchap
       &amp;&amp; heroku local web'<br><br># Path<br>export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"<br><br></p>
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - Heroku Gemfile:
     _slug:
@@ -68,7 +68,7 @@
       :development do<br>&nbsp; gem ''web-console'', ''~&gt; 2.0''<br>&nbsp; gem ''spring''<br>end<br>group
       :production do<br>&nbsp; gem ''rails_12factor''<br>&nbsp; gem ''platform-api''<br>&nbsp;
       gem ''heroics'', ''= 0.0.21''<br>end<br>gem ''rack-cors''<br><br></p>'
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - S3 bucket cors Config:
     _slug:
@@ -86,7 +86,7 @@
       &nbsp; &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;<br>&nbsp;
       &nbsp; &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;<br>&nbsp;
       &nbsp; &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;<br>&lt;/CORSRule&gt;<br>&lt;/CORSConfiguration&gt;<br></p>
-    version: 3.4.0
+    version: 3.x
     account: manuchap
 - Locomotive vs Wordpress:
     _slug:
@@ -100,5 +100,5 @@
         forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
     type: Gist
     code: https://gist.github.com/manuchap/38ddf8dd88272219a6acb28b362a26a1
-    version: 3.4.0
+    version: 3.x
     account: manuchap

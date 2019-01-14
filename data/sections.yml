@@ -1,0 +1,11 @@
+- Test:
+    _slug:
+      en: test
+      fr: test
+    name: Test
+    desc:
+      en: 'test'
+      fr: 'test'
+    code: "test"
+    version: 4.x
+    account: manuchap
