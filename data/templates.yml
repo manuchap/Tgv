@@ -1,18 +1,3 @@
-- Bootstrap3 Switcher:
-    _slug:
-      en: bootstrap3-switcher
-      fr: bootstrap3-switcher
-    name: Bootstrap3 Switcher
-    desc:
-      en: Every boostrap3 element on a single page with a selector to switch between
-        themes from Bootswatch (api).
-      fr: Every boostrap3 element on a single page with a selector to switch between
-        themes from Bootswatch (api).
-    pict: "/samples/content_entries/bs3switch.jpg"
-    url: https://github.com/manuchap/bootstrap3_switcher
-    demo: http://bs3switch.studiowan.fr
-    version: 3.x
-    account: manuchap
 - Cube:
     _slug:
       en: cube
@@ -61,12 +46,27 @@
       fr: rb-and-b
     name: Rb&b
     desc:
-      en: Quick Boostrap3 rb&b site from a discontinued client.
+      en: Quick Boostrap3 rb&amp;b site from a discontinued client.
       fr: Quick Boostrap3 rb&b site from a discontinued client.
     pict: "/samples/content_entries/rbnb_bs3.jpg"
     url: https://github.com/manuchap/Rb-b
     demo: https://manuchap.herokuapp.com/locomotive/tranquil-sunset-40/preview
-    version: 3.x
+    version: 2.x
+    account: manuchap
+- Bootstrap3 Switcher:
+    _slug:
+      en: bootstrap3-switcher
+      fr: bootstrap3-switcher
+    name: Bootstrap3 Switcher
+    desc:
+      en: Every boostrap3 element on a single page with a selector to switch between
+        themes from Bootswatch (api).
+      fr: Every boostrap3 element on a single page with a selector to switch between
+        themes from Bootswatch (api).
+    pict: "/samples/content_entries/bs3switch.jpg"
+    url: https://github.com/manuchap/bootstrap3_switcher
+    demo: http://bs3switch.studiowan.fr
+    version: 2.x
     account: manuchap
 - Ecwid:
     _slug:
@@ -81,7 +81,7 @@
     pict: "/samples/content_entries/Ecwid.jpg"
     url: https://github.com/manuchap/Ecwid
     demo: http://ecwid.studiowan.fr
-    version: 3.x
+    version: 2.x
     account: manuchap
 - Webagency:
     _slug:

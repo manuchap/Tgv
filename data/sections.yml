@@ -1,11 +1,71 @@
-- Test:
+- Footer example:
     _slug:
-      en: test
-      fr: test
-    name: Test
+      en: footer-example
+      fr: footer-example
+    name: Footer example
     desc:
-      en: 'test'
-      fr: 'test'
-    code: "test"
+      en: Example footer using the Bulma framework
+      fr: Example footer using the Bulma framework
+    code: "---\r<br>{\r<br>  \"name\": \"Footer\",\r<br>  \"class\": \"footer-main\",\r<br>
+      \ \"icon\": \"footer\",\r<br>  \"keep_icon\": true,\r<br>  \"settings\": [\r<br>
+      \   {\r<br>      \"label\": \"Logo\",\r<br>      \"id\": \"site_logo\",\r<br>
+      \     \"type\": \"image_picker\"\r<br>    },\r<br>    {\r<br>      \"label\":
+      \"Social\",\r<br>      \"id\": \"social\",\r<br>      \"type\": \"checkbox\"\r<br>
+      \   },\r<br>    {\r<br>      \"label\": \"Social title\",\r<br>      \"id\":
+      \"social_title\",\r<br>      \"type\": \"text\"\r<br>    },\r<br>    {\r<br>
+      \     \"label\": \"Praise\",\r<br>      \"id\": \"praise\",\r<br>      \"type\":
+      \"checkbox\"\r<br>    },\r<br>    {\r<br>      \"label\": \"Praise logo\",\r<br>
+      \     \"id\": \"praise_logo\",\r<br>      \"type\": \"image_picker\"\r<br>    }\r<br>
+      \ ],\r<br>  \"blocks\": [\r<br>    {\r<br>      \"name\": \"Columns\",\r<br>
+      \     \"type\": \"columns\",\r<br>      \"settings\": [\r<br>        {\r<br>
+      \         \"label\": \"Title\",\r<br>          \"id\": \"title\",\r<br>          \"type\":
+      \"text\"\r<br>        },\r<br>        {\r<br>          \"label\": \"Link 1\",\r<br>
+      \         \"id\": \"link_1\",\r<br>          \"type\": \"url\"\r<br>        },\r<br>
+      \       {\r<br>          \"label\": \"Link 1 text\",\r<br>          \"id\":
+      \"link_1_txt\",\r<br>          \"type\": \"text\"\r<br>        },\r<br>        {\r<br>
+      \         \"label\": \"Link 2\",\r<br>          \"id\": \"link_2\",\r<br>          \"type\":
+      \"url\"\r<br>        },\r<br>        {\r<br>          \"label\": \"Link 2 text\",\r<br>
+      \         \"id\": \"link_2_txt\",\r<br>          \"type\": \"text\"\r<br>        },\r<br>
+      \       {\r<br>          \"label\": \"Link 3\",\r<br>          \"id\": \"link_3\",\r<br>
+      \         \"type\": \"url\"\r<br>        },\r<br>        {\r<br>          \"label\":
+      \"Link 3 text\",\r<br>          \"id\": \"link_3_txt\",\r<br>          \"type\":
+      \"text\"\r<br>        },\r<br>        {\r<br>          \"label\": \"Link 4\",\r<br>
+      \         \"id\": \"link_4\",\r<br>          \"type\": \"url\"\r<br>        },\r<br>
+      \       {\r<br>          \"label\": \"Link 4 text\",\r<br>          \"id\":
+      \"link_4_txt\",\r<br>          \"type\": \"text\"\r<br>        }\r<br>      ]\r<br>
+      \   }\r<br>  ]\r<br>}\r<br>---\r<br><footer class=\"footer footer-dark\">\r<br>
+      \ <div class=\"container\">\r<br>    <div class=\"columns\">\r<br>      {% if
+      section.settings.site_logo %}\r<br>      <div class=\"column\">\r<br>        <div
+      class=\"footer-logo\">\r<br>          <img src=\"{{ section.settings.site_logo
+      }}\">\r<br>        </div>\r<br>      </div>\r<br>      {% endif %}\r<br>      {%
+      for block in section.blocks %}\r<br>      <div class=\"column\">\r<br>        <div
+      class=\"footer-column\">\r<br>          <div class=\"footer-header\">\r<br>
+      \           <h3>{{ block.settings.title }}</h3>\r<br>          </div>\r<br>
+      \         <ul class=\"link-list\">\r<br>            <li><a href=\"{{ block.settings.link_1
+      }}\">{{ block.settings.link_1_txt }}</a></li>\r<br>            <li><a href=\"{{
+      block.settings.link_2 }}\">{{ block.settings.link_2_txt }}</a></li>\r<br>            <li><a
+      href=\"{{ block.settings.link_3 }}\">{{ block.settings.link_3_txt }}</a></li>\r<br>
+      \           <li><a href=\"{{ block.settings.link_4 }}\">{{ block.settings.link_4_txt
+      }}</a></li>\r<br>          </ul>\r<br>        </div>\r<br>      </div>\r<br>
+      \     {% endfor %}\r<br>      {% if section.settings.social == true %}\r<br>
+      \     <div class=\"column\">\r<br>        <div class=\"footer-column\">\r<br>
+      \         <div class=\"footer-header\">\r<br>            <h3>{{ section.settings.social_title
+      }}</h3>\r<br>            <nav class=\"level is-mobile\">\r<br>              <div
+      class=\"level-left\">\r<br>                <a class=\"level-item\" href=\"https://github.com/#\">\r<br>
+      \                 <span class=\"icon\"><i class=\"fa fa-github\"></i></span>\r<br>
+      \               </a>\r<br>                <a class=\"level-item\" href=\"https://dribbble.com/#\">\r<br>
+      \                 <span class=\"icon\"><i class=\"fa fa-dribbble\"></i></span>\r<br>
+      \               </a>\r<br>                <a class=\"level-item\" href=\"https://fb.com/#\">\r<br>
+      \                 <span class=\"icon\"><i class=\"fa fa-facebook\"></i></span>\r<br>
+      \               </a>\r<br>                <a class=\"level-item\" href=\"https://twitter.com/#\">\r<br>
+      \                 <span class=\"icon\"><i class=\"fa fa-twitter\"></i></span>\r<br>
+      \               </a>\r<br>                <a class=\"level-item\" href=\"https://bitbucket.org/#\">\r<br>
+      \                 <span class=\"icon\"><i class=\"fa fa-bitbucket\"></i></span>\r<br>
+      \               </a>\r<br>              </div>\r<br>            </nav>\r<br>
+      \           <a href=\"https://bulma.io\" target=\"_blank\">\r<br>            {%
+      if section.settings.praise == true %}\r<br>              <img src=\"{{ section.settings.praise_logo
+      }}\" alt=\"Made with Bulma\" width=\"128\" height=\"24\">\r<br>            {%
+      endif %}\r<br>            </a>\r<br>          </div>\r<br>        </div>\r<br>
+      \     </div>\r<br>      {% endif %}\r<br>    </div>\r<br>  </div>\r<br></footer>"
     version: 4.x
     account: manuchap

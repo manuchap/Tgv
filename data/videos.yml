@@ -1,3 +1,15 @@
+- Vimeo test:
+    _slug:
+      en: vimeo-test
+      fr: vimeo-test
+    name: Vimeo test
+    desc:
+      en: "<p>Wow that takes me back!!!</p><p>Please don't watch it \U0001F602</p>"
+      fr: "<p>Ça me rajeunit pas!!!</p><p>À ne pas regarder \U0001F602</p>"
+    url: https://vimeo.com/28556892
+    origin: vimeo
+    version: 2.x
+    account: manuchap
 - LocomotiveCMS+Bootswatch:
     _slug:
       en: locomotivecms-plus-bootswatch
@@ -10,4 +22,5 @@
         silencieuse...</p>"
     url: https://www.youtube.com/watch?v=C-9V2TzqtxQ
     origin: youtube
+    version: 2.x
     account: manuchap

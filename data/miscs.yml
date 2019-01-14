@@ -1,18 +1,97 @@
-- FAQ Export:
+- Sublime shortcut - Toggle Liquid/Json:
     _slug:
-      en: faq-export
-      fr: faq-export
-    name: FAQ Export
+      en: sublime-shortcut-toggle-liquid-slash-json
+      fr: sublime-shortcut-toggle-liquid-slash-json
+    name: Sublime shortcut - Toggle Liquid/Json
+    desc:
+      en: <p>Toggle Liquid/Json with alt-a<br></p><p><span class="Apple-converted-space">&nbsp;</span>(need
+        to install Siteleaf Liquid Syntax - works best with Oceanic Next color scheme)<br></p>
+      fr: <p>Toggle Liquid/Json with alt-a<br></p><p><span class="Apple-converted-space">&nbsp;</span>(need
+        to install Siteleaf Liquid Syntax - works best with Oceanic Next color scheme)<br></p>
+    type: Gist
+    code: https://gist.github.com/manuchap/f3aa2c241492b86165e9dd0ab02d7f29
+    account: manuchap
+- Sublime shortcut - Toggle Liquid/Haml:
+    _slug:
+      en: sublime-shortcut-toggle-liquid-slash-haml
+      fr: sublime-shortcut-toggle-liquid-slash-haml
+    name: Sublime shortcut - Toggle Liquid/Haml
+    desc:
+      en: Toggle Liquid/Haml with alt-z<div><span class="Apple-converted-space">&nbsp;</span>(need
+        to install Siteleaf Liquid Syntax - works best with Oceanic Next color scheme)<br></div>
+      fr: Toggle Liquid/Haml with alt-z<div><span class="Apple-converted-space">&nbsp;</span>(need
+        to install Siteleaf Liquid Syntax - works best with Oceanic Next color scheme)<br></div>
+    type: Gist
+    code: https://gist.github.com/manuchap/4d606f856d4cb8d25487e4aef1abea9a
+    account: manuchap
+- Export to Algolia:
+    _slug:
+      en: export-to-algolia
+      fr: export-to-algolia
+    name: Export to Algolia
     desc:
       en: Export FAQ entries to Algolia (forked from<span class="Apple-converted-space">&nbsp;</span><a
         href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).
-      fr: 'Exporter les entrées FAQ vers Algolia (fork de<span class="Apple-converted-space">&nbsp;</span><a
-        href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183"
-        title="Link: https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).<br>'
+      fr: Export FAQ entries to Algolia (forked from<span class="Apple-converted-space">&nbsp;</span><a
+        href="https://gist.github.com/Shigawire/31329bcff3e7f393186472e48d4d5183">Shigawire/export.liquid</a>).
     type: Gist
     code: https://gist.github.com/manuchap/540c6084560778e1a071b2c513b470db
-    version: 3.x
     account: manuchap
+- Heroku Gemfile:
+    _slug:
+      en: heroku-gemfile-ruby-2-dot-5-rails-5-dot-1-5
+      fr: heroku-gemfile-ruby-2-dot-5-rails-5-dot-1-5
+    name: Heroku Gemfile
+    desc:
+      en: "<p>Ruby 2.5, Rails 5.1.5<br></p>"
+      fr: "<p>Ruby 2.5, Rails 5.1.5<br></p>"
+    type: Gemfile
+    code: 'source ''<a href="https://rubygems.org">https://rubygems.org</a>''<br>git_source(:github)
+      { |repo| "<a href="https://github.com/#{repo}.git&quot;">https://github.com/#{repo}.git"</a>;
+      }<br><br>ruby ''2.5.0''<br><br>gem ''mongoid''<br>gem ''devise''<br><br># gem
+      ''pry''<br># gem ''custom_fields'', path: ''../custom_fields'' # for Developers<br>#
+      gem ''locomotivecms_common'', path: ''../common'', require: false<br># gem ''locomotivecms_steam'',
+      path: ''../steam'', require: false<br># gem ''locomotivecms'', path: ''../engine''<br>#
+      gem ''locomotivecms_search'', path: ''../search''<br><br>gem ''custom_fields'',
+      require: false<br>gem ''locomotivecms_common'', require: false<br>gem ''locomotivecms_steam'',
+      github: ''locomotivecms/steam'', branch: ''sections'', ref: ''9d075ad'', require:
+      false<br>gem ''locomotivecms_coal'', github: ''locomotivecms/coal'', branch:
+      ''master'', ref: ''761f15a'', require: false<br>gem ''locomotivecms'', github:
+      ''locomotivecms/engine'', branch: ''sections'', ref: ''a584f599''<br><br><br>#
+      Bundle edge Rails instead: gem ''rails'', github: ''rails/rails''<br>gem ''rails'',
+      ''~&amp;gt; 5.1.5''<br># Use Puma as the app server<br># gem ''puma'', ''~&amp;gt;
+      3.11''<br>gem ''passenger-rails''<br># Use SCSS for stylesheets<br>gem ''sass-rails'',
+      ''~&amp;gt; 5.0''<br># Use Uglifier as compressor for JavaScript assets<br>gem
+      ''uglifier'', ''&amp;gt;= 1.3.0''<br># See <a href="https://github.com/rails/execjs#readme">https://github.com/rails/execjs#readme</a>
+      for more supported runtimes<br># gem ''mini_racer'', platforms: :ruby<br><br>#
+      Use CoffeeScript for .coffee assets and views<br>gem ''coffee-rails'', ''~&amp;gt;
+      4.2''<br># Turbolinks makes navigating your web application faster. Read more:
+      <a href="https://github.com/turbolinks/turbolinks" title="Link: https://github.com/turbolinks/turbolinks">https://github.com/turbolinks/turbolinks</a><br>gem
+      ''turbolinks'', ''~&amp;gt; 5''<br># Build JSON APIs with ease. Read more: <a
+      href="https://github.com/rails/jbuilder">https://github.com/rails/jbuilder</a><br>gem
+      ''jbuilder'', ''~&amp;gt; 2.5''<br># Use Redis adapter to run Action Cable in
+      production<br># gem ''redis'', ''~&amp;gt; 4.0''<br># Use ActiveModel has_secure_password<br>#
+      gem ''bcrypt'', ''~&amp;gt; 3.1.7''<br><br>gem ''carrierwave-aws''<br><br>#
+      gem ''sidekiq''<br><br># Use Capistrano for deployment<br># gem ''capistrano-rails'',
+      group: :development<br><br>group :development, :test do<br>&nbsp; # Call ''byebug''
+      anywhere in the code to stop execution and get a debugger console<br>&nbsp;
+      gem ''byebug'', platforms: [:mri, :mingw, :x64_mingw]<br>end<br><br>group :development
+      do<br>&nbsp; # Access an interactive console on exception pages or by calling
+      ''console'' anywhere in the code.<br>&nbsp; gem ''web-console'', ''&amp;gt;=
+      3.3.0''<br>&nbsp; gem ''listen'', ''&amp;gt;= 3.0.5'', ''&amp;lt; 3.2''<br>&nbsp;
+      # Spring speeds up development by keeping your application running in the background.
+      Read more: <a href="https://github.com/rails/spring">https://github.com/rails/spring</a><br>&nbsp;
+      gem ''spring''<br>&nbsp; gem ''spring-watcher-listen'', ''~&amp;gt; 2.0.0''<br>end<br><br>group
+      :test do<br>&nbsp; # Adds support for Capybara system testing and selenium driver<br>&nbsp;
+      gem ''capybara'', ''~&amp;gt; 2.15''<br>&nbsp; gem ''selenium-webdriver''<br>&nbsp;
+      # Easy installation and use of chromedriver to run system tests with Chrome<br>&nbsp;
+      gem ''chromedriver-helper''<br>end<br><br>group :production do<br>&nbsp; gem
+      ''newrelic_rpm''<br>end<br># Windows does not include zoneinfo files, so bundle
+      the tzinfo-data gem<br>gem ''tzinfo-data'', platforms: [:mingw, :mswin, :x64_mingw,
+      :jruby]<br><br>#Heroku gems<br>gem ''heroics'', ''= 0.0.17''<br>gem ''platform-api''<br><br>#Gems
+      for email sending issue<br>gem ''pony'', ''~&amp;gt; 1.12.0''<br>gem ''mail'',
+      ''~&amp;gt; 2.6.0'''
+    account: nikolay-bonev
 - My .zshrc:
     _slug:
       en: my-zshrc
@@ -44,7 +123,6 @@
       sync='bundle exec wagon sync'<br>alias supr='bundle exec wagon delete'<br>alias
       md=' mongod --dbpath /Users/manuchap/Sites/Mongo/manuchap'<br>alias hl='cd ~/Sites/Loco/manuchap
       &amp;&amp; heroku local web'<br><br># Path<br>export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"<br><br></p>
-    version: 3.x
     account: manuchap
 - Heroku Gemfile:
     _slug:
@@ -52,7 +130,7 @@
       fr: heroku-gemfile
     name: Heroku Gemfile
     desc:
-      en: "<p>Working on a Heroku-16 stack with ruby 2.5.1, rails 5.1.5.<br>Served
+      en: "<p>Working on a Heroku-16 stack with ruby 2.5.1 &amp; rails 5.1.5.<br>Served
         by Passenger 5.1.2</p>"
       fr: "<p>Working on a Heroku-16 stack with ruby 2.5.1, rails 5.1.5.<br>Served
         by Passenger 5.1.2</p>"
@@ -70,6 +148,7 @@
       gem ''heroics'', ''= 0.0.21''<br>end<br>gem ''rack-cors''<br><br></p>'
     version: 3.x
     account: manuchap
+    _visible: false
 - S3 bucket cors Config:
     _slug:
       en: s3-bucket-cors-config
@@ -86,19 +165,5 @@
       &nbsp; &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;<br>&nbsp;
       &nbsp; &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;<br>&nbsp; &nbsp; &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;<br>&nbsp;
       &nbsp; &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;<br>&lt;/CORSRule&gt;<br>&lt;/CORSConfiguration&gt;<br></p>
-    version: 3.x
-    account: manuchap
-- Locomotive vs Wordpress:
-    _slug:
-      en: locomotive-vs-wordpress
-      fr: locomotive-vs-wordpress
-    name: Locomotive vs Wordpress
-    desc:
-      en: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
-        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
-      fr: '<p>A comparison of LocomotiveCMS vs Wordpress for small business CMS sites
-        forked from <a href="https://gist.github.com/facto/7919316" title="Link: http://facto/locomotive_wordpress.md">facto/locomotive_wordpress</a>.<br></p>'
-    type: Gist
-    code: https://gist.github.com/manuchap/38ddf8dd88272219a6acb28b362a26a1
     version: 3.x
     account: manuchap

@@ -1,3 +1,41 @@
+- Vimeo API:
+    _slug:
+      en: vimeo-api
+      fr: vimeo-api
+    name: Vimeo API
+    desc:
+      en: "A simple action to query Vimeo's API and grab the thumbnail corresponding
+        to a video since they both have different IDs \U0001F615."
+      fr: "A simple action to query Vimeo's API and grab the thumbnail corresponding
+        to a video since they both have different IDs \U0001F615."
+    code: "{% action 'Vimeo API' %}\r\n<br>var url = getProp('video.url');\r\n<br>call
+      = callAPI('GET', 'https://vimeo.com/api/oembed.json?url=' + url, {data: {}});\r\n<br>setProp('thumb',
+      call.data.thumbnail_url);\r\n<br>{% endaction %}"
+    version: 3.x
+    account: manuchap
+- Call API:
+    _slug:
+      en: call-api
+      fr: call-api
+    name: Call API
+    desc:
+      en: Query the restful v3 api and get a json response.
+      fr: Envoyer un requête sur l'API V3 et obtenir une répons en Json.
+    code: '---<br>title: Info page<br>response_type: application/json<br>---<br>{%
+      capture token %}{{site.metafields.info.token}}{% endcapture %}<br>{% capture
+      email %}{{site.metafields.info.email}}{% endcapture %}<br>{% capture handle
+      %}{{site.metafields.info.handle}}{% endcapture %}<br>{% action ''Call API''
+      %}<br>var token = getProp(''token'');<br>var email = getProp(''email'');<br>var
+      handle = getProp(''handle'');<br>var info = false;<br>info = callAPI(''GET'',
+      ''<a href="http://YOURENGINE/locomotive/api/v3/current_site.json" title="Link:
+      http://YOURENGINE/locomotive/api/v3/current_site.json">http://YOURENGINE/locomotive/api/v3/current_site.json</a>'',
+      {<br>  data: {<br>  },<br>  headers: {<br>    ''X-Locomotive-Account-Token'':
+      token,<br>    ''X-Locomotive-Account-Email'': email,<br>    ''X-Locomotive-Site-Handle'':
+      handle<br>  }<br>});<br>setProp(''info'', info);<br>{% endaction %}<br>{% if
+      info %}<br>{{ info | split: "=&gt;" | join: ": " | split: "nil" | join: ''"NULL"''
+      }}<br>{% else %}<br>Failure!<br>{% endif %}'
+    version: 3.x
+    account: manuchap
 - Edit member:
     _slug:
       en: edit-member
@@ -15,24 +53,5 @@
       nickname: params.nick, first_name: params.firs, last_name: params.last, description:
       params.desc, avatar: params.avat });<br>redirectTo('members');<br>{% endaction
       %}"
-    version: 3.x
-    account: manuchap
-- Call API:
-    _slug:
-      en: call-api
-      fr: call-api
-    name: Call API
-    desc:
-      en: Query the restful v3 api and get a json response.
-      fr: Envoyer un requête sur l'API V3 et obtenir une réponse en Json.
-    code: '---<br>title: Info page<br>response_type: application/json<br>---<br>{% action ''Call API''
-      %}<br>var info = false;<br>info = callAPI(''GET'',
-      ''<a href="http://YOURENGINE/locomotive/api/v3/current_site.json" title="Link:
-      http://YOURENGINE/locomotive/api/v3/current_site.json">http://YOURENGINE/locomotive/api/v3/current_site.json</a>'',
-      {<br>  data: {""},<br>  headers: {<br>    ''X-Locomotive-Account-Token'':
-      {{site.metafields.info.token}},<br>    ''X-Locomotive-Account-Email'': {{site.metafields.info.email}},<br>    ''X-Locomotive-Site-Handle'':
-      {{site.metafields.info.handle}}<br>  }<br>});<br>setProp(''info'', info);<br>{% endaction %}<br>{% if
-      info %}<br>{{ info | split: "=&gt;" | join: ": " | split: "nil" | join: ''"NULL"''
-      }}<br>{% else %}<br>Failure!<br>{% endif %}'
     version: 3.x
     account: manuchap

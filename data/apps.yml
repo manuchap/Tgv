@@ -46,7 +46,7 @@
     pict: "/samples/content_entries/Agendastudio.jpg"
     url: https://github.com/manuchap/Agendastudio
     demo: http://agendastudio.studiowan.fr
-    version: 3.x
+    version: 2.x
     account: manuchap
 - Wordpress Consumer:
     _slug:
