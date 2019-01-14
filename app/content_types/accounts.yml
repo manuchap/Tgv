@@ -55,6 +55,12 @@ fields:
     class_name: miscs
     inverse_of: account
     ui_enabled: true
+- sections:
+    label: Sections
+    type: has_many
+    class_name: sections
+    inverse_of: account
+    ui_enabled: true
 - templates:
     label: Templates
     type: has_many

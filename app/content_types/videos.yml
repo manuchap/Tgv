@@ -36,7 +36,7 @@ fields:
       - 2.x
       - 3.x
       - 4.x
-<<<<<<<<- account:
+- account:
     label: Account
     type: belongs_to
     class_name: accounts

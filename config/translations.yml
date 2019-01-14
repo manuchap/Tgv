@@ -29,8 +29,8 @@ crea:
   en: Creator
   fr: Créateur
 ctcz:
-  en: Contact
-  fr: Contactez
+  en: Clic
+  fr: Cliquez
 dact:
   en: Delete action
   fr: Supprimer l'action
@@ -65,8 +65,8 @@ home:
   en: Home
   fr: Accueil
 iman:
-  en: me
-  fr: moi
+  en: here
+  fr: ici
 mail:
   en: Your E-mail
   fr: Votre E-mail
@@ -97,6 +97,9 @@ nmis:
 nsho:
   en: New showcase
   fr: Nouveau showcase
+nsec:
+  en: New section
+  fr: Nouvelle section
 ntem:
   en: New template
   fr: Nouveau template

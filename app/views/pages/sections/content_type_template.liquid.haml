@@ -1,0 +1,31 @@
+---
+title: Sections
+slug: content_type_template
+position: 0
+published: true
+is_layout: false
+content_type: sections
+---
+{% extends 'layouts/default' %}
+{% block 'main' %}
+%h3 {{ section.name }}
+%p{:style => "margin-top: -17px"}
+  %i {{ 'whos' | translate }}
+  %a{:href => "mailto:{{ section.account.email }}"} {{ section.account.name }}
+  {% if section.version %}
+  %br
+  %i
+    Locomotive&nbsp;{{ section.version }}
+  {% endif %}
+%p {{ section.desc }}
+.w3-panel.w3-card.w3-light-grey
+  .w3-code.jsHigh.notranslate {{ section.code | newline_to_br }}
+%hr
+.w3-container
+  %a{:href => "{% path_to 'list' %}?type=sections"}
+    %i.fa.fa-arrow-left.fa-fw>
+    \&#160; {{ 'back' | translate }}
+%script{:src => "https://www.w3schools.com/lib/w3codecolor.js"}
+:javascript
+  w3CodeColor();
+{% endblock %}

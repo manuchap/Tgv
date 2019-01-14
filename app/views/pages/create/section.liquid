@@ -1,0 +1,10 @@
+---
+title: CreateSection
+published: true
+handle: create_section
+---
+{% action 'createSection' %}
+var params = getProp('params');
+createEntry('sections', { name: params.name, desc: params.desc, code: params.code.replace(/\n/g, "<br>"), version: params.version, account: params.account });
+redirectTo('me');
+{% endaction %}

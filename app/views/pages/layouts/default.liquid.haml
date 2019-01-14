@@ -83,6 +83,10 @@ is_layout: true
           %input#syst.w3-check{:checked => "checked", :type => "checkbox", :onclick => "toggleSyst()"}/
           %label.w3-round-large.w3-yellow &nbsp;System&nbsp;
         {% endif %}
+        %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=sections"}
+          %i.fa.fa-bars.fa-fw
+          \&#160; Sections
+          %span.w3-badge.w3-red.w3-small {{ contents.sections.size }}
         %a.w3-bar-item.w3-button.w3-padding{:href => "{% path_to 'list' %}?type=showcases"}
           %i.fa.fa-eye.fa-fw
           \&#160; Showcase

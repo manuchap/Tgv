@@ -1,0 +1,10 @@
+---
+title: DeleteSection
+published: true
+handle: delete_section
+---
+{% action 'deleteSection' %}
+var params = getProp('params');
+updateEntry('sections', params.name, { _visible: false });
+redirectTo('me');
+{% endaction %}
