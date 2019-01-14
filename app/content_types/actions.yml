@@ -28,11 +28,9 @@ fields:
     localized: false
     select_options:
       en:
-      - 2.5.5
-      - 2.5.6
-      - 2.5.7
-      - 3.3.0
-      - 3.4.0
+      - 2.x
+      - 3.x
+      - 4.x
 - account:
     label: Account
     type: belongs_to

@@ -1,10 +1,9 @@
-name: Templates
-slug: templates
+name: Sections
+slug: sections
 label_field_name: name
-group_by: version
 order_by: created_at
 order_direction: desc
-entry_template: '<a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }} - {{ entry.version }}'
+entry_template: <a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }} - {{ entry.version }}
 fields:
 - name:
     label: Name
@@ -12,24 +11,14 @@ fields:
     required: true
     localized: false
 - desc:
-    label: Desc
+    label: Description
     type: text
     required: true
     localized: true
-- pict:
-    label: Picture
-    type: file
+- code:
+    label: Code
+    type: text
     required: true
-    localized: false
-- url:
-    label: Source
-    type: string
-    required: false
-    localized: false
-- demo:
-    label: Demo
-    type: string
-    required: false
     localized: false
 - version:
     label: Version
@@ -37,8 +26,7 @@ fields:
     required: false
     localized: false
     select_options:
-      - 2.x
-      - 3.x
+      en:
       - 4.x
 - account:
     label: Account
