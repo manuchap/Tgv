@@ -13,3 +13,6 @@ An attempt to create a [LocomotiveCMS](https://www.locomotivecms.com) free marke
 * tags
 * ~pagination~
 ...
+
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NDNEMU87Y5CD2)
