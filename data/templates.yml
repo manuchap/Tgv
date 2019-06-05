@@ -1,3 +1,33 @@
+- Foodee:
+    _slug:
+      en: foodee
+      fr: foodee
+    name: Foodee
+    desc:
+      en: A food/restaurant oriented template.<br>See a quick <a target="_blank" href="http://recordit.co/RT8RLIs88T"
+        title="foodee">video</a><div><div>Events, quotes and food items are models.</div><div>The
+        settings tab is for the footer.</div></div>
+      fr: Un template pour les restaurants.<br>Demo&nbsp;<a target="_blank" href="http://recordit.co/RT8RLIs88T"
+        title="foodee">video</a><div><div>Events, quotes et items sont des modèles.</div><div>L'onglet
+        settings sert pour le footer.</div></div>
+    pict: "/samples/content_entries/foodee.jpg"
+    url: https://github.com/manuchap/Foodee
+    demo: https://foodee.studiowan.fr
+    version: 4.x
+    account: manuchap
+- Fresh:
+    _slug:
+      en: fresh
+      fr: fresh
+    name: Fresh
+    desc:
+      en: "<p>A starter template for locomotivecms sections<br></p>"
+      fr: "<p>Un template pour démarrer avec les sections dans locomotivecms.<br></p>"
+    pict: "/samples/content_entries/fresh.jpg"
+    url: https://github.com/manuchap/Fresh
+    demo: https://fresh.studiowan.fr
+    version: 4.x
+    account: manuchap
 - Cube:
     _slug:
       en: cube

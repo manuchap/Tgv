@@ -194,6 +194,11 @@ position: 1
   {% paginate contents.templates by 3 %}
   {% for template in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to template %}?type=template", :style => "font-size=large"}
+    {% if template.version == '4.x' %}
+    %span.w3-badge.w3-yellow.w3-small
+      v4
+    &nbsp;
+    {% endif %}
     {{ template.name }}
   &nbsp;
   %i {{ 'whos' | translate }}

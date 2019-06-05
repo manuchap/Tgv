@@ -4,68 +4,108 @@
       fr: footer-example
     name: Footer example
     desc:
-      en: Example footer using the Bulma framework
-      fr: Example footer using the Bulma framework
-    code: "---\r<br>{\r<br>  \"name\": \"Footer\",\r<br>  \"class\": \"footer-main\",\r<br>
-      \ \"icon\": \"footer\",\r<br>  \"keep_icon\": true,\r<br>  \"settings\": [\r<br>
-      \   {\r<br>      \"label\": \"Logo\",\r<br>      \"id\": \"site_logo\",\r<br>
-      \     \"type\": \"image_picker\"\r<br>    },\r<br>    {\r<br>      \"label\":
-      \"Social\",\r<br>      \"id\": \"social\",\r<br>      \"type\": \"checkbox\"\r<br>
-      \   },\r<br>    {\r<br>      \"label\": \"Social title\",\r<br>      \"id\":
-      \"social_title\",\r<br>      \"type\": \"text\"\r<br>    },\r<br>    {\r<br>
-      \     \"label\": \"Praise\",\r<br>      \"id\": \"praise\",\r<br>      \"type\":
-      \"checkbox\"\r<br>    },\r<br>    {\r<br>      \"label\": \"Praise logo\",\r<br>
-      \     \"id\": \"praise_logo\",\r<br>      \"type\": \"image_picker\"\r<br>    }\r<br>
-      \ ],\r<br>  \"blocks\": [\r<br>    {\r<br>      \"name\": \"Columns\",\r<br>
-      \     \"type\": \"columns\",\r<br>      \"settings\": [\r<br>        {\r<br>
-      \         \"label\": \"Title\",\r<br>          \"id\": \"title\",\r<br>          \"type\":
-      \"text\"\r<br>        },\r<br>        {\r<br>          \"label\": \"Link 1\",\r<br>
-      \         \"id\": \"link_1\",\r<br>          \"type\": \"url\"\r<br>        },\r<br>
-      \       {\r<br>          \"label\": \"Link 1 text\",\r<br>          \"id\":
-      \"link_1_txt\",\r<br>          \"type\": \"text\"\r<br>        },\r<br>        {\r<br>
-      \         \"label\": \"Link 2\",\r<br>          \"id\": \"link_2\",\r<br>          \"type\":
-      \"url\"\r<br>        },\r<br>        {\r<br>          \"label\": \"Link 2 text\",\r<br>
-      \         \"id\": \"link_2_txt\",\r<br>          \"type\": \"text\"\r<br>        },\r<br>
-      \       {\r<br>          \"label\": \"Link 3\",\r<br>          \"id\": \"link_3\",\r<br>
-      \         \"type\": \"url\"\r<br>        },\r<br>        {\r<br>          \"label\":
-      \"Link 3 text\",\r<br>          \"id\": \"link_3_txt\",\r<br>          \"type\":
-      \"text\"\r<br>        },\r<br>        {\r<br>          \"label\": \"Link 4\",\r<br>
-      \         \"id\": \"link_4\",\r<br>          \"type\": \"url\"\r<br>        },\r<br>
-      \       {\r<br>          \"label\": \"Link 4 text\",\r<br>          \"id\":
-      \"link_4_txt\",\r<br>          \"type\": \"text\"\r<br>        }\r<br>      ]\r<br>
-      \   }\r<br>  ]\r<br>}\r<br>---\r<br><footer class=\"footer footer-dark\">\r<br>
-      \ <div class=\"container\">\r<br>    <div class=\"columns\">\r<br>      {% if
-      section.settings.site_logo %}\r<br>      <div class=\"column\">\r<br>        <div
-      class=\"footer-logo\">\r<br>          <img src=\"{{ section.settings.site_logo
-      }}\">\r<br>        </div>\r<br>      </div>\r<br>      {% endif %}\r<br>      {%
-      for block in section.blocks %}\r<br>      <div class=\"column\">\r<br>        <div
-      class=\"footer-column\">\r<br>          <div class=\"footer-header\">\r<br>
-      \           <h3>{{ block.settings.title }}</h3>\r<br>          </div>\r<br>
-      \         <ul class=\"link-list\">\r<br>            <li><a href=\"{{ block.settings.link_1
-      }}\">{{ block.settings.link_1_txt }}</a></li>\r<br>            <li><a href=\"{{
-      block.settings.link_2 }}\">{{ block.settings.link_2_txt }}</a></li>\r<br>            <li><a
-      href=\"{{ block.settings.link_3 }}\">{{ block.settings.link_3_txt }}</a></li>\r<br>
-      \           <li><a href=\"{{ block.settings.link_4 }}\">{{ block.settings.link_4_txt
-      }}</a></li>\r<br>          </ul>\r<br>        </div>\r<br>      </div>\r<br>
-      \     {% endfor %}\r<br>      {% if section.settings.social == true %}\r<br>
-      \     <div class=\"column\">\r<br>        <div class=\"footer-column\">\r<br>
-      \         <div class=\"footer-header\">\r<br>            <h3>{{ section.settings.social_title
-      }}</h3>\r<br>            <nav class=\"level is-mobile\">\r<br>              <div
-      class=\"level-left\">\r<br>                <a class=\"level-item\" href=\"https://github.com/#\">\r<br>
-      \                 <span class=\"icon\"><i class=\"fa fa-github\"></i></span>\r<br>
-      \               </a>\r<br>                <a class=\"level-item\" href=\"https://dribbble.com/#\">\r<br>
-      \                 <span class=\"icon\"><i class=\"fa fa-dribbble\"></i></span>\r<br>
-      \               </a>\r<br>                <a class=\"level-item\" href=\"https://fb.com/#\">\r<br>
-      \                 <span class=\"icon\"><i class=\"fa fa-facebook\"></i></span>\r<br>
-      \               </a>\r<br>                <a class=\"level-item\" href=\"https://twitter.com/#\">\r<br>
-      \                 <span class=\"icon\"><i class=\"fa fa-twitter\"></i></span>\r<br>
-      \               </a>\r<br>                <a class=\"level-item\" href=\"https://bitbucket.org/#\">\r<br>
-      \                 <span class=\"icon\"><i class=\"fa fa-bitbucket\"></i></span>\r<br>
-      \               </a>\r<br>              </div>\r<br>            </nav>\r<br>
-      \           <a href=\"https://bulma.io\" target=\"_blank\">\r<br>            {%
-      if section.settings.praise == true %}\r<br>              <img src=\"{{ section.settings.praise_logo
-      }}\" alt=\"Made with Bulma\" width=\"128\" height=\"24\">\r<br>            {%
-      endif %}\r<br>            </a>\r<br>          </div>\r<br>        </div>\r<br>
-      \     </div>\r<br>      {% endif %}\r<br>    </div>\r<br>  </div>\r<br></footer>"
+      en: "<p>Example footer using the Bulma framework<br></p>"
+      fr: "<p>Example footer using the Bulma framework<br></p>"
+    code: "---<br>{<br>&nbsp; \"name\": \"Footer\",<br>&nbsp; \"class\": \"footer-main\",<br>&nbsp;
+      \"icon\": \"footer\",<br>&nbsp; \"keep_icon\": true,<br>&nbsp; \"settings\":
+      [<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; \"label\": \"Logo\",<br>&nbsp;
+      &nbsp; &nbsp; \"id\": \"site_logo\",<br>&nbsp; &nbsp; &nbsp; \"type\": \"image_picker\"<br>&nbsp;
+      &nbsp; },<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; \"label\": \"Social\",<br>&nbsp;
+      &nbsp; &nbsp; \"id\": \"social\",<br>&nbsp; &nbsp; &nbsp; \"type\": \"checkbox\"<br>&nbsp;
+      &nbsp; },<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; \"label\": \"Social title\",<br>&nbsp;
+      &nbsp; &nbsp; \"id\": \"social_title\",<br>&nbsp; &nbsp; &nbsp; \"type\": \"text\"<br>&nbsp;
+      &nbsp; },<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; \"label\": \"Praise\",<br>&nbsp;
+      &nbsp; &nbsp; \"id\": \"praise\",<br>&nbsp; &nbsp; &nbsp; \"type\": \"checkbox\"<br>&nbsp;
+      &nbsp; },<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; \"label\": \"Praise logo\",<br>&nbsp;
+      &nbsp; &nbsp; \"id\": \"praise_logo\",<br>&nbsp; &nbsp; &nbsp; \"type\": \"image_picker\"<br>&nbsp;
+      &nbsp; }<br>&nbsp; ],<br>&nbsp; \"blocks\": [<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp;
+      &nbsp; \"name\": \"Columns\",<br>&nbsp; &nbsp; &nbsp; \"type\": \"columns\",<br>&nbsp;
+      &nbsp; &nbsp; \"settings\": [<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; \"label\": \"Title\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      \"id\": \"title\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"text\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 1\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"id\":
+      \"link_1\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"url\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 1 text\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      \"id\": \"link_1_txt\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"text\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 2\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"id\":
+      \"link_2\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"url\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 2 text\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      \"id\": \"link_2_txt\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"text\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 3\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"id\":
+      \"link_3\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"url\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 3 text\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      \"id\": \"link_3_txt\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"text\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 4\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"id\":
+      \"link_4\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"url\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; },<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; \"label\": \"Link 4 text\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      \"id\": \"link_4_txt\",<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \"type\": \"text\"<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; ]<br>&nbsp; &nbsp; }<br>&nbsp;
+      ]<br>}<br>---<br>&lt;footer class=\"footer footer-dark\"&gt;<br>&nbsp; &lt;div
+      class=\"container\"&gt;<br>&nbsp; &nbsp; &lt;div class=\"columns\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; {% if section.settings.site_logo %}<br>&nbsp; &nbsp; &nbsp; &lt;div
+      class=\"column\"&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=\"footer-logo\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=\"{{ section.settings.site_logo }}\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp;
+      &nbsp; &nbsp; {% endif %}<br>&nbsp; &nbsp; &nbsp; {% for block in section.blocks
+      %}<br>&nbsp; &nbsp; &nbsp; &lt;div class=\"column\"&gt;<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &lt;div class=\"footer-column\"&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &lt;div class=\"footer-header\"&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &lt;h3&gt;{{ block.settings.title }}&lt;/h3&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &lt;/div&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=\"link-list\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=\"{{ block.settings.link_1
+      }}\"&gt;{{ block.settings.link_1_txt }}&lt;/a&gt;&lt;/li&gt;<br>&nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=\"{{ block.settings.link_2
+      }}\"&gt;{{ block.settings.link_2_txt }}&lt;/a&gt;&lt;/li&gt;<br>&nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=\"{{ block.settings.link_3
+      }}\"&gt;{{ block.settings.link_3_txt }}&lt;/a&gt;&lt;/li&gt;<br>&nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=\"{{ block.settings.link_4
+      }}\"&gt;{{ block.settings.link_4_txt }}&lt;/a&gt;&lt;/li&gt;<br>&nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &lt;/ul&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp;
+      &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp; &nbsp; &nbsp; {% endfor %}<br>&nbsp; &nbsp;
+      &nbsp; {% if section.settings.social == true %}<br>&nbsp; &nbsp; &nbsp; &lt;div
+      class=\"column\"&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=\"footer-column\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=\"footer-header\"&gt;<br>&nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;{{ section.settings.social_title }}&lt;/h3&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;nav class=\"level is-mobile\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=\"level-left\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class=\"level-item\"
+      href=\"<a href=\"https://github.com/#&quot;&gt;\">https://github.com/#\"&gt;</a>;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=\"icon\"&gt;&lt;i
+      class=\"fa fa-github\"&gt;&lt;/i&gt;&lt;/span&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &lt;a class=\"level-item\" href=\"<a href=\"https://dribbble.com/#&quot;&gt;\">https://dribbble.com/#\"&gt;</a>;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=\"icon\"&gt;&lt;i
+      class=\"fa fa-dribbble\"&gt;&lt;/i&gt;&lt;/span&gt;<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class=\"level-item\" href=\"<a href=\"https://fb.com/#&quot;&gt;\">https://fb.com/#\"&gt;</a>;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=\"icon\"&gt;&lt;i
+      class=\"fa fa-facebook\"&gt;&lt;/i&gt;&lt;/span&gt;<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class=\"level-item\" href=\"<a href=\"https://twitter.com/#&quot;&gt;\">https://twitter.com/#\"&gt;</a>;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=\"icon\"&gt;&lt;i
+      class=\"fa fa-twitter\"&gt;&lt;/i&gt;&lt;/span&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &lt;a class=\"level-item\" href=\"<a href=\"https://bitbucket.org/#&quot;&gt;\">https://bitbucket.org/#\"&gt;</a>;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=\"icon\"&gt;&lt;i
+      class=\"fa fa-bitbucket\"&gt;&lt;/i&gt;&lt;/span&gt;<br>&nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &lt;/nav&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=\"<a href=\"https://bulma.io&quot;\">https://bulma.io\"</a>;
+      target=\"_blank\"&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {% if section.settings.praise
+      == true %}<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=\"{{
+      section.settings.praise_logo }}\" alt=\"Made with Bulma\" width=\"128\" height=\"24\"&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {% endif %}<br>&nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &lt;/a&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp;
+      &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>&nbsp;
+      &nbsp; &nbsp; {% endif %}<br>&nbsp; &nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/footer&gt;<div><div
+      class=\"container\"><div class=\"columns\">\r\n    </div>\r\n  </div>\r\n</div>"
     version: 4.x
     account: manuchap

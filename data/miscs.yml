@@ -1,8 +1,8 @@
-- Sublime shortcut - Toggle Liquid/Json:
+- Sublime Text shortcut - Toggle Liquid/Json:
     _slug:
       en: sublime-shortcut-toggle-liquid-slash-json
       fr: sublime-shortcut-toggle-liquid-slash-json
-    name: Sublime shortcut - Toggle Liquid/Json
+    name: Sublime Text shortcut - Toggle Liquid/Json
     desc:
       en: <p>Toggle Liquid/Json with alt-a<br></p><p><span class="Apple-converted-space">&nbsp;</span>(need
         to install Siteleaf Liquid Syntax - works best with Oceanic Next color scheme)<br></p>
@@ -11,11 +11,11 @@
     type: Gist
     code: https://gist.github.com/manuchap/f3aa2c241492b86165e9dd0ab02d7f29
     account: manuchap
-- Sublime shortcut - Toggle Liquid/Haml:
+- Sublime Text shortcut - Toggle Liquid/Haml:
     _slug:
       en: sublime-shortcut-toggle-liquid-slash-haml
       fr: sublime-shortcut-toggle-liquid-slash-haml
-    name: Sublime shortcut - Toggle Liquid/Haml
+    name: Sublime Text shortcut - Toggle Liquid/Haml
     desc:
       en: Toggle Liquid/Haml with alt-z<div><span class="Apple-converted-space">&nbsp;</span>(need
         to install Siteleaf Liquid Syntax - works best with Oceanic Next color scheme)<br></div>
@@ -148,7 +148,6 @@
       gem ''heroics'', ''= 0.0.21''<br>end<br>gem ''rack-cors''<br><br></p>'
     version: 3.x
     account: manuchap
-    _visible: false
 - S3 bucket cors Config:
     _slug:
       en: s3-bucket-cors-config

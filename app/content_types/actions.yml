@@ -27,7 +27,6 @@ fields:
     required: false
     localized: false
     select_options:
-      en:
       - 2.x
       - 3.x
       - 4.x

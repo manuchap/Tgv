@@ -26,7 +26,6 @@ fields:
     required: false
     localized: false
     select_options:
-      en:
       - 4.x
 - account:
     label: Account
