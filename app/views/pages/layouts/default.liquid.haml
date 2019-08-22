@@ -109,11 +109,11 @@ is_layout: true
       %header{:style => "padding-top:14px"}
       {% block 'main' %}
       {% endblock %}
-      {% if page.depth == 2 and params.type %}
+      {% comment %}{% if page.depth == 2 and params.type %}
       {% unless wagon %}
       {% include 'comments' %}
       {% endunless %}
-      {% endif %}
+      {% endif %}{% endcomment %}
       {% include 'footer' %}
       {% include 'modal_signup' %}
       {% include 'modal_signin' %}
