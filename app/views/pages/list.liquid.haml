@@ -18,7 +18,7 @@ position: 1
     {{ action.name }}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ action.account.email }}"} {{ action.account.name }}
+  %a{:href => "{{ action.account.company }}", :target => "_blank"} {{ action.account.name }}
   %p {{ action.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
@@ -34,7 +34,7 @@ position: 1
     {{ app.name }}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ app.account.email }}"} {{ app.account.name }}
+  %a{:href => "{{ app.account.company }}", :target => "_blank"} {{ app.account.name }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ app.pict.url | resize: '240x170#', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
@@ -54,7 +54,7 @@ position: 1
     {{ gist.name }}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ gist.account.email }}"} {{ gist.account.name }}
+  %a{:href => "{{ gist.account.company }}", :target => "_blank"} {{ gist.account.name }}
   %p {{ gist.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
@@ -74,7 +74,7 @@ position: 1
       {{ misc.name }}
     &nbsp;
     %i {{ 'whos' | translate }}
-    %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
+    %a{:href => "{{ misc.account.company }}", :target => "_blank"} {{ misc.account.name }}
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% when 'Gemfile' %}
@@ -84,7 +84,7 @@ position: 1
       {{ misc.name }}
     &nbsp;
     %i {{ 'whos' | translate }}
-    %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
+    %a{:href => "{{ misc.account.company }}", :target => "_blank"} {{ misc.account.name }}
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% when 'Gist' %}
@@ -94,7 +94,7 @@ position: 1
       {{ misc.name }}
     &nbsp;
     %i {{ 'whos' | translate }}
-    %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
+    %a{:href => "{{ misc.account.company }}", :target => "_blank"} {{ misc.account.name }}
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% when 'System' %}
@@ -104,7 +104,7 @@ position: 1
       {{ misc.name }}
     &nbsp;
     %i {{ 'whos' | translate }}
-    %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
+    %a{:href => "{{ misc.account.company }}", :target => "_blank"} {{ misc.account.name }}
     %p {{ misc.desc | truncatewords: '25' }}
     %hr
   {% endcase %}
@@ -125,7 +125,7 @@ position: 1
   {% endif %}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
+  %a{:href => "{{ showcase.account.company }}", :target => "_blank"} {{ showcase.account.name }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ showcase.pict.url | resize: '240x170#', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
@@ -145,7 +145,7 @@ position: 1
     {{ section.name }}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ section.account.email }}"} {{ section.account.name }}
+  %a{:href => "{{ section.account.company }}", :target => "_blank"} {{ section.account.name }}
   %p {{ section.desc | truncatewords: '25' }}
   %hr
   {% endfor %}
@@ -165,7 +165,7 @@ position: 1
   {% endif %}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ template.account.email }}"} {{ template.account.name }}
+  %a{:href => "{{ template.account.company }}", :target => "_blank"} {{ template.account.name }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ template.pict.url | resize: '240x170#', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
@@ -185,7 +185,7 @@ position: 1
     {{ video.name }}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ video.account.email }}"} {{ video.account.name }}
+  %a{:href => "{{ video.account.company }}", :target => "_blank"} {{ video.account.name }}
   .w3-row
     .w3-quarter
       {% case video.origin %}

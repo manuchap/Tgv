@@ -11,7 +11,7 @@ content_type: sections
 %h3 {{ section.name }}
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ section.account.email }}"} {{ section.account.name }}
+  %a{:href => "{{ section.account.company }}", :target => "_blank"} {{ section.account.name }}
   {% if section.version %}
   %br
   %i

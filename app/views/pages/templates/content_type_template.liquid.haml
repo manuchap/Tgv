@@ -11,7 +11,7 @@ content_type: templates
 %h3 {{ template.name }}
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ template.account.email }}"} {{ template.account.name }}
+  %a{:href => "{{ template.account.company }}", :target => "_blank"} {{ template.account.name }}
   {% if template.version %}
   %br
   %i

@@ -11,7 +11,7 @@ content_type: apps
 %h3 {{ app.name }}
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ app.account.email }}"} {{ app.account.name }}
+  %a{:href => "{{ app.account.company }}", :target => "_blank"} {{ app.account.name }}
   {% if app.version %}
   %br
   %i

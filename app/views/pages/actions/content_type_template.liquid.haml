@@ -11,7 +11,7 @@ content_type: actions
 %h3 {{ action.name }}
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ action.account.email }}"} {{ action.account.name }}
+  %a{:href => "{{ action.account.company }}", :target => "_blank"} {{ action.account.name }}
   {% if action.version %}
   %br
   %i

@@ -18,12 +18,6 @@ fields:
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
-- by_url:
-    label: Creator url
-    type: string
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
 - pict:
     label: Thumbnail
     type: file

@@ -21,7 +21,7 @@ content_type: miscs
 %h3 {{ misc.name }}
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ misc.account.email }}"} {{ misc.account.name }}
+  %a{:href => "{{ misc.account.company }}", :target => "_blank"} {{ misc.account.name }}
   {% if misc.version %}
   %br
   %i

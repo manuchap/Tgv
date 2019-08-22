@@ -11,7 +11,7 @@ content_type: showcases
 %h3 {{ showcase.name }}
 %p{:style => "margin-top: -17px"}
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
+  %a{:href => "{{ showcase.account.company }}", :target => "_blank"} {{ showcase.account.name }}
   {% if showcase.version %}
   %br
   %i
