@@ -49,6 +49,9 @@ disc:
 forg:
   en: Forgot your password?
   fr: Mot de passe oublié?
+fork:
+  en: Fork me on
+  fr: Fork moi sur
 gues:
   en: guest
   fr: invité
