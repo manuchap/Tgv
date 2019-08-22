@@ -37,7 +37,7 @@ position: 1
   %a{:href => "mailto:{{ app.account.email }}"} {{ app.account.name }}
   .w3-row
     .w3-quarter
-      %img{:src => "{{ app.pict.url | resize: '241x>', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
+      %img{:src => "{{ app.pict.url | resize: '240x170#', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
     .w3-threequarter.w3-padding
       %p {{ app.desc | truncatewords: '25' }}
   %hr
@@ -128,7 +128,7 @@ position: 1
   %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.by_url }}
   .w3-row
     .w3-quarter
-      %img{:src => "{{ showcase.pict.url | resize: '241x>', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
+      %img{:src => "{{ showcase.pict.url | resize: '240x170#', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
     .w3-threequarter.w3-padding
       %p {{ showcase.desc | truncatewords: '25' }}
   %hr
@@ -168,7 +168,7 @@ position: 1
   %a{:href => "mailto:{{ template.account.email }}"} {{ template.account.name }}
   .w3-row
     .w3-quarter
-      %img{:src => "{{ template.pict.url | resize: '241x>', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
+      %img{:src => "{{ template.pict.url | resize: '240x170#', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
     .w3-threequarter.w3-padding
       %p {{ template.desc | truncatewords: '25' }}
   %hr

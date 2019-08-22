@@ -116,8 +116,8 @@ pass:
   en: Password
   fr: Mot de passe
 pict:
-  en: Picture
-  fr: Image
+  en: Picture (will be resized to 900x570px)
+  fr: Image (sera redimentionnée à 900x570px)
 prev:
   en: Previous
   fr: Précédent
