@@ -1,7 +1,7 @@
 name: Accounts
 slug: accounts
 label_field_name: name
-order_by: created_at
+order_by: manually
 order_direction: desc
 public_submission_enabled: true
 fields:

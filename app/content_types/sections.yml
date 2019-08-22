@@ -1,7 +1,7 @@
 name: Sections
 slug: sections
 label_field_name: name
-order_by: created_at
+order_by: manually
 order_direction: desc
 entry_template: <a href="{{ link }}">{{ entry._label }}</a> - {{ entry.account.name }} - {{ entry.version }}
 fields:
