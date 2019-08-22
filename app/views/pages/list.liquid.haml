@@ -125,7 +125,7 @@ position: 1
   {% endif %}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.by_url }}
+  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ showcase.pict.url | resize: '240x170#', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
