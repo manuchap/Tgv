@@ -2,9 +2,5 @@
     _slug: manuchap
     name: Manuchap
     email: manuchap@gmail.com
+    password: iliketrains
     avatar: "/samples/content_entries/bugz.png"
-- Nikolay Bonev:
-    _slug: nikolay-bonev
-    name: Nikolay Bonev
-    email: nikolay@whale-agency.com
-    ip: 94.142.211.246
