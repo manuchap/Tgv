@@ -2,7 +2,7 @@ name: "Tgv"
 locales: [en,fr]
 timezone: Paris
 seo_title: "Tgv - The #1 LocomotiveCMS marketplace"
-meta_keywords: "locomotivecms templates gists snippets trips tricks"
+meta_keywords: "locomotivecms templates gists snippets tips tricks showcase"
 meta_description: "LocomotiveCMS Marketplace"
 metafields:
   comments:
