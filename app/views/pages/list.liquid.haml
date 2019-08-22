@@ -7,6 +7,8 @@ position: 1
 ---
 {% extends 'layouts/default' %}
 {% block 'main' %}
+:css
+  .pagination > a, .pagination > span { margin-left: 1em; margin-right: 1em; color: orangered;}
 .w3-container
   {% case params.type %}
   {% when 'actions' %}
@@ -22,14 +24,7 @@ position: 1
   {% endfor %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 10 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=actions&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=actions&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endpaginate %}
   {% when 'apps' %}
@@ -49,14 +44,7 @@ position: 1
   {% endfor %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 3 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=apps&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=apps&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endpaginate %}
   {% when 'gists' %}
@@ -72,14 +60,7 @@ position: 1
   {% endfor %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 10 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=gists&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=gists&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endpaginate %}
   {% when 'miscs' %}
@@ -129,14 +110,7 @@ position: 1
   {% endcase %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 10 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=miscs&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=miscs&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endfor %}
   {% endpaginate %}
@@ -145,9 +119,13 @@ position: 1
   {% for showcase in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to showcase %}?type=showcase", :style => "font-size=large"}
     {{ showcase.name }}
+  {% if showcase.version == '4.x' %}
+  %span.w3-badge.w3-yellow.w3-small
+    v4
+  {% endif %}
   &nbsp;
   %i {{ 'whos' | translate }}
-  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.account.name }}
+  %a{:href => "mailto:{{ showcase.account.email }}"} {{ showcase.by_url }}
   .w3-row
     .w3-quarter
       %img{:src => "{{ showcase.pict.url | resize: '241x>', strip: 'true' }}", :style => "min-width: 100%; max-width: 100%; max-height: 170px; margin-top:1.4em;"}/
@@ -157,14 +135,7 @@ position: 1
   {% endfor %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 3 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=showcases&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=showcases&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endpaginate %}
   {% when 'sections' %}
@@ -180,26 +151,18 @@ position: 1
   {% endfor %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 10 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=actions&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=actions&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endpaginate %}
   {% when 'templates' %}
   {% paginate contents.templates by 3 %}
   {% for template in paginate.collection %}
   %a.w3-red.w3-padding{:href => "{% path_to template %}?type=template", :style => "font-size=large"}
-    {% if template.version == '4.x' %}
-    %span.w3-badge.w3-yellow.w3-small
-      v4
-    &nbsp;
-    {% endif %}
     {{ template.name }}
+  {% if template.version == '4.x' %}
+  %span.w3-badge.w3-yellow.w3-small
+    v4
+  {% endif %}
   &nbsp;
   %i {{ 'whos' | translate }}
   %a{:href => "mailto:{{ template.account.email }}"} {{ template.account.name }}
@@ -212,14 +175,7 @@ position: 1
   {% endfor %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 3 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=templates&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=templates&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endpaginate %}
   {% when 'videos' %}
@@ -249,14 +205,7 @@ position: 1
   {% endfor %}
   .w3-row-padding.w3-center
     {% unless paginate.total_entries < 3 %}
-    {% if paginate.previous_page %}
-    %a{:href => "/list?type=templates&page={{paginate.previous_page}}"} {{ 'prev' | translate }}
-    {% else %}
-    {%endif%}
-    {% if paginate.next_page %}
-    %a{:href => "/list?type=templates&page={{paginate.next_page}}"} {{ 'next' | translate }}
-    {% else %}
-    {%endif%}
+    {{ paginate | default_pagination }}
     {% endunless %}
   {% endpaginate %}
   {% endcase %}
