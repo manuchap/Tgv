@@ -8,13 +8,9 @@ is_layout: true
     {% seo %}
     %meta{:charset => "UTF-8"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    %meta{:content => "{{ site.metafields.google.site_verification_code }}", :name => "google-site-verification"}
     %link{:href => "https://www.w3schools.com/w3css/4/w3.css", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Raleway", :rel => "stylesheet"}/
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
-    {% if fullpath contains 'search' %}
-    %link{:href => "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css", :rel => "stylesheet"}/
-    {% endif %}
     {% google_analytics 'UA-10738079-10' %}
     :css
       html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
@@ -109,11 +105,13 @@ is_layout: true
       %header{:style => "padding-top:14px"}
       {% block 'main' %}
       {% endblock %}
-      {% comment %}{% if page.depth == 2 and params.type %}
+      {% comment %}
+      {% if page.depth == 2 and params.type %}
       {% unless wagon %}
       {% include 'comments' %}
       {% endunless %}
-      {% endif %}{% endcomment %}
+      {% endif %}
+      {% endcomment %}
       {% include 'footer' %}
       {% include 'modal_signup' %}
       {% include 'modal_signin' %}

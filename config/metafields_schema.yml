@@ -1,9 +1,3 @@
-google:
-  label: Google
-  fields:
-    site_verification_code:
-      hint: Google Search Console site verification code
-      type: string
 comments:
   label: Intensedebate api key
   fields:
