@@ -12,25 +12,25 @@ fields:
     required: true
     localized: false
 - desc:
-    label: Desc
+    label: Description
     type: text
     required: true
     localized: true
+- code:
+    label: Code
+    type: text
+    required: true
+    localized: false
 - type:
     label: Type
     type: select
-    required: true
+    required: false
     localized: false
     select_options:
       - Config
       - Gemfile
       - Gist
       - System
-- code:
-    label: Code
-    type: text
-    required: true
-    localized: false
 - version:
     label: Version
     type: select

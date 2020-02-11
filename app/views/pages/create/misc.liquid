@@ -5,6 +5,6 @@ handle: create_misc
 ---
 {% action 'createMisc' %}
 var params = getProp('params');
-createEntry('miscs', { name: params.name, desc: params.desc, type: params.type, code: params.code.replace(/\n/g, "<br>"), version: params.version, account: params.account });
+createEntry('miscs', { name: params.name, desc: params.desc, code: params.code.replace(/\n/g, "<br>"), type: params.type, version: params.version, account: params.account });
 redirectTo('me');
 {% endaction %}

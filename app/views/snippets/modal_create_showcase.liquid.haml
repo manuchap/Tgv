@@ -21,11 +21,11 @@
           %input.w3-input{:name => "url", :type => 'text', :value => "{{showcase.url}}"}
         .form-group
           %label {{ 'crea' | translate }}
-          %input.w3-input{:name => "dby_url", :type => 'text', :value => "{{showcase.by_url}}"}
+          %input.w3-input{:name => "crea", :type => 'text', :value => "{{showcase.crea}}"}
         .form-group
           %label {{ 'vers' | translate }}
-          %select.w3-select{:name => "type"}
-            %option{:value => ""}
+          %select.w3-select{:name => "version", :value => ""}
+            %option{:disabled => "disabled", :selected => "selected"}
             {% for option in contents.showcases.version_options %}
             %option{:value => "{{ option }}"} {{ option }}
             {% endfor %}

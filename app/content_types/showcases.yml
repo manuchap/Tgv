@@ -10,25 +10,27 @@ fields:
     label: Name
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
-    localized: false
-- url:
-    label: Url
-    type: string
-    required: true
-    hint: Explanatory text displayed in the back office
-    localized: false
-- pict:
-    label: Thumbnail
-    type: file
-    required: true
-    hint: Explanatory text displayed in the back office
     localized: false
 - desc:
     label: Description
     type: text
     required: true
     localized: true
+- pict:
+    label: Picture
+    type: file
+    required: true
+    localized: false
+- url:
+    label: Website
+    type: string
+    required: false
+    localized: false
+- crea:
+    label: Creator
+    type: string
+    required: false
+    localized: false
 - version:
     label: Version
     type: select

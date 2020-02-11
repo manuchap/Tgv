@@ -18,15 +18,15 @@
           %input.w3-input{:name => "url", :type => 'text', :value => "{{video.url}}"}
         .form-group
           %label {{ 'orig' | translate }} *
-          %select.w3-select{:name => "type"}
-            %option{:value => ""}
+          %select.w3-select{:name => "origin", :value => ""}
+            %option{:disabled => "disabled", :selected => "selected"}
             {% for option in contents.videos.origin_options %}
             %option{:value => "{{ option }}"} {{ option }}
             {% endfor %}
         .form-group
           %label {{ 'vers' | translate }}
-          %select.w3-select{:name => "type"}
-            %option{:value => ""}
+          %select.w3-select{:name => "version", :value => ""}
+            %option{:disabled => "disabled", :selected => "selected"}
             {% for option in contents.videos.version_options %}
             %option{:value => "{{ option }}"} {{ option }}
             {% endfor %}

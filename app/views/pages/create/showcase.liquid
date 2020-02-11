@@ -5,6 +5,6 @@ handle: create_showcase
 ---
 {% action 'createShowcase' %}
 var params = getProp('params');
-createEntry('showcases', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, by_url: params.by_url, version: params.version, account: params.account });
+createEntry('showcases', { name: params.name, desc: params.desc, pict: params.pict, url: params.url, crea: params.crea, version: params.version, account: params.account });
 redirectTo('me');
 {% endaction %}

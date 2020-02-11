@@ -18,15 +18,15 @@
           %textarea.w3-input{:name => "code", :rows => 10, :value => "{{misc.code}}"}
         .form-group
           %label {{ 'type' | translate }} *
-          %select.w3-select{:name => "type"}
-            %option{:value => ""}
+          %select.w3-select{:name => "type", :value => ""}
+            %option{:disabled => "disabled", :selected => "selected"}
             {% for option in contents.miscs.type_options %}
             %option{:value => "{{ option }}"} {{ option }}
             {% endfor %}
         .form-group
           %label {{ 'vers' | translate }}
-          %select.w3-select{:name => "type"}
-            %option{:value => ""}
+          %select.w3-select{:name => "version", :value => ""}
+            %option{:disabled => "disabled", :selected => "selected"}
             {% for option in contents.miscs.version_options %}
             %option{:value => "{{ option }}"} {{ option }}
             {% endfor %}
